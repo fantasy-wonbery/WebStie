@@ -7,7 +7,9 @@ import {
   Wifi,
   ArrowRight,
   Globe,
-  TrendingUp,
+  Award,
+  Users,
+  Zap,
 } from 'lucide-react'
 import {
   PageLayout,
@@ -16,48 +18,72 @@ import {
   GlowCard,
   AnimatedText,
   ParticleField,
+  StatsCard,
 } from '../components'
 
 const companies = [
   {
-    name: 'Avinect Holding',
-    nameCn: '艾维科技控股',
-    description: '香港控股平台 · 国际业务实体',
+    name: 'Avinect',
+    nameCn: '艾维科技',
+    description: '国际航空科技服务商，为全球航空公司提供数字化解决方案',
     path: '/avinect',
     icon: Building2,
     color: '#00BCD4',
     gradient: 'from-cyan-500 to-blue-600',
-    tags: ['品牌授权', '技术服务输出', '海外市场'],
+    tags: ['国际业务', '数字化方案', '支付集成'],
   },
   {
     name: '天宇科技',
-    nameCn: 'Tianyu Technology',
-    description: '国内航司辅营服务主体',
+    nameCn: 'Tianyu Tech',
+    description: '航空辅营服务专家，提供客舱销售全链条解决方案',
     path: '/tianyu',
     icon: Plane,
     color: '#FF6F00',
     gradient: 'from-orange-500 to-amber-600',
-    tags: ['客舱销售', '业务系统', '供应链'],
+    tags: ['客舱销售', '供应链', '系统服务'],
   },
   {
     name: 'Wonbery',
     nameCn: '网博科技',
-    description: '航空 AOC 技术服务商',
+    description: '航空运行控制技术专家，赋能航司安全高效运营',
     path: '/wonbery',
     icon: Radio,
     color: '#5FA8D3',
     gradient: 'from-blue-500 to-indigo-600',
-    tags: ['运行控制', '指挥通信', 'AI 语音'],
+    tags: ['AOC系统', '指挥通信', 'AI语音'],
   },
   {
     name: '飞途科技',
-    nameCn: 'Feitu Technology',
-    description: '机载通信 · 内容运营创新平台',
+    nameCn: 'Feitu Tech',
+    description: '空中互联网创新者，打造下一代机上体验',
     path: '/feitu',
     icon: Wifi,
     color: '#E040FB',
     gradient: 'from-purple-500 to-pink-600',
-    tags: ['机载 WiFi', '低空经济', 'AI 内容'],
+    tags: ['机载WiFi', '低空经济', 'AI内容'],
+  },
+]
+
+const capabilities = [
+  {
+    icon: Globe,
+    title: '全球服务网络',
+    description: '业务覆盖亚太、中东等多个地区，服务国内外航空公司',
+  },
+  {
+    icon: Zap,
+    title: '技术创新驱动',
+    description: '持续投入研发，以AI、大数据等前沿技术赋能航空业',
+  },
+  {
+    icon: Users,
+    title: '专业服务团队',
+    description: '拥有丰富行业经验的专家团队，提供端到端解决方案',
+  },
+  {
+    icon: Award,
+    title: '行业深耕积累',
+    description: '多年航空科技领域深耕，深刻理解行业需求与痛点',
   },
 ]
 
@@ -98,7 +124,7 @@ export default function Home() {
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 rounded-full text-sm font-medium bg-white/5 border border-white/10 text-white/60">
-              Vincent Business Portfolio
+              Aviation Technology Solutions
             </span>
           </motion.div>
 
@@ -115,26 +141,63 @@ export default function Home() {
           >
             从航空辅营到机载通信，从运行控制到内容创新
             <br />
-            <span className="text-white/40">打造全链路航空科技服务体系</span>
+            <span className="text-white/40">为航空公司提供全方位数字化解决方案</span>
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="flex flex-wrap justify-center gap-6"
+            className="flex flex-wrap justify-center gap-4"
           >
-            <div className="flex items-center gap-2 text-white/40">
-              <Globe size={20} />
-              <span>香港 · 北京 · 天津</span>
-            </div>
-            <div className="flex items-center gap-2 text-white/40">
-              <TrendingUp size={20} />
-              <span>4 家企业 · 多业务协同</span>
-            </div>
+            <a
+              href="#companies"
+              className="px-6 py-3 rounded-xl bg-white text-black font-semibold hover:bg-white/90 transition-colors"
+            >
+              探索业务
+            </a>
+            <a
+              href="#capabilities"
+              className="px-6 py-3 rounded-xl border border-white/20 text-white hover:bg-white/5 transition-colors"
+            >
+              了解更多
+            </a>
           </motion.div>
         </div>
       </Hero>
+
+      {/* Stats */}
+      <Section>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <StatsCard
+            value="4"
+            label="专业子公司"
+            accentColor="#00BCD4"
+            delay={0}
+          />
+          <StatsCard
+            value="10"
+            suffix="+"
+            label="服务航司"
+            accentColor="#FF6F00"
+            delay={0.1}
+          />
+          <StatsCard
+            value="1000"
+            suffix="+"
+            label="日均服务航班"
+            accentColor="#5FA8D3"
+            delay={0.2}
+          />
+          <StatsCard
+            value="5"
+            suffix="+"
+            label="覆盖地区"
+            accentColor="#E040FB"
+            delay={0.3}
+          />
+        </div>
+      </Section>
 
       {/* Companies Grid */}
       <Section id="companies">
@@ -145,10 +208,10 @@ export default function Home() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            业务版图
+            业务板块
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            四大业务板块，覆盖航空科技全产业链
+            四大专业领域，覆盖航空科技全产业链
           </p>
         </motion.div>
 
@@ -206,8 +269,8 @@ export default function Home() {
         </motion.div>
       </Section>
 
-      {/* Architecture Section */}
-      <Section className="border-t border-white/5">
+      {/* Capabilities */}
+      <Section id="capabilities" className="border-t border-white/5">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -215,7 +278,7 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-display font-bold mb-4"
           >
-            股权架构
+            核心优势
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -224,50 +287,50 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="text-white/60 max-w-2xl mx-auto"
           >
-            优化的控股结构，实现税务效率与业务灵活性的平衡
+            专业能力与行业经验的深度融合
           </motion.p>
         </div>
 
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {capabilities.map((cap, index) => (
+            <motion.div
+              key={cap.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="glass-card p-6 text-center"
+            >
+              <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center mx-auto mb-4">
+                <cap.icon size={28} className="text-white/80" />
+              </div>
+              <h3 className="font-semibold mb-2">{cap.title}</h3>
+              <p className="text-white/50 text-sm">{cap.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* CTA */}
+      <Section className="border-t border-white/5">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card p-8 md:p-12"
+          className="glass-card p-8 md:p-12 text-center"
         >
-          <div className="font-mono text-sm md:text-base leading-relaxed">
-            <div className="text-white/80">Vincent（个人）</div>
-            <div className="text-white/40">│</div>
-            <div className="flex items-start gap-2">
-              <span className="text-white/40">├──</span>
-              <div>
-                <span className="text-cyan-400">Avinect Holding</span>
-                <span className="text-white/40">（香港）── 100% 持股</span>
-                <div className="text-white/40 ml-4 mt-1">
-                  <div>├── 持股 天宇科技 30%</div>
-                  <div>├── 持股 飞途科技 30%</div>
-                  <div>└── 国际业务实体</div>
-                </div>
-              </div>
-            </div>
-            <div className="text-white/40">│</div>
-            <div className="flex items-start gap-2">
-              <span className="text-white/40">├──</span>
-              <span className="text-orange-400">天宇科技</span>
-              <span className="text-white/40">（天津）── 个人 70% / Avinect 30%</span>
-            </div>
-            <div className="text-white/40">│</div>
-            <div className="flex items-start gap-2">
-              <span className="text-white/40">├──</span>
-              <span className="text-blue-400">Wonbery 网博科技</span>
-              <span className="text-white/40">（北京）── 个人 100%</span>
-            </div>
-            <div className="text-white/40">│</div>
-            <div className="flex items-start gap-2">
-              <span className="text-white/40">└──</span>
-              <span className="text-purple-400">飞途科技</span>
-              <span className="text-white/40">（天津）── 个人 70% / Avinect 30%</span>
-            </div>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+            开启合作
+          </h2>
+          <p className="text-white/60 mb-8 max-w-2xl mx-auto">
+            无论您是航空公司、机场还是行业合作伙伴，我们期待与您共同探索航空科技的无限可能
+          </p>
+          <a
+            href="mailto:contact@avinect.com"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-white text-black font-semibold hover:bg-white/90 transition-colors"
+          >
+            联系我们
+          </a>
         </motion.div>
       </Section>
 
@@ -275,8 +338,7 @@ export default function Home() {
       <footer className="py-12 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Vincent Business Portfolio. All rights
-            reserved.
+            © {new Date().getFullYear()} Aviation Technology Group. All rights reserved.
           </p>
         </div>
       </footer>

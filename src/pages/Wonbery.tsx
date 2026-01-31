@@ -388,7 +388,7 @@ export default function Wonbery() {
         </div>
       </Section>
 
-      {/* Architecture Note */}
+      {/* Security & Compliance */}
       <Section className="border-t border-white/5">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -397,24 +397,24 @@ export default function Wonbery() {
           className="glass-card p-8 md:p-12"
         >
           <div className="flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-amber-500/10">
-              <Shield size={28} className="text-amber-500" />
+            <div className="p-3 rounded-xl bg-wonbery-accent/10">
+              <Shield size={28} className="text-wonbery-accent" />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">纯内资架构</h3>
+              <h3 className="text-xl font-semibold mb-2">安全与合规</h3>
               <p className="text-white/60 mb-4">
-                考虑到航空运行数据的敏感性及行业监管要求，Wonbery 网博科技采用纯内资架构，
-                不引入外资股权，确保数据安全与合规运营。
+                我们深知航空运行数据的敏感性，严格遵循行业安全标准与监管要求，
+                为客户提供安全可靠的技术解决方案。
               </p>
               <div className="flex flex-wrap gap-4">
                 <span className="px-3 py-1 rounded-full text-sm bg-green-500/10 text-green-400">
-                  100% 内资
+                  数据加密传输
                 </span>
                 <span className="px-3 py-1 rounded-full text-sm bg-blue-500/10 text-blue-400">
-                  数据本地化
+                  等保三级认证
                 </span>
                 <span className="px-3 py-1 rounded-full text-sm bg-purple-500/10 text-purple-400">
-                  合规运营
+                  行业合规认证
                 </span>
               </div>
             </div>
