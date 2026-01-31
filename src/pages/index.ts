@@ -1,0 +1,5 @@
+export { default as Home } from './Home'
+export { default as Avinect } from './Avinect'
+export { default as Tianyu } from './Tianyu'
+export { default as Wonbery } from './Wonbery'
+export { default as Feitu } from './Feitu'
