@@ -195,7 +195,7 @@ export default function Feitu() {
               </motion.div>
 
               {/* Orbiting planes */}
-              {[0, 120, 240].map((angle, i) => (
+              {[0, 120, 240].map((angle) => (
                 <motion.div
                   key={angle}
                   animate={{ rotate: [angle, angle + 360] }}
