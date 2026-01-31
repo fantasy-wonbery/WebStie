@@ -70,13 +70,10 @@ const advantages = [
   '持续的产品迭代，紧跟行业趋势',
 ]
 
-const caseStudies = [
-  {
-    airline: '香港航空',
-    project: '机上支付系统升级',
-    status: '实施中',
-    highlights: ['Antom 支付集成', 'SoftPOS 部署', '多币种支持'],
-  },
+const successMetrics = [
+  { label: '项目交付', value: '100%', desc: '按时交付率' },
+  { label: '客户满意', value: '98%', desc: '满意度评分' },
+  { label: '系统稳定', value: '99.9%', desc: '运行可用性' },
 ]
 
 export default function Avinect() {
@@ -307,27 +304,19 @@ export default function Avinect() {
           >
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
               <BarChart3 size={24} className="text-avinect-accent" />
-              客户案例
+              服务承诺
             </h3>
             <div className="space-y-4">
-              {caseStudies.map((study) => (
-                <div key={study.airline} className="p-4 rounded-xl bg-white/5">
-                  <div className="flex items-center justify-between mb-3">
+              {successMetrics.map((metric) => (
+                <div key={metric.label} className="p-4 rounded-xl bg-white/5">
+                  <div className="flex items-center justify-between">
                     <div>
-                      <div className="font-medium">{study.airline}</div>
-                      <div className="text-white/40 text-sm">{study.project}</div>
+                      <div className="font-medium">{metric.label}</div>
+                      <div className="text-white/40 text-sm">{metric.desc}</div>
                     </div>
-                    <span className="px-3 py-1 rounded-full text-xs bg-avinect-accent/20 text-avinect-accent">
-                      {study.status}
+                    <span className="text-2xl font-bold text-avinect-accent">
+                      {metric.value}
                     </span>
-                  </div>
-                  <div className="space-y-2">
-                    {study.highlights.map((highlight) => (
-                      <div key={highlight} className="flex items-center gap-2 text-sm text-white/60">
-                        <CheckCircle2 size={14} className="text-avinect-accent" />
-                        {highlight}
-                      </div>
-                    ))}
                   </div>
                 </div>
               ))}

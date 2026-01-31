@@ -9,7 +9,6 @@ import {
   Users,
   CheckCircle2,
   MapPin,
-  Star,
 } from 'lucide-react'
 import {
   PageLayout,
@@ -26,7 +25,7 @@ import {
 const navItems = [
   { label: '关于天宇', href: '#about' },
   { label: '服务内容', href: '#services' },
-  { label: '合作航司', href: '#partners' },
+  { label: '服务亮点', href: '#highlights' },
   { label: '联系我们', href: '#contact' },
 ]
 
@@ -69,10 +68,10 @@ const services = [
   },
 ]
 
-const partners = [
-  { name: '天津航空', status: '深度合作', years: 5 },
-  { name: '长龙航空', status: '战略合作', years: 3 },
-  { name: '幸福航空', status: '合作伙伴', years: 2 },
+const serviceHighlights = [
+  { title: '全流程服务', desc: '从采购到销售的一站式解决方案', icon: 'Package' },
+  { title: '专业团队', desc: '经验丰富的运营与技术团队', icon: 'Users' },
+  { title: '数据驱动', desc: '智能分析优化销售策略', icon: 'BarChart' },
 ]
 
 const serviceModels = [
@@ -316,8 +315,8 @@ export default function Tianyu() {
         </div>
       </Section>
 
-      {/* Partners */}
-      <Section id="partners" className="border-t border-white/5">
+      {/* Service Highlights */}
+      <Section id="highlights" className="border-t border-white/5">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -325,7 +324,7 @@ export default function Tianyu() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-display font-bold mb-4"
           >
-            合作航司
+            服务亮点
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -334,14 +333,14 @@ export default function Tianyu() {
             transition={{ delay: 0.2 }}
             className="text-white/60 max-w-2xl mx-auto"
           >
-            与国内多家航空公司建立深度合作关系
+            专业能力成就卓越服务
           </motion.p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {partners.map((partner, index) => (
+          {serviceHighlights.map((item, index) => (
             <motion.div
-              key={partner.name}
+              key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -351,20 +350,8 @@ export default function Tianyu() {
               <div className="w-16 h-16 rounded-full bg-tianyu-secondary/10 flex items-center justify-center mx-auto mb-4">
                 <Plane size={32} className="text-tianyu-secondary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{partner.name}</h3>
-              <div className="flex items-center justify-center gap-1 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    size={14}
-                    className={i < partner.years ? 'text-tianyu-secondary fill-tianyu-secondary' : 'text-white/20'}
-                  />
-                ))}
-              </div>
-              <span className="inline-block px-3 py-1 rounded-full text-xs bg-tianyu-secondary/20 text-tianyu-secondary">
-                {partner.status}
-              </span>
-              <p className="text-white/40 text-sm mt-2">合作 {partner.years} 年</p>
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-white/60">{item.desc}</p>
             </motion.div>
           ))}
         </div>
