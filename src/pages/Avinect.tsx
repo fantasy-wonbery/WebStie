@@ -1,9 +1,7 @@
 import { motion } from 'framer-motion'
 import {
-  Globe,
   Plane,
   CreditCard,
-  Users,
   MapPin,
   CheckCircle2,
   Smartphone,
