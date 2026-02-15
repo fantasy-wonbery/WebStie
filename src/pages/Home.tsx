@@ -18,6 +18,7 @@ import {
   GlowCard,
   AnimatedText,
   ParticleField,
+  FloatingOrbs,
   StatsCard,
 } from '../components'
 
@@ -113,6 +114,7 @@ export default function Home() {
   return (
     <PageLayout className="bg-black">
       <ParticleField color="#ffffff" count={300} />
+      <FloatingOrbs colors={['#00BCD4', '#7B2CBF', '#E040FB']} />
 
       {/* Hero Section */}
       <Hero>
