@@ -44,7 +44,7 @@ export default function FloatingOrbs({
   colors = ['#00BCD4', '#1E88E5', '#7C4DFF'],
 }: FloatingOrbsProps) {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-10" style={{ mixBlendMode: 'screen' }}>
       <Orb color={colors[0]} size={500} top="5%" left="5%" delay={0} duration={10} />
       <Orb color={colors[1]} size={400} top="55%" left="65%" delay={1.5} duration={12} />
       <Orb color={colors[2] || colors[0]} size={450} top="30%" left="35%" delay={3} duration={14} />
