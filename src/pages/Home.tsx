@@ -124,12 +124,12 @@ export default function Home() {
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 rounded-full text-sm font-medium bg-white/5 border border-white/10 text-white/60">
-              Aviation Technology Solutions
+              Avinect Group · Aviation Technology Solutions
             </span>
           </motion.div>
 
           <AnimatedText
-            text="构建航空科技生态"
+            text="Avinect 航空科技集团"
             className="text-4xl md:text-6xl lg:text-7xl font-display font-bold justify-center mb-4"
           />
 
@@ -170,22 +170,23 @@ export default function Home() {
       <Section>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <StatsCard
-            value="4"
-            label="专业子公司"
+            value="20"
+            suffix="+"
+            label="服务航司"
             accentColor="#00BCD4"
             delay={0}
           />
           <StatsCard
-            value="10"
+            value="1000"
             suffix="+"
-            label="服务航司"
+            label="覆盖飞机"
             accentColor="#FF6F00"
             delay={0.1}
           />
           <StatsCard
-            value="1000"
+            value="10000"
             suffix="+"
-            label="日均服务航班"
+            label="赋能员工"
             accentColor="#5FA8D3"
             delay={0.2}
           />
@@ -211,7 +212,7 @@ export default function Home() {
             业务板块
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            四大专业领域，覆盖航空科技全产业链
+            四大专业板块，覆盖航空科技全产业链
           </p>
         </motion.div>
 
@@ -338,7 +339,7 @@ export default function Home() {
       <footer className="py-12 px-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Aviation Technology Group. All rights reserved.
+            © {new Date().getFullYear()} Avinect Group. All rights reserved.
           </p>
         </div>
       </footer>

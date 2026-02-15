@@ -1,5 +1,5 @@
 {
-  "name": "vincent-business-portfolio",
+  "name": "avinect-group-website",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,6 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@fontsource/space-grotesk": "^5.2.10",
     "@react-three/drei": "^9.97.0",
     "@react-three/fiber": "^8.15.16",
     "framer-motion": "^11.0.3",
