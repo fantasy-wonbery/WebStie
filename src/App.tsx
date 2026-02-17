@@ -1,10 +1,9 @@
 import { Routes, Route } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Home from './pages/Home'
-import Avinect from './pages/Avinect'
-import Tianyu from './pages/Tianyu'
+import JpMall from './pages/JpMall'
+import Weflye from './pages/Weflye'
 import Wonbery from './pages/Wonbery'
-import Feitu from './pages/Feitu'
 
 function App() {
   return (
@@ -13,10 +12,9 @@ function App() {
       <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/avinect" element={<Avinect />} />
-          <Route path="/tianyu" element={<Tianyu />} />
+          <Route path="/jpmall" element={<JpMall />} />
+          <Route path="/weflye" element={<Weflye />} />
           <Route path="/wonbery" element={<Wonbery />} />
-          <Route path="/feitu" element={<Feitu />} />
         </Routes>
       </AnimatePresence>
     </>

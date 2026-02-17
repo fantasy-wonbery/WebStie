@@ -7,33 +7,40 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Avinect - 国际商务蓝
+        // Avinect 集团品牌 - 深蓝+白
         avinect: {
-          primary: '#0A2540',
-          secondary: '#1E88E5',
-          accent: '#00BCD4',
+          primary: '#0A1E3D',
+          secondary: '#1E3A5F',
+          accent: '#4A90D9',
           light: '#E3F2FD',
         },
-        // 天宇科技 - 航空蓝橙
-        tianyu: {
-          primary: '#1565C0',
+        // 鲸品 JpMall - 航司系统品牌
+        jpmall: {
+          primary: '#0D1F3C',
           secondary: '#FF6F00',
-          accent: '#4FC3F7',
-          light: '#E1F5FE',
+          accent: '#FFB74D',
+          light: '#FFF3E0',
         },
-        // Wonbery - 科技深蓝
+        // weflye - 旅客平台品牌
+        weflye: {
+          primary: '#0A1E3D',
+          secondary: '#1565C0',
+          accent: '#42A5F5',
+          light: '#E3F2FD',
+        },
+        // STARRY SKY - 高端产品线
+        starry: {
+          primary: '#0A1E3D',
+          gold: '#C5A55A',
+          goldLight: '#D4B96E',
+          dark: '#091828',
+        },
+        // Wonbery - 科技深蓝（保留）
         wonbery: {
           primary: '#0D1B2A',
           secondary: '#1B4965',
           accent: '#5FA8D3',
           light: '#CAE9FF',
-        },
-        // 飞途科技 - 未来紫渐变
-        feitu: {
-          primary: '#2D1B69',
-          secondary: '#7B2CBF',
-          accent: '#E040FB',
-          light: '#F3E5F5',
         },
       },
       fontFamily: {
@@ -55,8 +62,8 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(0, 188, 212, 0.3)' },
-          '100%': { boxShadow: '0 0 40px rgba(0, 188, 212, 0.6)' },
+          '0%': { boxShadow: '0 0 20px rgba(197, 165, 90, 0.3)' },
+          '100%': { boxShadow: '0 0 40px rgba(197, 165, 90, 0.6)' },
         },
         slideUp: {
           '0%': { opacity: '0', transform: 'translateY(30px)' },
