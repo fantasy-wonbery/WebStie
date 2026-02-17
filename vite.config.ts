@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-export default defineConfig({
-  base: process.env.GITHUB_ACTIONS ? '/WebStie/' : '/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/WebStie/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -13,4 +13,4 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
     },
   },
-})
+}))
