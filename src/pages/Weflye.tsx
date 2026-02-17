@@ -162,7 +162,7 @@ export default function Weflye() {
       <ParticleField color="#42A5F5" count={500} />
       <FloatingOrbs colors={['#1565C0', '#42A5F5', '#0A1E3D']} />
       <Navigation
-        brand="weflye"
+        brand="WeFlye"
         brandColor="#42A5F5"
         items={navItems}
         showBack
@@ -184,7 +184,7 @@ export default function Weflye() {
           </motion.div>
 
           <AnimatedText
-            text="weflye"
+            text="WeFlye"
             className="text-5xl md:text-6xl lg:text-7xl font-display font-bold justify-center mb-4"
           />
 
@@ -355,7 +355,7 @@ export default function Weflye() {
             className="text-white/60 max-w-2xl mx-auto"
           >
             从连接 WiFi 的第一刻起，到下机后的持续互动，
-            weflye 打造完整的旅客数字化旅程闭环
+            WeFlye 打造完整的旅客数字化旅程闭环
           </motion.p>
         </div>
 
@@ -536,7 +536,7 @@ export default function Weflye() {
               transition={{ delay: 0.2 }}
               className="text-white/50 max-w-2xl mx-auto"
             >
-              weflye 旗下高端零售品牌，以航空为纽带，甄选全球好物，
+              WeFlye 旗下高端零售品牌，以航空为纽带，甄选全球好物，
               为旅客打造独一无二的空中购物体验
             </motion.p>
           </div>
@@ -687,7 +687,7 @@ export default function Weflye() {
             transition={{ delay: 0.2 }}
             className="text-white/60 max-w-2xl mx-auto"
           >
-            从 AI 剧本到 AI 视频，自动化内容生产流水线为 weflye 平台源源不断地输出优质内容
+            从 AI 剧本到 AI 视频，自动化内容生产流水线为 WeFlye 平台源源不断地输出优质内容
           </motion.p>
         </div>
 
@@ -796,7 +796,7 @@ export default function Weflye() {
             </h2>
             <p className="text-white/60 mb-6">
               随着 eVTOL（电动垂直起降飞行器）技术的成熟，城市空中交通即将迎来爆发式增长。
-              weflye 的技术积累与旅客运营经验，将无缝延伸至低空出行场景。
+              WeFlye 的技术积累与旅客运营经验，将无缝延伸至低空出行场景。
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -828,7 +828,7 @@ export default function Weflye() {
                 <div>
                   <h4 className="font-semibold mb-1">旅客体验延伸</h4>
                   <p className="text-white/50 text-sm">
-                    将 weflye 的内容与零售能力引入低空出行，打造全场景旅客平台
+                    将 WeFlye 的内容与零售能力引入低空出行，打造全场景旅客平台
                   </p>
                 </div>
               </div>
@@ -901,7 +901,7 @@ export default function Weflye() {
         </div>
       </Section>
 
-      <Footer companyName="weflye" accentColor="#42A5F5" />
+      <Footer companyName="WeFlye" accentColor="#42A5F5" />
     </PageLayout>
   )
 }

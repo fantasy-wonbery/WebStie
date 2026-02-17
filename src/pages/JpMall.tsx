@@ -120,7 +120,7 @@ export default function JpMall() {
     <PageLayout className="bg-gradient-to-b from-[#0D1F3C] to-[#0a1929]">
       <FloatingOrbs colors={['#FF6F00', '#FFB74D', '#1565C0']} />
       <Navigation
-        brand="鲸品 JpMall"
+        brand="鲸品 JPMall"
         brandColor="#FF6F00"
         items={navItems}
         showBack
@@ -141,7 +141,7 @@ export default function JpMall() {
             </motion.div>
 
             <AnimatedText
-              text="鲸品 JpMall"
+              text="鲸品 JPMall"
               className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4"
             />
 
@@ -419,7 +419,7 @@ export default function JpMall() {
             transition={{ delay: 0.2 }}
             className="text-white/60 mb-8 max-w-2xl mx-auto"
           >
-            无论您是寻求全委托运营还是技术系统升级，鲸品 JpMall 都能为您提供专业、可靠的解决方案
+            无论您是寻求全委托运营还是技术系统升级，鲸品 JPMall 都能为您提供专业、可靠的解决方案
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -445,7 +445,7 @@ export default function JpMall() {
         </div>
       </Section>
 
-      <Footer companyName="鲸品 JpMall" accentColor="#FF6F00" />
+      <Footer companyName="鲸品 JPMall" accentColor="#FF6F00" />
     </PageLayout>
   )
 }

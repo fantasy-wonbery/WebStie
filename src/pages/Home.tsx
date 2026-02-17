@@ -18,7 +18,6 @@ import {
   Hero,
   Section,
   GlowCard,
-  AnimatedText,
   ParticleField,
   FloatingOrbs,
   StatsCard,
@@ -39,7 +38,7 @@ interface Brand {
 
 const brands: Brand[] = [
   {
-    name: '鲸品 JpMall',
+    name: '鲸品 JPMall',
     subtitle: '航司机上零售系统',
     description: '国内领先的机上销售系统与运营服务商，覆盖国内主要航司',
     path: '/jpmall',
@@ -50,7 +49,7 @@ const brands: Brand[] = [
     type: 'B2B · 航司系统',
   },
   {
-    name: 'weflye',
+    name: 'WeFlye',
     subtitle: '旅客数字平台',
     description: '旅客空中体验平台——从连WiFi到内容消费到精选购物的完整旅程',
     path: '/weflye',
@@ -104,7 +103,7 @@ const capabilities = [
   {
     icon: Award,
     title: '行业壁垒',
-    description: '鲸品与Wonbery在各自领域具备领先市场地位',
+    description: 'JPMall与Wonbery在各自领域具备领先市场地位',
   },
 ]
 
@@ -185,9 +184,13 @@ export default function Home() {
             </span>
           </motion.div>
 
-          <AnimatedText
-            text="AVINECT"
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold justify-center mb-3 tracking-wide"
+          <motion.img
+            src={`${import.meta.env.BASE_URL}avinect-logo.svg`}
+            alt="AVINECT"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="h-16 md:h-20 lg:h-24 mx-auto mb-3"
           />
 
           <motion.p
@@ -297,7 +300,7 @@ export default function Home() {
               </div>
               <p className="text-white/50 mb-4">
                 高端精选产品线 —— 航司联名定制、精选好物、礼品系列。
-                在 weflye 平台内为旅客提供有品质感的空中购物体验。
+                在 WeFlye 平台内为旅客提供有品质感的空中购物体验。
               </p>
               <Link
                 to="/weflye"
