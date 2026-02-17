@@ -1,0 +1,261 @@
+{
+  "common": {
+    "companyName": "Wonbery",
+    "companyFullName": "Beijing Wonbery Technology Co., Ltd.",
+    "slogan": "Aviation Operations Technology Expert",
+    "backToHome": "Back",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "copyright": "© {{year}} Beijing Wonbery Technology Co., Ltd. All rights reserved.",
+    "stats": {
+      "airlines": "Airlines Served",
+      "airlinesValue": "20+",
+      "aircraft": "Aircraft Covered",
+      "aircraftValue": "1000+",
+      "employees": "Employees Empowered",
+      "employeesValue": "10000+",
+      "years": "Years of Experience",
+      "yearsValue": "18+"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "operations": "Operations",
+    "airport": "Airport",
+    "aocSolutions": "AOC Solutions",
+    "flightCrew": "Flight Crew",
+    "serviceSupport": "Service",
+    "about": "About"
+  },
+  "home": {
+    "badge": "Aviation Operations Technology Expert",
+    "heroTitle": "Smart Aviation Operations",
+    "heroTitleHighlight": "Digital Solutions",
+    "heroDescription": "Dedicated to the R&D, design, and integration of civil aviation operational systems, delivering technology-leading, fully-featured, and secure products and services for airlines",
+    "exploreProducts": "Explore Products",
+    "contactUs": "Contact Us",
+    "services": {
+      "title": "Core Business Areas",
+      "subtitle": "Comprehensive digital solutions across the full aviation operations spectrum",
+      "items": {
+        "operations": {
+          "title": "Operations Control",
+          "description": "AOC intelligent voice dispatch, FOC flight operations management, and flight monitoring for real-time situational awareness and efficient decision-making"
+        },
+        "airport": {
+          "title": "Airport Management",
+          "description": "Surface monitoring & dispatch, remote tower, resource optimization, and counter-drone systems for comprehensive airport operations support"
+        },
+        "aoc": {
+          "title": "AOC Planning & Design",
+          "description": "Operations hall consulting, large-screen display platforms, and integrated design solutions for intelligent operations centers"
+        },
+        "crew": {
+          "title": "Flight Crew",
+          "description": "Electronic flight bag, pre-flight preparation, certificate management, and safety reporting for digitalized crew operations"
+        },
+        "maintenance": {
+          "title": "IT Operations",
+          "description": "MSP managed services and hyper-converged architecture platforms ensuring safe and stable aviation production systems"
+        },
+        "data": {
+          "title": "Data & AI",
+          "description": "Big data analytics, visualization, AI, and operations research algorithms powering smart aviation"
+        }
+      }
+    },
+    "products": {
+      "title": "Core Products",
+      "subtitle": "Technology-driven aviation operations product portfolio",
+      "recovery": {
+        "title": "Intelligent Flight Recovery",
+        "description": "Reduces flight adjustment time from 6-8 hours to 15 minutes, decreases cancellations by 2%, and delays by 7%",
+        "stat1Label": "Adjustment Time",
+        "stat1Value": "15 min",
+        "stat2Label": "Cancellation Reduction",
+        "stat2Value": "2%",
+        "stat3Label": "Delay Reduction",
+        "stat3Value": "7%"
+      },
+      "voice": {
+        "title": "Intelligent Voice Dispatch",
+        "description": "Unified communications dispatch platform integrating voice, wireless, video conferencing, and mobile applications",
+        "stat1Label": "System Reliability",
+        "stat1Value": "99.999%",
+        "stat2Label": "Connection Rate",
+        "stat2Value": "99%"
+      },
+      "monitoring": {
+        "title": "Flight Operations Monitoring",
+        "description": "Integrates charts, weather, NOTAMs, and crew data with GIS-based global electronic mapping for real-time flight tracking"
+      }
+    },
+    "tech": {
+      "title": "Core Technologies",
+      "items": ["Cloud Computing", "Big Data", "Artificial Intelligence", "Operations Research"]
+    },
+    "clients": {
+      "title": "Our Partners",
+      "subtitle": "Serving leading airlines across China"
+    },
+    "cta": {
+      "title": "Shaping the Future of Aviation Operations Together",
+      "description": "Whether you are an airline, airport, or industry partner, we look forward to exploring the limitless possibilities of aviation technology together",
+      "email": "service@wonbery.com"
+    }
+  },
+  "operations": {
+    "badge": "Operations Management",
+    "title": "Operations Management",
+    "subtitle": "AOC/FOC Core Operations Systems",
+    "description": "Comprehensive digital management platform for the entire aviation operations workflow",
+    "pillars": ["Safety", "Real-time", "Efficiency"],
+    "systems": {
+      "voice": {
+        "title": "AOC Intelligent Voice Dispatch",
+        "description": "Assists with event response and decision-making through unified dispatch resources. Supports one-to-one, group, and multi-group calls with seamless wired, wireless, VHF, and 800M frequency integration.",
+        "features": ["One-click Group Dispatch", "VHF/800M Mixed Comms", "Seamless Group Switching"]
+      },
+      "foc": {
+        "title": "FOC Flight Operations Management",
+        "description": "Professional airline operations platform covering flight control, network planning, aircraft resource management, ground support, crew resource management, and operations information management.",
+        "features": ["Automation", "Standardization", "Informatization"]
+      },
+      "monitoring": {
+        "title": "Flight Monitoring Platform",
+        "description": "Integrates charts, weather, and NOTAMs with graphical/digital display; preset threshold alerts; real-time flight data interfaces; ACARS/ADS-B/satellite data fusion; global electronic map tracking; and comprehensive weather analysis for emergency decision support.",
+        "features": ["Multi-source Data Fusion", "Smart Alert System", "Global Tracking"]
+      },
+      "focOps": {
+        "title": "FOC Aviation Operations System",
+        "description": "Combines data collection, risk alerts, flight planning, and crew assignment. Supports private/hybrid cloud deployment with Docker containerization for rapid customization.",
+        "features": ["Containerized Deployment", "Smart Risk Alerts", "Rapid Customization"]
+      },
+      "collaboration": {
+        "title": "Crew Collaboration Platform",
+        "description": "Unified communications platform supporting text, voice, file transfer, screenshots, whiteboard, offline messaging, calls, SMS, email, and message history. Private deployment with local data storage and encrypted transmission.",
+        "features": ["Full-featured Comms", "Private Deployment", "Cross-department Collaboration"]
+      }
+    }
+  },
+  "airport": {
+    "badge": "Airport Operations",
+    "title": "Airport Operations Management",
+    "subtitle": "Comprehensive Digital Airport Operations Support",
+    "pillars": ["Intelligence", "Visualization", "Security"],
+    "systems": {
+      "surface": {
+        "title": "Airport Surface Monitoring & Dispatch",
+        "description": "GIS-based real-time monitoring system covering parking positions, runways, taxiways, flights, ground vehicles, personnel, and unpowered equipment, providing real-time operational status and resource utilization data."
+      },
+      "tower": {
+        "title": "Remote Tower Command System",
+        "description": "Visual flight management with remote transmission capabilities, VHF/800M wireless remote control for ground-air communications, and ADS-B data reception for remote monitoring."
+      },
+      "resource": {
+        "title": "Airport Resource Optimization",
+        "description": "Leverages operations research to maximize gate, jet bridge, and parking allocation efficiency while reducing operational costs and improving service quality."
+      },
+      "drone": {
+        "title": "Counter-Drone Monitoring System",
+        "description": "Commercial drone detection and identification capabilities with remote control and navigation signal jamming for long-range, multi-target drone interception."
+      }
+    }
+  },
+  "aocSolutions": {
+    "badge": "AOC Solutions",
+    "title": "AOC Solutions",
+    "subtitle": "Professional Operations Center Planning & Construction",
+    "pillars": ["Technology", "Professional", "Customized"],
+    "systems": {
+      "consulting": {
+        "title": "AOC Construction Consulting",
+        "description": "Full-cycle consulting for airline AOC operations halls including functional design, system migration, upgrades, interior design, and smart renovations with an experienced team of experts and engineers."
+      },
+      "display": {
+        "title": "AOC Large-Screen Display Platform",
+        "description": "Big data visualization-based large-screen interactive system, delivering customized information display platforms that transform business data into graphical, visual presentations."
+      },
+      "design": {
+        "title": "AOC Integrated Design Solutions",
+        "description": "End-to-end solutions covering functional design, equipment selection, capability upgrades, and innovative technology integration, creating intelligent, modern, and user-friendly operations environments.",
+        "features": ["Intelligent", "Technology-driven", "Modern", "Automated", "User-friendly"]
+      }
+    }
+  },
+  "flightCrew": {
+    "badge": "Flight Crew Systems",
+    "title": "Flight Crew",
+    "subtitle": "Digital Operations Support for Flight Crews",
+    "pillars": ["Real-time", "Accuracy", "Security"],
+    "systems": {
+      "efb": {
+        "title": "Electronic Flight Bag (EFB)",
+        "description": "Digital information management replacing traditional flight manuals with visualization, portability, and intelligent data maintenance capabilities."
+      },
+      "preflight": {
+        "title": "Pre-flight Preparation System",
+        "description": "Comprehensive crew health records, alcohol detection, system checks, remote monitoring, biometric authentication, and health database analytics."
+      },
+      "certificate": {
+        "title": "Certificate Management Platform",
+        "description": "Systematic crew credential management with automatic expiration alerts, paperless document archiving, personnel analytics, and customizable reporting."
+      },
+      "sms": {
+        "title": "SMS Safety Reporting System",
+        "description": "Risk distribution mapping, safety event database analysis, incident prediction, and preventive safety mechanisms for comprehensive safety management."
+      },
+      "brief": {
+        "title": "Flight Release & Dispatch System",
+        "description": "Automated data synchronization, electronic dispatch materials, dynamic preparation matching, and biometric login for digitalized dispatch workflows."
+      }
+    }
+  },
+  "serviceSupport": {
+    "badge": "Service & Support",
+    "title": "Service & Support",
+    "subtitle": "Professional Aviation IT Operations",
+    "pillars": ["Stability", "Professional", "Security"],
+    "systems": {
+      "msp": {
+        "title": "Civil Aviation MSP",
+        "description": "Leveraging world-class cloud platforms including AWS, Alibaba Cloud, Huawei Cloud, Tencent Cloud, and Baidu Cloud, our expert team provides 24/7/365 system management services ensuring continuous stable operations."
+      },
+      "hybrid": {
+        "title": "Hyper-converged Architecture Platform",
+        "description": "Industry-leading microservices architecture enabling zero-downtime user experience with seamless business migration and service continuity.",
+        "features": ["High Reliability", "Easy Deployment", "Light Maintenance"]
+      }
+    }
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "About Us",
+    "subtitle": "Deep Expertise in Aviation IT",
+    "company": {
+      "description": "Founded in 2006 and headquartered in Beijing with a registered capital of 92.58 million yuan, Beijing Wonbery Technology is a technology enterprise jointly established by the Beijing Science and Technology Commission's 863 Program, the Beijing Information Office, and the Chinese Academy of Sciences Graduate School. The company specializes in software R&D, customized aviation software development, enterprise IT consulting, and IoT application integration.",
+      "team": "Wonbery's R&D team consists of graduates from China's top universities with over a decade of aviation informatization experience, serving dozens of domestic airlines, general aviation operators, and airports. The team continuously innovates in flight operations big data analytics, data visualization, AI, and optimization algorithms."
+    },
+    "values": {
+      "vision": {
+        "title": "Vision",
+        "description": "To create lasting value for clients and growth opportunities for employees, becoming China's most professional provider of aviation technology consulting, system integration, and custom software solutions."
+      },
+      "mission": {
+        "title": "Mission",
+        "description": "Delivering services to users, creating value for clients, sharing information publicly, and building platforms for resources."
+      },
+      "purpose": {
+        "title": "Purpose",
+        "description": "Maintaining unwavering customer focus with commitment to technical innovation, comprehensive functionality, stable performance, and excellent service."
+      },
+      "philosophy": {
+        "title": "Philosophy",
+        "description": "With professional dedication, we deliver reliable and advanced system solutions and technical services, aligning with customer needs across organization, technology, market service systems, and corporate values."
+      }
+    },
+    "established": "Founded in 2006",
+    "capital": "Registered Capital: ¥92.58M",
+    "location": "Headquartered in Beijing"
+  }
+}
