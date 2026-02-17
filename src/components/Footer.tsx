@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 interface FooterProps {
   companyName: string
@@ -9,6 +10,8 @@ export default function Footer({
   companyName,
   accentColor = '#00BCD4',
 }: FooterProps) {
+  const { t } = useTranslation()
+
   return (
     <motion.footer
       initial={{ opacity: 0 }}
@@ -35,13 +38,13 @@ export default function Footer({
             href="#"
             className="text-white/40 hover:text-white transition-colors text-sm"
           >
-            隐私政策
+            {t('common.privacyPolicy')}
           </a>
           <a
             href="#"
             className="text-white/40 hover:text-white transition-colors text-sm"
           >
-            联系我们
+            {t('common.contactUs')}
           </a>
         </div>
       </div>

@@ -13,6 +13,7 @@ import '@fontsource/space-grotesk/700.css'
 import '@fontsource/jetbrains-mono/400.css'
 import '@fontsource/jetbrains-mono/500.css'
 import App from './App'
+import './i18n'
 import './styles/index.css'
 
 const basename = import.meta.env.BASE_URL

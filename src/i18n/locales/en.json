@@ -1,0 +1,326 @@
+{
+  "common": {
+    "backToHome": "Back",
+    "learnMore": "Learn More",
+    "visitWebsite": "Visit Website",
+    "contactEmail": "contact@avinect.com",
+    "privacyPolicy": "Privacy Policy",
+    "contactUs": "Contact Us",
+    "copyright": "© {{year}} {{company}}. All rights reserved."
+  },
+  "home": {
+    "badge": "Global Aviation Connect",
+    "subtitle": "Aviation Technology Group",
+    "description": "From airline systems to passenger platforms, from operations control to in-flight connectivity",
+    "descriptionSub": "End-to-end digital solutions for the aviation industry",
+    "exploreBusiness": "Explore",
+    "stats": {
+      "airlines": "Airlines Served",
+      "aircraft": "Aircraft Covered",
+      "employees": "Employees Empowered",
+      "regions": "Regions Covered"
+    },
+    "brandArchitecture": "Brand Portfolio",
+    "brandArchitectureDesc": "Enterprise brand + Passenger platform + Product line — a three-layer architecture covering all aviation tech scenarios",
+    "brands": {
+      "jpmall": {
+        "name": "JPMall",
+        "subtitle": "Airline Onboard Retail Systems",
+        "description": "China's leading onboard sales system and operations service provider, covering major domestic airlines",
+        "type": "B2B · Airline Systems",
+        "tags": ["Onboard Sales", "Offline Payment", "Mall Operations"]
+      },
+      "weflye": {
+        "name": "WeFlye",
+        "subtitle": "Passenger Digital Platform",
+        "description": "In-flight experience platform — from WiFi to content to curated shopping, the complete passenger journey",
+        "type": "B2C · Passenger Platform",
+        "tags": ["In-flight WiFi", "Content", "Mall", "STARRY SKY"]
+      },
+      "wonbery": {
+        "name": "Wonbery",
+        "subtitle": "AOC Technology",
+        "description": "Deep expertise in aviation AOC, providing operations control systems, command communications, and AI voice recognition",
+        "type": "Independent · Tech Brand",
+        "tags": ["AOC Systems", "Communications", "AI Voice"]
+      },
+      "weworks": {
+        "name": "WeWorks",
+        "subtitle": "Enterprise Payroll Platform",
+        "description": "HR payroll services platform with WeChat Pay merchant qualifications",
+        "type": "Independent · Business Brand",
+        "tags": ["Payroll", "WeChat Pay"]
+      }
+    },
+    "starrySky": {
+      "title": "STARRY SKY",
+      "description": "Premium product line — airline co-branded collections, curated selections, and gift series. Delivering a premium in-flight shopping experience on the WeFlye platform."
+    },
+    "capabilities": {
+      "title": "Core Strengths",
+      "subtitle": "Deep integration of professional capabilities and industry expertise",
+      "global": {
+        "title": "Global Presence",
+        "description": "Headquartered in Hong Kong, with operations spanning Asia-Pacific and the Middle East"
+      },
+      "tech": {
+        "title": "Technology-Driven",
+        "description": "Empowering aviation digital transformation with AI, big data, and cutting-edge technologies"
+      },
+      "industry": {
+        "title": "Industry Expertise",
+        "description": "Deep understanding of aviation business scenarios, delivering end-to-end solutions"
+      },
+      "barrier": {
+        "title": "Market Leadership",
+        "description": "JPMall and Wonbery hold leading positions in their respective domains"
+      }
+    },
+    "cta": {
+      "title": "Start a Partnership",
+      "description": "Whether you are an airline, airport, or industry partner, we look forward to exploring the limitless possibilities of aviation technology together"
+    }
+  },
+  "jpmall": {
+    "nav": {
+      "about": "About",
+      "systems": "Core Systems",
+      "models": "Service Models",
+      "contact": "Contact"
+    },
+    "badge": "B2B Airline System Brand",
+    "heroTitle": "JPMall",
+    "heroSubtitle": "Airline Cabin Retail Systems & Operations Provider",
+    "heroDescription": "Providing airlines with one-stop cabin retail solutions from sales systems to supply chain management, driving operations with technology to boost ancillary revenue and lead industry digitalization.",
+    "ctaSystems": "Core Systems",
+    "ctaModels": "Service Models",
+    "heroVisual": {
+      "title": "Cabin Retail",
+      "subtitle": "Systems & Operations Expert"
+    },
+    "stats": {
+      "systems": "Core Systems",
+      "systemsValue": "6",
+      "systemsSuffix": "",
+      "airlines": "Partner Airlines",
+      "airlinesValue": "10",
+      "flights": "Daily Flight Coverage",
+      "flightsValue": "1000",
+      "years": "Industry Experience",
+      "yearsValue": "5",
+      "yearsSuffix": "yr+"
+    },
+    "systemsSection": {
+      "title": "Core System Capabilities",
+      "subtitle": "Six core systems covering the entire airline cabin retail business chain"
+    },
+    "systems": {
+      "sales": {
+        "title": "Onboard Sales Management",
+        "description": "Proprietary full-process onboard sales management platform covering orders, inventory, settlement, and data analytics",
+        "features": ["Order Lifecycle Management", "Real-time Inventory Control", "Multi-dimensional Reports"]
+      },
+      "payment": {
+        "title": "Offline Payment System",
+        "description": "Offline POS solution designed for aviation, supporting multiple payment methods with secure transactions at 30,000 feet",
+        "features": ["Offline Transactions", "Multi-payment Support", "Encrypted Transmission"]
+      },
+      "mall": {
+        "title": "Mall Operations Platform",
+        "description": "One-stop e-commerce operations system for airlines, supporting product management, marketing campaigns, and loyalty programs",
+        "features": ["Full Category Management", "Flexible Marketing Tools", "Loyalty Point System"]
+      },
+      "supply": {
+        "title": "Supply Chain Management",
+        "description": "End-to-end supply chain digitalization from procurement to warehouse management to onboard delivery",
+        "features": ["Centralized Procurement", "Smart Warehousing", "Quality Traceability"]
+      },
+      "logistics": {
+        "title": "Logistics & Delivery",
+        "description": "Aviation-specific logistics management system, precisely synchronized with flight schedules to ensure timely onboard delivery",
+        "features": ["Flight Schedule Sync", "Scheduled Dispatch", "Emergency Response"]
+      },
+      "analytics": {
+        "title": "Data Analytics Platform",
+        "description": "Multi-dimensional business analytics platform providing data-driven insights for airline decision-making",
+        "features": ["Sales Trend Analysis", "Passenger Preference Insights", "Operational Efficiency"]
+      }
+    },
+    "modelsSection": {
+      "title": "Service Models",
+      "subtitle": "Flexible partnership models tailored to different airline needs and growth stages"
+    },
+    "models": {
+      "fullService": {
+        "title": "Full Outsourced Operations",
+        "subtitle": "End-to-End Service",
+        "description": "Airlines fully entrust their onboard retail operations to JPMall. We provide end-to-end services from staffing, system deployment, and supply chain management to daily operations, allowing airlines to focus on their core business.",
+        "suitable": "Ideal for airlines looking to quickly establish or upgrade onboard retail operations",
+        "highlights": ["Staff Deployment & Management", "Full System Deployment", "Integrated Supply Chain", "Performance Guarantee"]
+      },
+      "techOutput": {
+        "title": "Technology System Output",
+        "subtitle": "Platform Licensing",
+        "description": "For airlines with mature operations teams, we provide JPMall's core technology systems including sales management, offline POS, and data analytics platforms to empower independent operations.",
+        "suitable": "Ideal for airlines with existing teams seeking system capability upgrades",
+        "highlights": ["Rapid Deployment", "Custom Development", "Technical Training", "Continuous Updates"]
+      }
+    },
+    "advantages": {
+      "title": "Core Advantages",
+      "subtitle": "Deep expertise in airline cabin retail, building industry-leading barriers",
+      "market": {
+        "title": "Market Leadership",
+        "description": "Serving multiple major domestic airlines with extensive system coverage and deep industry expertise"
+      },
+      "security": {
+        "title": "Secure & Reliable",
+        "description": "Financial-grade security standards, stable offline operation, ensuring every transaction is safe"
+      },
+      "data": {
+        "title": "Data-Driven Operations",
+        "description": "Intelligent data analytics driving precision marketing, continuously optimizing product mix and sales strategies"
+      },
+      "expansion": {
+        "title": "Asia-Pacific Expansion",
+        "description": "Building on domestic success, actively expanding airline partnerships across Asia-Pacific with proven solutions"
+      }
+    },
+    "cta": {
+      "title": "Shaping the Future of Cabin Retail Together",
+      "description": "Whether you seek full outsourced operations or technology system upgrades, JPMall delivers professional and reliable solutions",
+      "business": "Business Inquiry",
+      "systemCapabilities": "System Capabilities"
+    }
+  },
+  "weflye": {
+    "nav": {
+      "journey": "Passenger Journey",
+      "platform": "Platform",
+      "starrySky": "STARRY SKY",
+      "ai": "AI Content Factory",
+      "evtol": "Low-Altitude Economy",
+      "contact": "Contact"
+    },
+    "badge": "Passenger Digital Platform",
+    "heroSubtitle": "In-Flight Experience Platform",
+    "heroDescription": "WiFi x Content x Mall x Private Domain",
+    "heroDescriptionSub": "Complete digital experience loop for the entire passenger journey",
+    "exploreJourney": "Explore",
+    "stats": {
+      "touchpoints": "Journey Touchpoints",
+      "aiContent": "AI Content / Month",
+      "airlinePartners": "Airline Partners",
+      "passengers": "Passengers Served"
+    },
+    "journey": {
+      "title": "Full Passenger Journey",
+      "subtitle": "From the moment of WiFi connection to post-flight engagement, WeFlye creates a complete digital experience loop",
+      "steps": {
+        "wifi": { "label": "Connect WiFi", "sublabel": "WiFi Portal" },
+        "content": { "label": "Browse Content", "sublabel": "Shows / Games / News" },
+        "mall": { "label": "In-flight Mall", "sublabel": "Sky Retail" },
+        "starry": { "label": "STARRY SKY", "sublabel": "Premium Selection" },
+        "private": { "label": "Private Domain", "sublabel": "WeChat Enterprise" }
+      },
+      "loop": "Repeat Purchase — Continuous Operations Loop"
+    },
+    "platform": {
+      "title": "Core Platform Features",
+      "subtitle": "WiFi Portal x Content Platform x Sky Mall — three pillars building the complete passenger experience",
+      "wifi": {
+        "title": "WiFi Portal",
+        "subtitle": "Sky Gateway",
+        "description": "The first touchpoint when passengers connect to onboard WiFi — a unified portal for brand display and service entry, powering content distribution and traffic routing",
+        "features": ["Custom Brand Portal", "Smart Content Recommendation", "Traffic Distribution Engine"]
+      },
+      "content": {
+        "title": "Content Platform",
+        "subtitle": "Shows / Games / News",
+        "description": "A full-flight entertainment content ecosystem covering short series, casual games, and real-time news in one seamless experience",
+        "features": ["AI Short Series", "Casual Game Matrix", "Real-time News Feed"]
+      },
+      "mall": {
+        "title": "In-Flight Mall",
+        "subtitle": "Sky Retail Mall",
+        "description": "Shopping at 30,000 feet — airline co-branded products, destination specialties, and duty-free selections turning every flight into a shopping experience",
+        "features": ["Route-specific Products", "Destination Goods", "Duty-free Channel"]
+      }
+    },
+    "starrySky": {
+      "badge": "PREMIUM",
+      "title": "STARRY SKY",
+      "subtitle": "Premium Product Line",
+      "description": "WeFlye's premium retail brand — connecting the world through aviation, curating global excellence for a one-of-a-kind in-flight shopping experience",
+      "features": {
+        "collab": {
+          "title": "Airline Co-branded Series",
+          "description": "Deep collaboration with major airlines to launch exclusive co-branded products, creating differentiated premium travel experiences"
+        },
+        "curated": {
+          "title": "Artisan-Curated Selections",
+          "description": "Carefully curated by global buyers, every product passes rigorous quality control — only the finest for your journey"
+        },
+        "gift": {
+          "title": "Gift Collection",
+          "description": "Business gifts, travel souvenirs — thoughtfully designed gift sets that convey every sentiment perfectly"
+        }
+      },
+      "quote": "\"At 30,000 feet, discover beauty like the starry sky\"",
+      "tagline": "Airline Co-branded / Artisan Curated / Gift Collection — STARRY SKY Premium Product Line"
+    },
+    "ai": {
+      "badge": "AI-Powered",
+      "title": "AI Content Factory",
+      "subtitle": "From AI scripts to AI videos, an automated content production pipeline continuously delivering quality content for the WeFlye platform",
+      "capabilities": {
+        "script": { "title": "AI Script Generation", "description": "Intelligent scriptwriting powered by large language models, producing high-quality short series scripts at scale" },
+        "voice": { "title": "AI Voice Synthesis", "description": "Multi-language, multi-voice AI dubbing technology, reaching passengers worldwide" },
+        "video": { "title": "AI Video Generation", "description": "Automated text-to-video production pipeline, producing hundreds of quality short series daily" },
+        "game": { "title": "AI Game Content", "description": "Intelligently generated casual games and interactive content, enriching the in-flight entertainment ecosystem" }
+      },
+      "pipeline": "AI Content Production Pipeline",
+      "steps": {
+        "script": "AI Script",
+        "voice": "AI Dubbing",
+        "visual": "AI Visuals",
+        "compose": "Auto Compose"
+      },
+      "techStack": "Tech Stack"
+    },
+    "evtol": {
+      "badge": "Strategic Initiative",
+      "title": "Low-Altitude Economy",
+      "titleHighlight": "New Frontier",
+      "description": "As eVTOL (electric vertical takeoff and landing) technology matures, urban air mobility is set for explosive growth. WeFlye's technology and passenger operations expertise will seamlessly extend to low-altitude travel scenarios.",
+      "comm": {
+        "title": "eVTOL Communication Modules",
+        "description": "Proprietary lightweight, high-reliability communication devices compatible with various eVTOL models"
+      },
+      "network": {
+        "title": "Ground Network Infrastructure",
+        "description": "Building low-altitude communication networks ensuring seamless air-ground connectivity"
+      },
+      "experience": {
+        "title": "Passenger Experience Extension",
+        "description": "Bringing WeFlye's content and retail capabilities into low-altitude travel, building an all-scenario passenger platform"
+      },
+      "ready": "eVTOL Ready"
+    },
+    "cta": {
+      "title": "Co-creating the Future of Passenger Experience",
+      "description": "Whether it's airline partnerships, content co-creation, brand collaboration, or low-altitude economy exploration — we look forward to working together to deliver better in-flight experiences"
+    }
+  },
+  "wonbery": {
+    "nav": {
+      "about": "About"
+    },
+    "location": "Beijing",
+    "cnName": "Wonbery Tech",
+    "description": "Focused on aviation AOC technology services, serving 20+ airlines, 1,000+ aircraft, and 10,000+ employees daily. Providing operations control center systems, command communication terminals, and AI voice recognition solutions.",
+    "tags": ["AOC Operations Control", "Command Communications", "Video Conferencing", "AI Voice Recognition", "Data Encryption", "High Availability"],
+    "visitWebsite": "Visit Wonbery Website",
+    "footerName": "Wonbery Tech"
+  }
+}

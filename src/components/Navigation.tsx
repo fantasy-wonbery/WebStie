@@ -2,6 +2,8 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 
 interface NavigationProps {
   brand: string
@@ -18,6 +20,7 @@ export default function Navigation({
 }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
+  const { t } = useTranslation()
 
   return (
     <motion.nav
@@ -36,7 +39,7 @@ export default function Navigation({
                 className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
               >
                 <ArrowLeft size={20} />
-                <span className="hidden sm:inline">返回总览</span>
+                <span className="hidden sm:inline">{t('common.backToHome')}</span>
               </Link>
             )}
             <span
@@ -62,15 +65,19 @@ export default function Navigation({
                 {item.label}
               </a>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile menu button */}
-          <button
-            className="md:hidden text-white/60 hover:text-white"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex md:hidden items-center gap-3">
+            <LanguageSwitcher />
+            <button
+              className="text-white/60 hover:text-white"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}

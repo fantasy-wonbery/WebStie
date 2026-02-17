@@ -1,0 +1,326 @@
+{
+  "common": {
+    "backToHome": "返回总览",
+    "learnMore": "了解更多",
+    "visitWebsite": "访问官网",
+    "contactEmail": "contact@avinect.com",
+    "privacyPolicy": "隐私政策",
+    "contactUs": "联系我们",
+    "copyright": "© {{year}} {{company}}. All rights reserved."
+  },
+  "home": {
+    "badge": "Global Aviation Connect",
+    "subtitle": "航空科技集团",
+    "description": "从航司系统到旅客平台，从运行控制到空中互联",
+    "descriptionSub": "为航空业提供全链路数字化解决方案",
+    "exploreBusiness": "探索业务",
+    "stats": {
+      "airlines": "服务航司",
+      "aircraft": "覆盖飞机",
+      "employees": "赋能员工",
+      "regions": "覆盖地区"
+    },
+    "brandArchitecture": "品牌版图",
+    "brandArchitectureDesc": "企业品牌 + 旅客平台 + 产品线，三层架构覆盖航空科技全场景",
+    "brands": {
+      "jpmall": {
+        "name": "鲸品 JPMall",
+        "subtitle": "航司机上零售系统",
+        "description": "国内领先的机上销售系统与运营服务商，覆盖国内主要航司",
+        "type": "B2B · 航司系统",
+        "tags": ["机上销售系统", "离线收款", "商城运营"]
+      },
+      "weflye": {
+        "name": "WeFlye",
+        "subtitle": "旅客数字平台",
+        "description": "旅客空中体验平台——从连WiFi到内容消费到精选购物的完整旅程",
+        "type": "B2C · 旅客平台",
+        "tags": ["机上WiFi", "内容平台", "在线商城", "STARRY SKY"]
+      },
+      "wonbery": {
+        "name": "Wonbery",
+        "subtitle": "AOC 运行控制技术",
+        "description": "深耕航空AOC领域，提供运行控制系统、指挥通信、AI语音识别",
+        "type": "独立 · 技术品牌",
+        "tags": ["AOC系统", "指挥通信", "AI语音"]
+      },
+      "weworks": {
+        "name": "微工卡",
+        "subtitle": "企业发薪平台",
+        "description": "面向企业HR的薪资发放服务平台，微信支付服务商资质",
+        "type": "独立 · 业务品牌",
+        "tags": ["发薪平台", "微信支付"]
+      }
+    },
+    "starrySky": {
+      "title": "STARRY SKY",
+      "description": "高端精选产品线 —— 航司联名定制、精选好物、礼品系列。在 WeFlye 平台内为旅客提供有品质感的空中购物体验。"
+    },
+    "capabilities": {
+      "title": "核心优势",
+      "subtitle": "专业能力与行业经验的深度融合",
+      "global": {
+        "title": "国际化布局",
+        "description": "香港总部，业务覆盖亚太、中东等多个地区"
+      },
+      "tech": {
+        "title": "技术创新驱动",
+        "description": "以AI、大数据等前沿技术赋能航空数字化转型"
+      },
+      "industry": {
+        "title": "行业深耕",
+        "description": "深刻理解航空业务场景，提供端到端解决方案"
+      },
+      "barrier": {
+        "title": "行业壁垒",
+        "description": "JPMall与Wonbery在各自领域具备领先市场地位"
+      }
+    },
+    "cta": {
+      "title": "开启合作",
+      "description": "无论您是航空公司、机场还是行业合作伙伴，我们期待与您共同探索航空科技的无限可能"
+    }
+  },
+  "jpmall": {
+    "nav": {
+      "about": "关于鲸品",
+      "systems": "核心系统",
+      "models": "服务模式",
+      "contact": "联系我们"
+    },
+    "badge": "B2B 航司系统品牌",
+    "heroTitle": "鲸品 JPMall",
+    "heroSubtitle": "航空客舱零售系统与运营服务商",
+    "heroDescription": "为航司提供从销售系统到供应链管理的一站式客舱零售解决方案，以技术驱动运营，助力航司提升非票收入，引领行业数字化升级。",
+    "ctaSystems": "核心系统",
+    "ctaModels": "服务模式",
+    "heroVisual": {
+      "title": "客舱零售",
+      "subtitle": "系统与运营专家"
+    },
+    "stats": {
+      "systems": "核心系统",
+      "systemsValue": "6",
+      "systemsSuffix": "大",
+      "airlines": "合作航司",
+      "airlinesValue": "10",
+      "flights": "日均航班覆盖",
+      "flightsValue": "1000",
+      "years": "行业深耕",
+      "yearsValue": "5",
+      "yearsSuffix": "年+"
+    },
+    "systemsSection": {
+      "title": "核心系统能力",
+      "subtitle": "覆盖航空客舱零售全业务链的六大核心系统"
+    },
+    "systems": {
+      "sales": {
+        "title": "机上销售管理系统",
+        "description": "自主研发的全流程机上销售管理平台，覆盖订单、库存、结算、数据分析等完整业务链条",
+        "features": ["订单全生命周期管理", "实时库存管控", "多维度数据报表"]
+      },
+      "payment": {
+        "title": "离线支付系统",
+        "description": "专为航空场景设计的离线收银解决方案，支持多种支付方式，确保万米高空交易安全可靠",
+        "features": ["离线交易能力", "多支付方式", "安全加密传输"]
+      },
+      "mall": {
+        "title": "商城运营平台",
+        "description": "面向航司的一站式电商运营系统，支持商品管理、营销活动、会员体系等运营能力",
+        "features": ["商品全品类管理", "灵活营销工具", "会员积分体系"]
+      },
+      "supply": {
+        "title": "供应链管理",
+        "description": "从采购寻源、仓储管理到机上配送的全链路供应链数字化管理",
+        "features": ["集中采购管理", "智能仓储系统", "质量追溯体系"]
+      },
+      "logistics": {
+        "title": "物流配送系统",
+        "description": "航空专属物流配送管理系统，精准对接航班计划，保障商品准时上机",
+        "features": ["航班动态对接", "定时配送调度", "应急保障机制"]
+      },
+      "analytics": {
+        "title": "数据分析平台",
+        "description": "多维度业务数据分析平台，为航司经营决策提供数据驱动的洞察与建议",
+        "features": ["销售趋势分析", "旅客偏好洞察", "经营效能评估"]
+      }
+    },
+    "modelsSection": {
+      "title": "服务模式",
+      "subtitle": "灵活的合作方式，适配不同航司的业务需求与发展阶段"
+    },
+    "models": {
+      "fullService": {
+        "title": "全委托运营",
+        "subtitle": "Full Outsourced Operations",
+        "description": "航司将机上零售业务全权委托给鲸品，由我们提供从人员配置、系统建设、供应链管理到日常运营的端到端服务，航司可专注于核心主业。",
+        "suitable": "适合希望快速建立或升级机上零售业务的航司",
+        "highlights": ["人员派驻与管理", "系统全套部署", "供应链一体化", "运营绩效保障"]
+      },
+      "techOutput": {
+        "title": "技术系统输出",
+        "subtitle": "Technology System Output",
+        "description": "面向拥有成熟运营团队的航司，输出鲸品核心技术系统能力，包括销售管理系统、离线收银系统、数据分析平台等，赋能航司自主运营。",
+        "suitable": "适合已有运营团队、需要系统能力升级的航司",
+        "highlights": ["系统快速部署", "定制化开发", "技术培训支持", "持续迭代升级"]
+      }
+    },
+    "advantages": {
+      "title": "核心优势",
+      "subtitle": "深耕航空客舱零售领域，构建行业领先壁垒",
+      "market": {
+        "title": "市场领先地位",
+        "description": "服务国内多家主要航司，系统覆盖广泛，积累深厚行业经验"
+      },
+      "security": {
+        "title": "安全稳定可靠",
+        "description": "金融级安全标准，离线场景稳定运行，保障每一笔交易安全无忧"
+      },
+      "data": {
+        "title": "数据驱动运营",
+        "description": "智能数据分析驱动精准营销，持续优化商品结构与销售策略"
+      },
+      "expansion": {
+        "title": "亚太市场拓展",
+        "description": "立足国内成功经验，积极拓展亚太区域航司合作，输出成熟解决方案"
+      }
+    },
+    "cta": {
+      "title": "携手共创客舱零售新格局",
+      "description": "无论您是寻求全委托运营还是技术系统升级，鲸品 JPMall 都能为您提供专业、可靠的解决方案",
+      "business": "商务合作咨询",
+      "systemCapabilities": "了解系统能力"
+    }
+  },
+  "weflye": {
+    "nav": {
+      "journey": "旅客旅程",
+      "platform": "平台功能",
+      "starrySky": "STARRY SKY",
+      "ai": "AI 内容工厂",
+      "evtol": "低空经济",
+      "contact": "联系我们"
+    },
+    "badge": "旅客数字平台",
+    "heroSubtitle": "旅客空中体验平台",
+    "heroDescription": "WiFi 连接 x 内容娱乐 x 空中商城 x 私域运营",
+    "heroDescriptionSub": "覆盖旅客全航程的数字化体验闭环",
+    "exploreJourney": "探索旅程",
+    "stats": {
+      "touchpoints": "旅客旅程触点",
+      "aiContent": "AI 生成内容/月",
+      "airlinePartners": "航司合作伙伴",
+      "passengers": "服务旅客"
+    },
+    "journey": {
+      "title": "旅客全旅程体验",
+      "subtitle": "从连接 WiFi 的第一刻起，到下机后的持续互动，WeFlye 打造完整的旅客数字化旅程闭环",
+      "steps": {
+        "wifi": { "label": "连接 WiFi", "sublabel": "WiFi Portal" },
+        "content": { "label": "浏览内容", "sublabel": "短剧 / 游戏 / 资讯" },
+        "mall": { "label": "机上商城", "sublabel": "空中零售" },
+        "starry": { "label": "STARRY SKY", "sublabel": "高端甄选" },
+        "private": { "label": "私域运营", "sublabel": "微信企业域" }
+      },
+      "loop": "私域复购 -- 持续运营闭环"
+    },
+    "platform": {
+      "title": "平台核心功能",
+      "subtitle": "WiFi 门户 x 内容平台 x 空中商城，三大板块构建旅客完整体验",
+      "wifi": {
+        "title": "WiFi Portal",
+        "subtitle": "空中入口",
+        "description": "旅客连接机载 WiFi 的第一触点，品牌展示与服务入口的统一门户，承载内容分发与流量引导",
+        "features": ["品牌定制门户", "智能内容推荐", "流量分发引擎"]
+      },
+      "content": {
+        "title": "内容平台",
+        "subtitle": "短剧 / 游戏 / 资讯",
+        "description": "覆盖旅客全航程的娱乐内容生态，短剧追更、休闲游戏、实时资讯一站式体验",
+        "features": ["AI 短剧内容", "休闲游戏矩阵", "实时新闻资讯"]
+      },
+      "mall": {
+        "title": "机上商城",
+        "subtitle": "空中零售 Mall",
+        "description": "万米高空的购物体验，航司联名、目的地特产、免税精选，让旅途成为消费场景",
+        "features": ["航线特色商品", "目的地好物", "免税精选频道"]
+      }
+    },
+    "starrySky": {
+      "badge": "PREMIUM",
+      "title": "STARRY SKY",
+      "subtitle": "高端甄选产品线",
+      "description": "WeFlye 旗下高端零售品牌，以航空为纽带，甄选全球好物，为旅客打造独一无二的空中购物体验",
+      "features": {
+        "collab": {
+          "title": "航司联名系列",
+          "description": "与各大航空公司深度合作，推出专属联名产品，打造差异化高端旅行体验"
+        },
+        "curated": {
+          "title": "匠心甄选好物",
+          "description": "全球买手精心挑选，每一件商品都经过严格品控，只为旅途中的品质之选"
+        },
+        "gift": {
+          "title": "礼遇系列",
+          "description": "商务馈赠、旅行纪念，精心设计的礼品套装，让每一份心意都恰到好处"
+        }
+      },
+      "quote": "\u201c在万米高空，遇见星空般的美好\u201d",
+      "tagline": "航司联名 / 匠心甄选 / 礼遇系列 -- STARRY SKY 高端产品线"
+    },
+    "ai": {
+      "badge": "AI-Powered",
+      "title": "AI 内容工厂",
+      "subtitle": "从 AI 剧本到 AI 视频，自动化内容生产流水线为 WeFlye 平台源源不断地输出优质内容",
+      "capabilities": {
+        "script": { "title": "AI 剧本生成", "description": "基于大语言模型的智能剧本创作，批量产出高质量短剧脚本" },
+        "voice": { "title": "AI 语音合成", "description": "多语种、多音色 AI 配音技术，让内容触达全球旅客" },
+        "video": { "title": "AI 视频生成", "description": "从文字到画面的自动化视频流水线，日产百条优质短剧" },
+        "game": { "title": "AI 游戏内容", "description": "智能生成休闲游戏与互动内容，丰富机上娱乐生态" }
+      },
+      "pipeline": "AI 内容生产流水线",
+      "steps": {
+        "script": "AI 剧本",
+        "voice": "AI 配音",
+        "visual": "AI 画面",
+        "compose": "自动合成"
+      },
+      "techStack": "技术栈"
+    },
+    "evtol": {
+      "badge": "战略布局",
+      "title": "低空经济",
+      "titleHighlight": "新赛道",
+      "description": "随着 eVTOL（电动垂直起降飞行器）技术的成熟，城市空中交通即将迎来爆发式增长。WeFlye 的技术积累与旅客运营经验，将无缝延伸至低空出行场景。",
+      "comm": {
+        "title": "eVTOL 通信模块",
+        "description": "自主研发的轻量化、高可靠通信设备，适配各类 eVTOL 机型"
+      },
+      "network": {
+        "title": "地面网络基建",
+        "description": "构建低空通信网络，确保空地一体化无缝连接"
+      },
+      "experience": {
+        "title": "旅客体验延伸",
+        "description": "将 WeFlye 的内容与零售能力引入低空出行，打造全场景旅客平台"
+      },
+      "ready": "eVTOL Ready"
+    },
+    "cta": {
+      "title": "共创旅客体验未来",
+      "description": "无论是航司合作、内容共创、品牌联名，还是低空经济探索，我们期待与您携手，为每一位旅客带来更美好的空中体验"
+    }
+  },
+  "wonbery": {
+    "nav": {
+      "about": "关于"
+    },
+    "location": "北京",
+    "cnName": "网博科技",
+    "description": "专注航空 AOC 技术服务，每天为 20+ 航空公司、1000+ 架飞机、10000+ 员工提供服务。提供运行控制中心系统、指挥通信终端、AI 语音识别等专业解决方案。",
+    "tags": ["AOC 运行控制", "指挥通信", "视频会议", "AI 语音识别", "数据加密", "高可用"],
+    "visitWebsite": "访问 Wonbery 官网",
+    "footerName": "Wonbery 网博科技"
+  }
+}

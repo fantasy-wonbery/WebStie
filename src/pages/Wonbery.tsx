@@ -8,12 +8,17 @@ import {
   ParticleField,
   Footer,
 } from '../components'
-
-const navItems = [
-  { label: '关于', href: '#about' },
-]
+import { useTranslation } from 'react-i18next'
 
 export default function Wonbery() {
+  const { t } = useTranslation()
+
+  const navItems = [
+    { label: t('wonbery.nav.about'), href: '#about' },
+  ]
+
+  const tags = t('wonbery.tags', { returnObjects: true }) as string[]
+
   return (
     <PageLayout className="bg-wonbery-primary">
       <ParticleField color="#5FA8D3" count={400} />
@@ -35,7 +40,7 @@ export default function Wonbery() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wonbery-accent/10 border border-wonbery-accent/20 mb-6"
           >
             <MapPin size={16} className="text-wonbery-accent" />
-            <span className="text-wonbery-accent text-sm">北京</span>
+            <span className="text-wonbery-accent text-sm">{t('wonbery.location')}</span>
           </motion.div>
 
           <motion.div
@@ -48,7 +53,7 @@ export default function Wonbery() {
               Wonbery
             </h1>
             <h2 className="text-2xl md:text-3xl font-display font-bold text-wonbery-accent">
-              网博科技
+              {t('wonbery.cnName')}
             </h2>
           </motion.div>
 
@@ -58,8 +63,7 @@ export default function Wonbery() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-lg text-white/50 mb-6 max-w-2xl mx-auto"
           >
-            专注航空 AOC 技术服务，每天为 20+ 航空公司、1000+ 架飞机、10000+ 员工提供服务。
-            提供运行控制中心系统、指挥通信终端、AI 语音识别等专业解决方案。
+            {t('wonbery.description')}
           </motion.p>
 
           {/* Feature tags */}
@@ -69,16 +73,14 @@ export default function Wonbery() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="flex flex-wrap justify-center gap-3 mb-10"
           >
-            {['AOC 运行控制', '指挥通信', '视频会议', 'AI 语音识别', '数据加密', '高可用'].map(
-              (tag) => (
-                <span
-                  key={tag}
-                  className="px-4 py-1.5 rounded-full text-sm bg-white/5 border border-white/10 text-white/60"
-                >
-                  {tag}
-                </span>
-              )
-            )}
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-4 py-1.5 rounded-full text-sm bg-white/5 border border-white/10 text-white/60"
+              >
+                {tag}
+              </span>
+            ))}
           </motion.div>
 
           {/* Command center visualization */}
@@ -133,7 +135,7 @@ export default function Wonbery() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-10 py-4 rounded-xl bg-wonbery-accent text-wonbery-primary font-semibold text-lg hover:bg-wonbery-accent/90 transition-all hover:scale-105"
             >
-              访问 Wonbery 官网
+              {t('wonbery.visitWebsite')}
               <ExternalLink size={20} />
             </a>
             <p className="text-white/30 text-sm mt-4">www.wonbery.com</p>
@@ -141,7 +143,7 @@ export default function Wonbery() {
         </div>
       </Hero>
 
-      <Footer companyName="Wonbery 网博科技" accentColor="#5FA8D3" />
+      <Footer companyName={t('wonbery.footerName')} accentColor="#5FA8D3" />
     </PageLayout>
   )
 }
