@@ -39,6 +39,10 @@
       "title": "核心业务领域",
       "subtitle": "覆盖航空运行全场景的数字化解决方案",
       "items": {
+        "passenger": {
+          "title": "旅客服务",
+          "description": "交互式娱乐体验、个性化定制服务，满足旅客多元化需求"
+        },
         "operations": {
           "title": "运行控制",
           "description": "AOC智能语音调度、FOC航班运行管理、航班监控平台，实现实时态势感知与高效决策"
@@ -58,10 +62,6 @@
         "maintenance": {
           "title": "IT运维服务",
           "description": "MSP托管服务、超融合架构平台，保障航空生产系统安全稳定运行"
-        },
-        "data": {
-          "title": "数据与AI",
-          "description": "大数据分析、可视化展示、AI人工智能、运筹优化算法，赋能智慧航空"
         }
       }
     },

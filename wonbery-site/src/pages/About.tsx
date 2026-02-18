@@ -3,124 +3,131 @@ import { motion } from 'framer-motion'
 import { Calendar, Building2, MapPin, Eye, Target, Heart, Lightbulb } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import Section from '../components/Section'
-import PageHero from '../components/PageHero'
 
-const fadeUp = {
-  initial: { opacity: 0, y: 24 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true } as const,
-}
+const B = import.meta.env.BASE_URL
 
-const values = [
-  { key: 'vision', icon: Eye },
-  { key: 'mission', icon: Target },
-  { key: 'purpose', icon: Heart },
-  { key: 'philosophy', icon: Lightbulb },
-] as const
-
-const facts = [
-  { key: 'established', icon: Calendar },
-  { key: 'capital', icon: Building2 },
-  { key: 'location', icon: MapPin },
-] as const
+const valueIcons = [Eye, Target, Heart, Lightbulb]
 
 export default function About() {
   const { t } = useTranslation()
 
+  const values = (['vision', 'mission', 'purpose', 'philosophy'] as const).map((key, i) => ({
+    key,
+    icon: valueIcons[i],
+    title: t(`about.values.${key}.title`),
+    description: t(`about.values.${key}.description`),
+  }))
+
   return (
-    <div className="min-h-screen bg-primary">
+    <div className="min-h-screen bg-white">
       <Navigation showBack />
 
       {/* Hero */}
-      <PageHero
-        badge={t('about.badge')}
-        title={t('about.title')}
-        subtitle={t('about.subtitle')}
-      />
+      <section className="relative pt-16 pb-20 bg-dark overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${B}images/about/Office-large-3.jpg)` }} />
+        <div className="absolute inset-0 bg-dark/80" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-8 text-center">
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-medium mb-6">
+            {t('about.badge')}
+          </div>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">{t('about.title')}</h1>
+          <p className="text-white/60 text-lg max-w-2xl mx-auto">{t('about.subtitle')}</p>
+        </div>
+      </section>
 
-      {/* Company Description */}
-      <Section>
-        <div className="grid md:grid-cols-2 gap-6">
-          {(['description', 'team'] as const).map((key, i) => (
-            <motion.div
-              key={key}
-              {...fadeUp}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="group relative"
-            >
-              <div className="absolute -inset-0.5 rounded-2xl bg-accent/0 group-hover:bg-accent/10 blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
-              <div className="relative glass-card p-6 md:p-8 h-full">
-                <p className="text-white/70 leading-relaxed text-[15px]">
-                  {t(`about.company.${key}`)}
-                </p>
+      {/* Company stats */}
+      <section className="relative -mt-12 z-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl shadow-2xl p-8 grid grid-cols-3 gap-6"
+          >
+            {[
+              { icon: Calendar, text: t('about.established') },
+              { icon: Building2, text: t('about.capital') },
+              { icon: MapPin, text: t('about.location') },
+            ].map((item, i) => (
+              <div key={i} className="text-center">
+                <item.icon size={28} className="text-primary mx-auto mb-2" />
+                <div className="font-display font-semibold text-gray-900">{item.text}</div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Company description */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">
+                {t('about.badge') === '关于我们' ? '公司简介' : 'Company Overview'}
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-6">{t('about.company.description')}</p>
+              <p className="text-gray-600 leading-relaxed">{t('about.company.team')}</p>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <div className="grid grid-cols-2 gap-4">
+                <img src={B + 'images/about/Office-large-3.jpg'} alt="" className="rounded-xl shadow-lg w-full h-48 object-cover" />
+                <img src={B + 'images/about/office03.jpg'} alt="" className="rounded-xl shadow-lg w-full h-48 object-cover mt-8" />
+                <img src={B + 'images/about/tjjapan02.jpg'} alt="" className="rounded-xl shadow-lg w-full h-48 object-cover col-span-2" />
               </div>
             </motion.div>
-          ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
-      {/* Key Facts Bar */}
-      <Section className="!py-0">
-        <motion.div
-          {...fadeUp}
-          transition={{ duration: 0.5 }}
-          className="glass-card p-6 md:p-8"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {facts.map((fact, i) => {
-              const Icon = fact.icon
+      {/* Values */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((val, i) => {
+              const Icon = val.icon
               return (
                 <motion.div
-                  key={fact.key}
-                  {...fadeUp}
-                  transition={{ delay: i * 0.12, duration: 0.5 }}
-                  className="flex items-center gap-4 justify-center"
+                  key={val.key}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="card text-center"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-accent" />
+                  <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <Icon size={28} className="text-primary" />
                   </div>
-                  <span className="text-white/80 font-medium text-[15px]">
-                    {t(`about.${fact.key}`)}
-                  </span>
+                  <h3 className="font-display font-bold text-gray-900 text-lg mb-3">{val.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{val.description}</p>
                 </motion.div>
               )
             })}
           </div>
-        </motion.div>
-      </Section>
-
-      {/* Values */}
-      <Section>
-        <div className="grid md:grid-cols-2 gap-6">
-          {values.map((value, i) => {
-            const Icon = value.icon
-            return (
-              <motion.div
-                key={value.key}
-                {...fadeUp}
-                transition={{ delay: i * 0.12, duration: 0.5 }}
-                className="group relative"
-              >
-                <div className="absolute -inset-0.5 rounded-2xl bg-accent/0 group-hover:bg-accent/10 blur-xl transition-all duration-500 opacity-0 group-hover:opacity-100" />
-                <div className="relative glass-card p-6 md:p-8 h-full">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-accent" />
-                    </div>
-                    <h3 className="text-lg font-display font-semibold text-white">
-                      {t(`about.values.${value.key}.title`)}
-                    </h3>
-                  </div>
-                  <p className="text-white/60 leading-relaxed text-[15px]">
-                    {t(`about.values.${value.key}.description`)}
-                  </p>
-                </div>
-              </motion.div>
-            )
-          })}
         </div>
-      </Section>
+      </section>
+
+      {/* Qualifications */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl font-display font-bold text-gray-900 text-center mb-12"
+          >
+            {t('about.badge') === '关于我们' ? '公司资质' : 'Corporate Qualifications'}
+          </motion.h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card overflow-hidden p-0">
+              <img src={B + 'images/about/ca_ryzs-1.jpg'} alt="" className="w-full h-64 object-cover" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="card overflow-hidden p-0">
+              <img src={B + 'images/about/ca_cxcjqy-1.jpg'} alt="" className="w-full h-64 object-cover" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

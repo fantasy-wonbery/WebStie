@@ -39,6 +39,10 @@
       "title": "Core Business Areas",
       "subtitle": "Comprehensive digital solutions across the full aviation operations spectrum",
       "items": {
+        "passenger": {
+          "title": "Passenger Services",
+          "description": "Interactive entertainment experiences and personalized customized services to meet diverse passenger needs"
+        },
         "operations": {
           "title": "Operations Control",
           "description": "AOC intelligent voice dispatch, FOC flight operations management, and flight monitoring for real-time situational awareness and efficient decision-making"
@@ -58,10 +62,6 @@
         "maintenance": {
           "title": "IT Operations",
           "description": "MSP managed services and hyper-converged architecture platforms ensuring safe and stable aviation production systems"
-        },
-        "data": {
-          "title": "Data & AI",
-          "description": "Big data analytics, visualization, AI, and operations research algorithms powering smart aviation"
         }
       }
     },
