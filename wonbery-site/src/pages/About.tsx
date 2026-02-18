@@ -22,27 +22,33 @@ export default function About() {
     <div className="min-h-screen bg-white">
       <Navigation showBack />
 
-      {/* Hero */}
-      <section className="relative pt-16 pb-20 bg-dark overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${B}images/about/Office-large-3.jpg)` }} />
-        <div className="absolute inset-0 bg-dark/80" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-8 text-center">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-medium mb-6">
-            {t('about.badge')}
-          </div>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">{t('about.title')}</h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">{t('about.subtitle')}</p>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <section className="relative pt-16 bg-dark overflow-hidden">
+        <div className="absolute inset-0 opacity-30 bg-cover bg-center" style={{ backgroundImage: `url(${B}images/about/Office-large-3.jpg)` }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark/60 to-dark" />
 
-      {/* Company stats */}
-      <section className="relative -mt-12 z-20">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-2xl p-8 grid grid-cols-3 gap-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-8"
+          >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+              每天为<span className="text-primary">20+</span>航空公司
+              <span className="text-primary">1000+</span>架飞机
+              <span className="text-primary">10000+</span>员工提供服务
+            </h1>
+            <p className="text-white/60 text-lg max-w-4xl mx-auto leading-relaxed">
+              {t('about.subtitle')}
+            </p>
+          </motion.div>
+
+          {/* Company Info Cards */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="flex justify-center gap-6 md:gap-12 mt-12"
           >
             {[
               { icon: Calendar, text: t('about.established') },
@@ -50,30 +56,46 @@ export default function About() {
               { icon: MapPin, text: t('about.location') },
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <item.icon size={28} className="text-primary mx-auto mb-2" />
-                <div className="font-display font-semibold text-gray-900">{item.text}</div>
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-primary/50 flex items-center justify-center mx-auto mb-3 bg-primary/10">
+                  <item.icon size={28} className="text-primary" />
+                </div>
+                <span className="text-white/80 text-sm font-medium">{item.text}</span>
               </div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Company description */}
-      <section className="py-20">
+      {/* Company Description */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
               <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">
                 {t('about.badge') === '关于我们' ? '公司简介' : 'Company Overview'}
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">{t('about.company.description')}</p>
               <p className="text-gray-600 leading-relaxed">{t('about.company.team')}</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
               <div className="grid grid-cols-2 gap-4">
-                <img src={B + 'images/about/Office-large-3.jpg'} alt="" className="rounded-xl shadow-lg w-full h-48 object-cover" />
-                <img src={B + 'images/about/office03.jpg'} alt="" className="rounded-xl shadow-lg w-full h-48 object-cover mt-8" />
-                <img src={B + 'images/about/tjjapan02.jpg'} alt="" className="rounded-xl shadow-lg w-full h-48 object-cover col-span-2" />
+                <div className="rounded-2xl overflow-hidden shadow-xl">
+                  <img src={B + 'images/about/Office-large-3.jpg'} alt="" className="w-full h-48 object-cover" />
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-xl mt-8">
+                  <img src={B + 'images/about/office03.jpg'} alt="" className="w-full h-48 object-cover" />
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-xl col-span-2">
+                  <img src={B + 'images/about/tjjapan02.jpg'} alt="" className="w-full h-48 object-cover" />
+                </div>
               </div>
             </motion.div>
           </div>
@@ -83,6 +105,14 @@ export default function About() {
       {/* Values */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl font-display font-bold text-gray-900 text-center mb-12"
+          >
+            {t('about.badge') === '关于我们' ? '企业文化' : 'Corporate Culture'}
+          </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((val, i) => {
               const Icon = val.icon
@@ -108,7 +138,7 @@ export default function About() {
       </section>
 
       {/* Qualifications */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -119,11 +149,22 @@ export default function About() {
             {t('about.badge') === '关于我们' ? '公司资质' : 'Corporate Qualifications'}
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="card overflow-hidden p-0">
-              <img src={B + 'images/about/ca_ryzs-1.jpg'} alt="" className="w-full h-64 object-cover" />
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <img src={B + 'images/about/ca_ryzs-1.jpg'} alt="" className="w-full h-auto" />
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="card overflow-hidden p-0">
-              <img src={B + 'images/about/ca_cxcjqy-1.jpg'} alt="" className="w-full h-64 object-cover" />
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <img src={B + 'images/about/ca_cxcjqy-1.jpg'} alt="" className="w-full h-auto" />
             </motion.div>
           </div>
         </div>

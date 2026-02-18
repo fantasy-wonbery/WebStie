@@ -1,93 +1,119 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Headset, Monitor, Layout, X } from 'lucide-react'
+import { motion } from 'framer-motion'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import type { LucideIcon } from 'lucide-react'
 
 const B = import.meta.env.BASE_URL
 
-interface SystemDef { key: string; icon: LucideIcon; image: string }
-
-const systems: SystemDef[] = [
-  { key: 'consulting', icon: Headset, image: 'images/products/aoc01.jpg' },
-  { key: 'display', icon: Monitor, image: 'images/products/dashboard02.jpg' },
-  { key: 'design', icon: Layout, image: 'images/products/efw-freighter01.jpg' },
-]
-
 export default function AocSolutions() {
   const { t } = useTranslation()
-  const [modal, setModal] = useState<SystemDef | null>(null)
-  const pillars = t('aocSolutions.pillars', { returnObjects: true }) as string[]
+
+  const products = [
+    {
+      titleKey: 'consulting',
+      image: 'images/products/aoc01.jpg',
+    },
+    {
+      titleKey: 'display',
+      image: 'images/products/dashboard02.jpg',
+    },
+    {
+      titleKey: 'design',
+      image: 'images/products/efw-freighter01.jpg',
+      features: ['智能化', '科技化', '现代化', '自动化', '人性化'],
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation showBack />
 
-      <section className="relative pt-16 pb-20 bg-dark overflow-hidden">
-        <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: `url(${B}images/products/efw-freighter01.jpg)` }} />
-        <div className="absolute inset-0 bg-dark/80" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-8 text-center">
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary text-sm font-medium mb-6">
-            {t('aocSolutions.badge')}
-          </div>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">{t('aocSolutions.title')}</h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto mb-8">{t('aocSolutions.subtitle')}</p>
-          <div className="flex justify-center gap-4 flex-wrap">
-            {pillars.map((p) => <span key={p} className="px-5 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-medium">{p}</span>)}
-          </div>
+      {/* Hero Section */}
+      <section className="relative pt-16 bg-dark overflow-hidden">
+        <div className="absolute inset-0 opacity-30 bg-cover bg-center" style={{ backgroundImage: `url(${B}images/products/efw-freighter01.jpg)` }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark/60 to-dark" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-8"
+          >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+              每天为<span className="text-primary">20+</span>航空公司
+              <span className="text-primary">1000+</span>架飞机
+              <span className="text-primary">10000+</span>员工提供服务
+            </h1>
+            <p className="text-white/60 text-lg max-w-4xl mx-auto leading-relaxed">
+              {t('aocSolutions.subtitle')}
+            </p>
+          </motion.div>
+
+          {/* Three pillars */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="flex justify-center gap-6 md:gap-12 mt-12"
+          >
+            {(t('aocSolutions.pillars', { returnObjects: true }) as string[]).map((pillar, i) => (
+              <div key={i} className="text-center">
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-primary/50 flex items-center justify-center mx-auto mb-3 bg-primary/10">
+                  <span className="text-primary text-xl md:text-2xl font-bold">{pillar}</span>
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            {systems.map((sys, i) => {
-              const Icon = sys.icon
-              const features = t(`aocSolutions.systems.${sys.key}.features`, { returnObjects: true })
-              return (
-                <motion.div key={sys.key} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                  className="card overflow-hidden p-0 cursor-pointer group" onClick={() => setModal(sys)}>
-                  <div className="relative h-48 overflow-hidden">
-                    <img src={B + sys.image} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute bottom-4 left-4 w-10 h-10 rounded-lg bg-primary flex items-center justify-center"><Icon size={20} className="text-white" /></div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-display font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">{t(`aocSolutions.systems.${sys.key}.title`)}</h3>
-                    <p className="text-gray-500 text-sm leading-relaxed mb-4">{t(`aocSolutions.systems.${sys.key}.description`)}</p>
-                    {Array.isArray(features) && (
-                      <div className="flex flex-wrap gap-2">
-                        {(features as string[]).map((f) => <span key={f} className="px-3 py-1 rounded-full bg-primary/5 text-primary text-xs font-medium">{f}</span>)}
-                      </div>
-                    )}
+      {/* Product Sections */}
+      {products.map((product, index) => {
+        const isEven = index % 2 === 0
+        return (
+          <section key={product.titleKey} className={`py-20 ${index % 2 === 1 ? 'bg-gray-50' : 'bg-white'}`}>
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                {/* Text content */}
+                <motion.div
+                  initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className={isEven ? '' : 'md:order-2'}
+                >
+                  <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">
+                    {t(`aocSolutions.systems.${product.titleKey}.title`)}
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed mb-6">
+                    {t(`aocSolutions.systems.${product.titleKey}.description`)}
+                  </p>
+                  {product.features && (
+                    <div className="flex flex-wrap gap-3">
+                      {product.features.map((feature) => (
+                        <span key={feature} className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
+
+                {/* Image */}
+                <motion.div
+                  initial={{ opacity: 0, x: isEven ? 30 : -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className={isEven ? '' : 'md:order-1'}
+                >
+                  <div className="rounded-2xl overflow-hidden shadow-2xl">
+                    <img src={B + product.image} alt="" className="w-full h-auto" />
                   </div>
                 </motion.div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      <AnimatePresence>
-        {modal && (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={() => setModal(null)}>
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl" onClick={(e) => e.stopPropagation()}>
-              <button onClick={() => setModal(null)} className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/20 hover:bg-black/40 text-white transition-colors"><X size={20} /></button>
-              <div className="relative h-64 md:h-80"><img src={B + modal.image} alt="" className="w-full h-full object-cover" /><div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-6 left-6"><h2 className="text-2xl md:text-3xl font-display font-bold text-white">{t(`aocSolutions.systems.${modal.key}.title`)}</h2></div>
               </div>
-              <div className="p-6 md:p-8">
-                <p className="text-gray-700 leading-relaxed mb-6">{t(`aocSolutions.systems.${modal.key}.description`)}</p>
-                {(() => { const f = t(`aocSolutions.systems.${modal.key}.features`, { returnObjects: true }); return Array.isArray(f) ? (
-                  <div className="flex flex-wrap gap-2">{(f as string[]).map((x) => <span key={x} className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">{x}</span>)}</div>
-                ) : null })()}
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </div>
+          </section>
+        )
+      })}
 
       <Footer />
     </div>
