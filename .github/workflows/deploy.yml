@@ -27,14 +27,28 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install dependencies
+      - name: Install dependencies (Avinect)
         run: npm ci
 
-      - name: Build
+      - name: Build Avinect site
         run: npm run build
 
       - name: Copy index.html to 404.html for SPA routing
         run: cp dist/index.html dist/404.html
+
+      - name: Install dependencies (Wonbery)
+        working-directory: wonbery-site
+        run: npm ci
+
+      - name: Build Wonbery site
+        working-directory: wonbery-site
+        run: npm run build
+
+      - name: Copy Wonbery dist to main dist/wonbery
+        run: |
+          mkdir -p dist/wonbery
+          cp -r wonbery-site/dist/* dist/wonbery/
+          cp dist/wonbery/index.html dist/wonbery/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
