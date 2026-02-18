@@ -17,6 +17,7 @@ import {
 } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import Counter from '../components/Counter'
 
 const B = import.meta.env.BASE_URL
 
@@ -67,14 +68,14 @@ export default function Home() {
       {/* ============================================================ */}
       {/*  HERO - Dark background with more transparent overlay        */}
       {/* ============================================================ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-dark">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background image - centered on mobile */}
         <div
           className="absolute inset-0 bg-cover bg-center md:bg-fixed"
           style={{ backgroundImage: `url(${B}images/hero/airbus02.jpg)` }}
         />
-        {/* Blue gradient overlay like original site */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent" />
+        {/* Blue gradient overlay - lighter for better background visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0063dd]/70 via-[#0063dd]/40 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20">
           <div className="max-w-3xl">
@@ -158,19 +159,19 @@ export default function Home() {
             className="bg-white rounded-2xl shadow-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-6"
           >
             <motion.div className="text-center">
-              <div className="stat-number">20+</div>
+              <div className="stat-number"><Counter end={20} suffix="+" /></div>
               <div className="text-gray-500 text-sm mt-1">{isZh ? '航空公司' : 'Airlines'}</div>
             </motion.div>
             <motion.div className="text-center">
-              <div className="stat-number">1000+</div>
+              <div className="stat-number"><Counter end={1000} suffix="+" /></div>
               <div className="text-gray-500 text-sm mt-1">{isZh ? '架飞机' : 'Aircraft'}</div>
             </motion.div>
             <motion.div className="text-center">
-              <div className="stat-number">10000+</div>
+              <div className="stat-number"><Counter end={10000} suffix="+" /></div>
               <div className="text-gray-500 text-sm mt-1">{isZh ? '名员工' : 'Employees'}</div>
             </motion.div>
             <motion.div className="text-center">
-              <div className="stat-number">18+</div>
+              <div className="stat-number"><Counter end={18} suffix="+" /></div>
               <div className="text-gray-500 text-sm mt-1">{isZh ? '年经验' : 'Years Experience'}</div>
             </motion.div>
           </motion.div>

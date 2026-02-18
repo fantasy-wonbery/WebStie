@@ -30,8 +30,8 @@ export default function AocSolutions() {
 
       {/* Hero Section */}
       <section className="relative pt-16 bg-dark overflow-hidden">
-        <div className="absolute inset-0 opacity-40 bg-cover bg-center md:bg-fixed" style={{ backgroundImage: `url(${B}images/products/efw-freighter01.jpg)` }} />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent" />
+        <div className="absolute inset-0 bg-cover bg-center md:bg-fixed" style={{ backgroundImage: `url(${B}images/products/efw-freighter01.jpg)` }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0063dd]/70 via-[#0063dd]/40 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
           <motion.div

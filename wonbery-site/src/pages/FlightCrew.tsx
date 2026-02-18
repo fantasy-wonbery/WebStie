@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import Counter from '../components/Counter'
 
 const B = import.meta.env.BASE_URL
 
@@ -13,13 +14,13 @@ export default function FlightCrew() {
     <div className="min-h-screen bg-white">
       <Navigation showBack />
 
-      {/* Hero Section */}
-      <section className="relative pt-16 bg-dark overflow-hidden">
+      {/* Hero Section - Blue gradient overlay */}
+      <section className="relative pt-16 overflow-hidden">
         <div
-          className="absolute inset-0 opacity-30 bg-cover bg-center md:bg-fixed"
+          className="absolute inset-0 bg-cover bg-center md:bg-fixed"
           style={{ backgroundImage: `url(${B}images/pages/flightcrew01.jpg)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0063dd]/70 via-[#0063dd]/40 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
           <motion.div
@@ -38,7 +39,7 @@ export default function FlightCrew() {
                 <span className="text-primary">10000+</span> Employees Daily</>
               )}
             </h1>
-            <p className="text-white/60 text-lg max-w-4xl mx-auto leading-relaxed">
+            <p className="text-white/80 text-lg max-w-4xl mx-auto leading-relaxed">
               {t('flightCrew.subtitle')}
             </p>
           </motion.div>
@@ -108,7 +109,7 @@ export default function FlightCrew() {
         </div>
       </section>
 
-      {/* Product 2: 机组航前准备系统 - Right text, left image with stats */}
+      {/* Product 2: 机组航前准备系统 - Right text, left image with animated stats */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -134,11 +135,15 @@ export default function FlightCrew() {
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="p-4 bg-white rounded-xl shadow-sm text-center">
-                  <div className="text-3xl font-display font-bold text-primary">85%</div>
+                  <div className="text-3xl font-display font-bold text-primary">
+                    <Counter end={85} suffix="%" />
+                  </div>
                   <div className="text-gray-500 text-sm">{isZh ? '满意度提升' : 'Satisfaction Increase'}</div>
                 </div>
                 <div className="p-4 bg-white rounded-xl shadow-sm text-center">
-                  <div className="text-3xl font-display font-bold text-primary">45%</div>
+                  <div className="text-3xl font-display font-bold text-primary">
+                    <Counter end={45} suffix="%" />
+                  </div>
                   <div className="text-gray-500 text-sm">{isZh ? '效率提升' : 'Efficiency Increase'}</div>
                 </div>
               </div>
@@ -248,7 +253,7 @@ export default function FlightCrew() {
         </div>
       </section>
 
-      {/* Product 5: 航班放行讲解系统 - Left text, right image with stats */}
+      {/* Product 5: 航班放行讲解系统 - Left text, right image with animated stats */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -265,11 +270,15 @@ export default function FlightCrew() {
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="p-4 bg-gray-50 rounded-xl text-center">
-                  <div className="text-3xl font-display font-bold text-primary">80%</div>
+                  <div className="text-3xl font-display font-bold text-primary">
+                    <Counter end={80} suffix="%" />
+                  </div>
                   <div className="text-gray-500 text-sm">{isZh ? '满意度提升' : 'Satisfaction Increase'}</div>
                 </div>
                 <div className="p-4 bg-gray-50 rounded-xl text-center">
-                  <div className="text-3xl font-display font-bold text-primary">30%</div>
+                  <div className="text-3xl font-display font-bold text-primary">
+                    <Counter end={30} suffix="%" />
+                  </div>
                   <div className="text-gray-500 text-sm">{isZh ? '效率提升' : 'Efficiency Increase'}</div>
                 </div>
               </div>
