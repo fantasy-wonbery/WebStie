@@ -57,7 +57,7 @@ export default function Navigation({ items = [], showBack }: NavigationProps) {
             <ArrowLeft size={18} className={scrolled ? 'text-gray-600' : 'text-white/70'} />
           )}
           <img
-            src={import.meta.env.BASE_URL + (scrolled ? 'images/wonbery-gray-89.png' : 'images/wonbery-gray-89.png')}
+            src={import.meta.env.BASE_URL + (scrolled ? 'images/real-110.png' : 'images/wonbery-gray-89.png')}
             alt="Wonbery"
             className="h-7"
           />

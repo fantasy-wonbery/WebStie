@@ -9,9 +9,6 @@ import {
   Plane,
   Wrench,
   Layout,
-  Cloud,
-  BarChart3,
-  Brain,
   Zap,
   ArrowRight,
   Mail,
@@ -34,20 +31,20 @@ const airlineLogos = [
 
 /* Service categories matching original site */
 const serviceCategories = [
-  { key: 'passenger',    icon: Users,   path: '/operations', img: 'images/products/passenger.jpg' },
-  { key: 'operations',   icon: Radio,   path: '/operations', img: 'images/products/ATalk.jpg' },
-  { key: 'crew',         icon: Plane,   path: '/flight-crew', img: 'images/pages/flightcrew01.jpg' },
-  { key: 'airport',      icon: MapPin,  path: '/airport', img: 'images/pages/Air-Traffic-Control.jpg' },
-  { key: 'aoc',          icon: Layout,  path: '/aoc-solutions', img: 'images/products/aoc01.jpg' },
-  { key: 'maintenance',  icon: Wrench,  path: '/service', img: 'images/pages/improve-operational-efficiency-header.jpg' },
+  { key: 'passenger',    icon: Users,   path: '/operations', img: 'images/services/service-v-01.jpg' },
+  { key: 'operations',   icon: Radio,   path: '/operations', img: 'images/services/service-v-08.jpg' },
+  { key: 'crew',         icon: Plane,   path: '/flight-crew', img: 'images/services/service-v-07.jpg' },
+  { key: 'airport',      icon: MapPin,  path: '/airport', img: 'images/services/service-v-06.jpg' },
+  { key: 'aoc',          icon: Layout,  path: '/aoc-solutions', img: 'images/services/service-v-09.jpg' },
+  { key: 'maintenance',  icon: Wrench,  path: '/service', img: 'images/services/service-v-10.jpg' },
 ]
 
-/* Key products */
+/* Key products - using original site images */
 const products = [
   {
     key: 'recovery',
     icon: Zap,
-    img: 'images/products/Foc01_1024.jpg',
+    img: 'images/products/vector02-1.png',
     stats: [
       { labelKey: 'stat1Label', valueKey: 'stat1Value' },
       { labelKey: 'stat2Label', valueKey: 'stat2Value' },
@@ -57,7 +54,7 @@ const products = [
   {
     key: 'voice',
     icon: Radio,
-    img: 'images/products/datalink01.jpg',
+    img: 'images/products/vector03-1.png',
     stats: [
       { labelKey: 'stat1Label', valueKey: 'stat1Value' },
       { labelKey: 'stat2Label', valueKey: 'stat2Value' },
@@ -66,16 +63,17 @@ const products = [
   {
     key: 'monitoring',
     icon: Monitor,
-    img: 'images/products/dashboard02.jpg',
+    img: 'images/products/csm_A380.jpg',
     stats: [],
   },
 ]
 
-const techIcons = [
-  { icon: Cloud, key: 0 },
-  { icon: BarChart3, key: 1 },
-  { icon: Brain, key: 2 },
-  { icon: Zap, key: 3 },
+/* Tech icons - using original site images */
+const techImages = [
+  { img: 'images/tech/EFB-1.png', key: 0 },
+  { img: 'images/tech/Link-OnAir-1.png', key: 1 },
+  { img: 'images/tech/crew-tab-1.png', key: 2 },
+  { img: 'images/tech/DATA_capture_GREEN.png', key: 3 },
 ]
 
 export default function Home() {
@@ -96,13 +94,13 @@ export default function Home() {
       {/* ============================================================ */}
       {/*  HERO - Dark gradient background like original               */}
       {/* ============================================================ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-dark via-dark-light to-dark-lighter">
-        {/* Background image overlay */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-dark">
+        {/* Background image with parallax effect */}
         <div
-          className="absolute inset-0 opacity-20 bg-cover bg-center"
-          style={{ backgroundImage: `url(${B}images/backgrounds/crypto-bg-04.png)` }}
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
+          style={{ backgroundImage: `url(${B}images/hero/airbus02.jpg)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/80 to-dark/60" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20">
           <div className="max-w-3xl">
@@ -283,12 +281,13 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/*  KEY PRODUCTS - Dark section like original                   */}
+      {/*  KEY PRODUCTS - Dark section with parallax like original     */}
       {/* ============================================================ */}
       <section id="products" className="py-24 bg-dark relative overflow-hidden">
+        {/* Parallax background */}
         <div
-          className="absolute inset-0 opacity-10 bg-cover bg-center"
-          style={{ backgroundImage: `url(${B}images/backgrounds/crypto-bg-02.png)` }}
+          className="absolute inset-0 bg-cover bg-center bg-fixed opacity-20"
+          style={{ backgroundImage: `url(${B}images/backgrounds/efw-berufserfahrene.jpg)` }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <motion.div
@@ -379,7 +378,6 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {(t('home.tech.items', { returnObjects: true }) as string[]).map(
               (label, i) => {
-                const Icon = techIcons[i].icon
                 return (
                   <motion.div
                     key={label}
@@ -389,8 +387,8 @@ export default function Home() {
                     transition={{ delay: i * 0.1 }}
                     className="card flex flex-col items-center text-center gap-4 p-8"
                   >
-                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-                      <Icon size={32} className="text-primary" />
+                    <div className="w-16 h-16 flex items-center justify-center">
+                      <img src={B + techImages[i].img} alt="" className="w-12 h-12 object-contain" />
                     </div>
                     <span className="font-display font-semibold text-lg text-gray-900">
                       {label}
