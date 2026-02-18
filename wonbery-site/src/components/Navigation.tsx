@@ -39,7 +39,7 @@ export default function Navigation({ items = [], showBack, transparent }: Naviga
             </Link>
           ) : (
             <Link to="/" className="flex items-center gap-3">
-              <img src="/images/logo.png" alt="Wonbery" className="h-8 w-8" />
+              <img src={import.meta.env.BASE_URL + 'images/logo.png'} alt="Wonbery" className="h-8 w-8" />
               <span className="font-display font-bold text-lg">
                 {t('common.companyName')}
               </span>

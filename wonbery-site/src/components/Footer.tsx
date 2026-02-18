@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src="/images/logo.png" alt="Wonbery" className="h-6 w-6 opacity-60" />
+            <img src={import.meta.env.BASE_URL + 'images/logo.png'} alt="Wonbery" className="h-6 w-6 opacity-60" />
             <span className="text-white/40 text-sm">
               {t('common.copyright', { year })}
             </span>

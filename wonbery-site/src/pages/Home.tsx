@@ -474,7 +474,7 @@ export default function Home() {
               className="glass-card p-4 w-full flex items-center justify-center h-20"
             >
               <img
-                src={'/images/airlines/' + logo}
+                src={import.meta.env.BASE_URL + 'images/airlines/' + logo}
                 alt={logo.replace(/\.(png|jpg|svg)$/, '')}
                 className="max-h-10 max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
               />
