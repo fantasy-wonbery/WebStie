@@ -2,8 +2,12 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import Counter from '../components/Counter'
 
 const B = import.meta.env.BASE_URL
+
+/* Text shadow style for readability on background images */
+const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3)' }
 
 export default function Operations() {
   const { t, i18n } = useTranslation()
@@ -13,13 +17,14 @@ export default function Operations() {
     <div className="min-h-screen bg-white">
       <Navigation showBack />
 
-      {/* Hero Section - Blue gradient overlay like original */}
+      {/* Hero Section - Minimal top-to-bottom overlay with text shadow */}
       <section className="relative pt-16 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center md:bg-fixed"
-          style={{ backgroundImage: `url(${B}images/products/efw-mro-services01.jpg)` }}
+          style={{ backgroundImage: `url(${B}images/pages/efw-mro-services01.jpg)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0063dd]/70 via-[#0063dd]/40 to-transparent" />
+        {/* Minimal gradient overlay from top to bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
           {/* Stats banner */}
@@ -28,7 +33,7 @@ export default function Operations() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-8"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
               {isZh ? (
                 <>每天为<span className="text-primary">20+</span>航空公司
                 <span className="text-primary">1000+</span>架飞机
@@ -39,7 +44,7 @@ export default function Operations() {
                 <span className="text-primary">10000+</span> Employees Daily</>
               )}
             </h1>
-            <p className="text-white/60 text-lg max-w-4xl mx-auto leading-relaxed">
+            <p className="text-white text-lg max-w-4xl mx-auto leading-relaxed" style={textShadow}>
               {t('operations.description')}
             </p>
           </motion.div>
@@ -53,8 +58,8 @@ export default function Operations() {
           >
             {(t('operations.pillars', { returnObjects: true }) as string[]).map((pillar, i) => (
               <div key={i} className="text-center">
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-primary/50 flex items-center justify-center mx-auto mb-3 bg-primary/10">
-                  <span className="text-primary text-xl md:text-2xl font-bold">{pillar}</span>
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-white/50 flex items-center justify-center mx-auto mb-3 bg-white/10 backdrop-blur-sm">
+                  <span className="text-white text-xl md:text-2xl font-bold" style={textShadow}>{pillar}</span>
                 </div>
               </div>
             ))}
@@ -62,7 +67,7 @@ export default function Operations() {
         </div>
       </section>
 
-      {/* Product 1: AOC智能语音调度系统 - Left text, right images */}
+      {/* Product 1: AOC智能语音调度系统 - Left text, right images (no border, blends into bg) */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -91,12 +96,9 @@ export default function Operations() {
               viewport={{ once: true }}
               className="grid grid-cols-2 gap-4"
             >
-              <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={B + 'images/products/ATalk.jpg'} alt="" className="w-full h-48 object-cover" />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={B + 'images/products/atalk1.jpg'} alt="" className="w-full h-48 object-cover" />
-              </div>
+              {/* Software screenshots - no border, blends into background */}
+              <img src={B + 'images/products/ATalk.jpg'} alt="" className="w-full h-auto" />
+              <img src={B + 'images/products/atalk1.jpg'} alt="" className="w-full h-auto" />
             </motion.div>
           </div>
         </div>
@@ -112,12 +114,9 @@ export default function Operations() {
               viewport={{ once: true }}
               className="grid grid-cols-2 gap-4"
             >
-              <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={B + 'images/products/Foc01_1024.jpg'} alt="" className="w-full h-48 object-cover" />
-              </div>
-              <div className="rounded-2xl overflow-hidden shadow-xl">
-                <img src={B + 'images/products/Foc02_1024.jpg'} alt="" className="w-full h-48 object-cover" />
-              </div>
+              {/* Software screenshots - no border, blends into background */}
+              <img src={B + 'images/products/Foc01_1024.jpg'} alt="" className="w-full h-auto" />
+              <img src={B + 'images/products/Foc02_1024.jpg'} alt="" className="w-full h-auto" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -130,6 +129,24 @@ export default function Operations() {
               <p className="text-gray-600 leading-relaxed mb-6">
                 {t('operations.systems.foc.description')}
               </p>
+              <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="text-center p-4 bg-white rounded-xl">
+                  <div className="text-2xl font-display font-bold text-primary">
+                    <Counter end={99} suffix="%" />
+                  </div>
+                  <div className="text-gray-500 text-sm mt-1">{isZh ? '自动化率' : 'Automation'}</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-xl">
+                  <div className="text-2xl font-display font-bold text-primary">
+                    <Counter end={50} suffix="%" />
+                  </div>
+                  <div className="text-gray-500 text-sm mt-1">{isZh ? '效率提升' : 'Efficiency'}</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-xl">
+                  <div className="text-2xl font-display font-bold text-primary">24/7</div>
+                  <div className="text-gray-500 text-sm mt-1">{isZh ? '全天候' : 'Support'}</div>
+                </div>
+              </div>
               <div className="flex flex-wrap gap-3">
                 {(isZh ? ['自动化', '规范化', '信息化'] : ['Automation', 'Standardization', 'Digitalization']).map((tag) => (
                   <span key={tag} className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
@@ -183,9 +200,8 @@ export default function Operations() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img src={B + 'images/products/dashboard02.jpg'} alt="" className="w-full h-auto" />
-              </div>
+              {/* Software screenshot - no border */}
+              <img src={B + 'images/products/dashboard02.jpg'} alt="" className="w-full h-auto" />
             </motion.div>
           </div>
         </div>
@@ -200,9 +216,8 @@ export default function Operations() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img src={B + 'images/products/datalink01.jpg'} alt="" className="w-full h-auto" />
-              </div>
+              {/* Software screenshot - no border */}
+              <img src={B + 'images/products/datalink01.jpg'} alt="" className="w-full h-auto" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -266,9 +281,8 @@ export default function Operations() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img src={B + 'images/products/Connected-aircraft.jpg'} alt="" className="w-full h-auto" />
-              </div>
+              {/* Software screenshot - no border */}
+              <img src={B + 'images/products/Connected-aircraft.jpg'} alt="" className="w-full h-auto" />
             </motion.div>
           </div>
         </div>

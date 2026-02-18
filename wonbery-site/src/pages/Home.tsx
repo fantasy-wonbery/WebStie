@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import {
   Radio,
-  Monitor,
   MapPin,
   Users,
   Plane,
@@ -49,6 +48,9 @@ const techImages = [
   { img: 'images/tech/DATA_capture_GREEN.png', key: 3 },
 ]
 
+/* Text shadow style for readability on background images */
+const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3)' }
+
 export default function Home() {
   const { t, i18n } = useTranslation()
   const isZh = i18n.language === 'zh'
@@ -66,16 +68,16 @@ export default function Home() {
       <Navigation items={navItems} />
 
       {/* ============================================================ */}
-      {/*  HERO - Dark background with more transparent overlay        */}
+      {/*  HERO - Minimal top-to-bottom overlay with text shadow       */}
       {/* ============================================================ */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background image - centered on mobile */}
+        {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center md:bg-fixed"
           style={{ backgroundImage: `url(${B}images/hero/airbus02.jpg)` }}
         />
-        {/* Blue gradient overlay - lighter for better background visibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0063dd]/70 via-[#0063dd]/40 to-transparent" />
+        {/* Minimal gradient overlay from top to bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20">
           <div className="max-w-3xl">
@@ -83,10 +85,10 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/20 border border-primary/30 mb-8"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-8"
             >
-              <Plane size={16} className="text-primary" />
-              <span className="text-primary text-sm font-medium">
+              <Plane size={16} className="text-white" />
+              <span className="text-white text-sm font-medium">
                 {t('home.badge')}
               </span>
             </motion.div>
@@ -96,6 +98,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-4"
+              style={textShadow}
             >
               {t('home.heroTitle')}
             </motion.h1>
@@ -104,6 +107,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-primary leading-tight mb-8"
+              style={textShadow}
             >
               {t('home.heroTitleHighlight')}
             </motion.h1>
@@ -112,7 +116,8 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-lg text-white/70 max-w-2xl mb-10 leading-relaxed"
+              className="text-lg text-white max-w-2xl mb-10 leading-relaxed"
+              style={textShadow}
             >
               {t('home.heroDescription')}
             </motion.p>
@@ -127,7 +132,7 @@ export default function Home() {
                 {t('home.exploreProducts')}
                 <ArrowRight size={16} />
               </a>
-              <a href="#contact" className="btn-outline">
+              <a href="#contact" className="btn-outline border-white text-white hover:bg-white hover:text-dark">
                 {t('home.contactUs')}
               </a>
             </motion.div>
@@ -142,13 +147,13 @@ export default function Home() {
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
-            <ChevronDown size={28} className="text-white/30" />
+            <ChevronDown size={28} className="text-white/60" />
           </motion.div>
         </motion.div>
       </section>
 
       {/* ============================================================ */}
-      {/*  STATS BAR - with "年经验" label                             */}
+      {/*  STATS BAR - with animated counters                          */}
       {/* ============================================================ */}
       <section className="relative -mt-16 z-20">
         <div className="max-w-5xl mx-auto px-6">
@@ -245,7 +250,9 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/*  KEY PRODUCTS - Original site layout with parallax sections  */}
+      {/*  KEY PRODUCTS - Original site layout                         */}
+      {/*  Product 1 & 3: Processed interface images (no border)       */}
+      {/*  Product 2: Parallax background, text with shadow            */}
       {/* ============================================================ */}
       <section id="products" className="bg-white">
         <div className="text-center py-16 bg-gray-50">
@@ -267,7 +274,7 @@ export default function Home() {
           </motion.p>
         </div>
 
-        {/* Product 1: 智能航班快速恢复 - Left text, right image */}
+        {/* Product 1: 智能航班快速恢复 - Left text, right processed image (no border) */}
         <div className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -319,78 +326,58 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
+                {/* Processed interface image - no border/shadow, blends into background */}
                 <img
                   src={B + 'images/products/vector02-1.png'}
                   alt=""
-                  className="w-full h-auto rounded-2xl shadow-xl"
+                  className="w-full h-auto"
                 />
               </motion.div>
             </div>
           </div>
         </div>
 
-        {/* Product 2: 智能语音调度 - Parallax background, right text, left image */}
-        <div className="relative py-20 overflow-hidden">
+        {/* Product 2: 航班运行监控平台 - Parallax background with text shadow */}
+        <div className="relative py-24 overflow-hidden">
           {/* Parallax background with airplane */}
           <div
             className="absolute inset-0 bg-cover bg-center md:bg-fixed"
             style={{ backgroundImage: `url(${B}images/products/csm_A380.jpg)` }}
           />
-          <div className="absolute inset-0 bg-dark/80" />
+          {/* Minimal overlay from top to bottom */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40" />
 
           <div className="relative z-10 max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
-                <img
-                  src={B + 'images/products/vector03-1.png'}
-                  alt=""
-                  className="w-full h-auto rounded-2xl shadow-xl"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-                    <Radio size={24} className="text-primary" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-display font-bold text-white">
-                    {t('home.products.voice.title')}
-                  </h3>
-                </div>
-                <p className="text-white/70 leading-relaxed mb-8">
-                  {t('home.products.voice.description')}
-                </p>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur">
-                    <div className="text-2xl font-display font-bold text-primary">
-                      {t('home.products.voice.stat1Value')}
-                    </div>
-                    <div className="text-white/60 text-sm mt-1">
-                      {t('home.products.voice.stat1Label')}
-                    </div>
-                  </div>
-                  <div className="text-center p-4 bg-white/10 rounded-xl backdrop-blur">
-                    <div className="text-2xl font-display font-bold text-primary">
-                      {t('home.products.voice.stat2Value')}
-                    </div>
-                    <div className="text-white/60 text-sm mt-1">
-                      {t('home.products.voice.stat2Label')}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center max-w-3xl mx-auto"
+            >
+              <p className="text-primary text-lg font-medium mb-2" style={textShadow}>
+                {isZh ? '特色产品' : 'Featured Product'}
+              </p>
+              <p className="text-white/80 text-sm tracking-widest mb-4" style={textShadow}>
+                Planning and Design
+              </p>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
+                {t('home.products.monitoring.title')}
+              </h3>
+              <p className="text-white/90 text-lg leading-relaxed mb-8" style={textShadow}>
+                {t('home.products.monitoring.description')}
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {(isZh ? ['GIS地图实时追踪', 'ACARS协议集成', '自动获取飞行计划', '气象与航行通告'] : ['Real-time GIS tracking', 'ACARS integration', 'Auto flight plans', 'Weather & NOTAMs']).map((item) => (
+                  <span key={item} className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm" style={textShadow}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
 
-        {/* Product 3: 航班运行监控平台 - Left text, right image */}
+        {/* Product 3: 智能语音调度 - Right text, left processed image (no border) */}
         <div className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -399,36 +386,47 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Monitor size={24} className="text-primary" />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900">
-                    {t('home.products.monitoring.title')}
-                  </h3>
-                </div>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  {t('home.products.monitoring.description')}
-                </p>
-                <ul className="space-y-3">
-                  {(isZh ? ['GIS地图实时追踪', 'ACARS协议集成', '自动获取飞行计划', '气象与航行通告'] : ['Real-time GIS tracking', 'ACARS protocol integration', 'Auto flight plan retrieval', 'Weather & NOTAMs']).map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-gray-600">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                {/* Processed interface image - no border/shadow, blends into background */}
+                <img
+                  src={B + 'images/products/vector03-1.png'}
+                  alt=""
+                  className="w-full h-auto"
+                />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <img
-                  src={B + 'images/products/dashboard02.jpg'}
-                  alt=""
-                  className="w-full h-auto rounded-2xl shadow-xl"
-                />
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Radio size={24} className="text-primary" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-display font-bold text-gray-900">
+                    {t('home.products.voice.title')}
+                  </h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-8">
+                  {t('home.products.voice.description')}
+                </p>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                    <div className="text-2xl font-display font-bold text-primary">
+                      {t('home.products.voice.stat1Value')}
+                    </div>
+                    <div className="text-gray-500 text-sm mt-1">
+                      {t('home.products.voice.stat1Label')}
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-white rounded-xl shadow-sm">
+                    <div className="text-2xl font-display font-bold text-primary">
+                      {t('home.products.voice.stat2Value')}
+                    </div>
+                    <div className="text-gray-500 text-sm mt-1">
+                      {t('home.products.voice.stat2Label')}
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>

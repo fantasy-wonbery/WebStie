@@ -5,6 +5,9 @@ import Footer from '../components/Footer'
 
 const B = import.meta.env.BASE_URL
 
+/* Text shadow style for readability on background images */
+const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3)' }
+
 export default function AocSolutions() {
   const { t } = useTranslation()
 
@@ -28,10 +31,11 @@ export default function AocSolutions() {
     <div className="min-h-screen bg-white">
       <Navigation showBack />
 
-      {/* Hero Section */}
-      <section className="relative pt-16 bg-dark overflow-hidden">
+      {/* Hero Section - Minimal top-to-bottom overlay with text shadow */}
+      <section className="relative pt-16 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center md:bg-fixed" style={{ backgroundImage: `url(${B}images/products/efw-freighter01.jpg)` }} />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0063dd]/70 via-[#0063dd]/40 to-transparent" />
+        {/* Minimal gradient overlay from top to bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
           <motion.div
@@ -39,12 +43,12 @@ export default function AocSolutions() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-8"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
               每天为<span className="text-primary">20+</span>航空公司
               <span className="text-primary">1000+</span>架飞机
               <span className="text-primary">10000+</span>员工提供服务
             </h1>
-            <p className="text-white/60 text-lg max-w-4xl mx-auto leading-relaxed">
+            <p className="text-white text-lg max-w-4xl mx-auto leading-relaxed" style={textShadow}>
               {t('aocSolutions.subtitle')}
             </p>
           </motion.div>
@@ -58,8 +62,8 @@ export default function AocSolutions() {
           >
             {(t('aocSolutions.pillars', { returnObjects: true }) as string[]).map((pillar, i) => (
               <div key={i} className="text-center">
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-primary/50 flex items-center justify-center mx-auto mb-3 bg-primary/10">
-                  <span className="text-primary text-xl md:text-2xl font-bold">{pillar}</span>
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-white/50 flex items-center justify-center mx-auto mb-3 bg-white/10 backdrop-blur-sm">
+                  <span className="text-white text-xl md:text-2xl font-bold" style={textShadow}>{pillar}</span>
                 </div>
               </div>
             ))}
@@ -98,16 +102,14 @@ export default function AocSolutions() {
                   )}
                 </motion.div>
 
-                {/* Image */}
+                {/* Image - no border */}
                 <motion.div
                   initial={{ opacity: 0, x: isEven ? 30 : -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   className={isEven ? '' : 'md:order-1'}
                 >
-                  <div className="rounded-2xl overflow-hidden shadow-2xl">
-                    <img src={B + product.image} alt="" className="w-full h-auto" />
-                  </div>
+                  <img src={B + product.image} alt="" className="w-full h-auto" />
                 </motion.div>
               </div>
             </div>

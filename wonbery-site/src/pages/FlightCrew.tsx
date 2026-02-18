@@ -6,6 +6,9 @@ import Counter from '../components/Counter'
 
 const B = import.meta.env.BASE_URL
 
+/* Text shadow style for readability on background images */
+const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3)' }
+
 export default function FlightCrew() {
   const { t, i18n } = useTranslation()
   const isZh = i18n.language === 'zh'
@@ -14,13 +17,14 @@ export default function FlightCrew() {
     <div className="min-h-screen bg-white">
       <Navigation showBack />
 
-      {/* Hero Section - Blue gradient overlay */}
+      {/* Hero Section - Minimal top-to-bottom overlay with text shadow */}
       <section className="relative pt-16 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center md:bg-fixed"
           style={{ backgroundImage: `url(${B}images/pages/flightcrew01.jpg)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0063dd]/70 via-[#0063dd]/40 to-transparent" />
+        {/* Minimal gradient overlay from top to bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
           <motion.div
@@ -28,7 +32,7 @@ export default function FlightCrew() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-8"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
               {isZh ? (
                 <>每天为<span className="text-primary">20+</span>航空公司
                 <span className="text-primary">1000+</span>架飞机
@@ -39,7 +43,7 @@ export default function FlightCrew() {
                 <span className="text-primary">10000+</span> Employees Daily</>
               )}
             </h1>
-            <p className="text-white/80 text-lg max-w-4xl mx-auto leading-relaxed">
+            <p className="text-white text-lg max-w-4xl mx-auto leading-relaxed" style={textShadow}>
               {t('flightCrew.subtitle')}
             </p>
           </motion.div>
@@ -53,8 +57,8 @@ export default function FlightCrew() {
           >
             {(t('flightCrew.pillars', { returnObjects: true }) as string[]).map((pillar, i) => (
               <div key={i} className="text-center">
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-primary/50 flex items-center justify-center mx-auto mb-3 bg-primary/10">
-                  <span className="text-primary text-xl md:text-2xl font-bold">{pillar}</span>
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-white/50 flex items-center justify-center mx-auto mb-3 bg-white/10 backdrop-blur-sm">
+                  <span className="text-white text-xl md:text-2xl font-bold" style={textShadow}>{pillar}</span>
                 </div>
               </div>
             ))}

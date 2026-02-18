@@ -6,6 +6,9 @@ import Footer from '../components/Footer'
 
 const B = import.meta.env.BASE_URL
 
+/* Text shadow style for readability on background images */
+const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3)' }
+
 const valueIcons = [Eye, Target, Heart, Lightbulb]
 
 export default function About() {
@@ -22,10 +25,11 @@ export default function About() {
     <div className="min-h-screen bg-white">
       <Navigation showBack />
 
-      {/* Hero Section */}
-      <section className="relative pt-16 bg-dark overflow-hidden">
+      {/* Hero Section - Minimal top-to-bottom overlay with text shadow */}
+      <section className="relative pt-16 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center md:bg-fixed" style={{ backgroundImage: `url(${B}images/about/Office-large-3.jpg)` }} />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0063dd]/70 via-[#0063dd]/40 to-transparent" />
+        {/* Minimal gradient overlay from top to bottom */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
           <motion.div
@@ -33,12 +37,12 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-8"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
               每天为<span className="text-primary">20+</span>航空公司
               <span className="text-primary">1000+</span>架飞机
               <span className="text-primary">10000+</span>员工提供服务
             </h1>
-            <p className="text-white/60 text-lg max-w-4xl mx-auto leading-relaxed">
+            <p className="text-white text-lg max-w-4xl mx-auto leading-relaxed" style={textShadow}>
               {t('about.subtitle')}
             </p>
           </motion.div>
@@ -56,10 +60,10 @@ export default function About() {
               { icon: MapPin, text: t('about.location') },
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-primary/50 flex items-center justify-center mx-auto mb-3 bg-primary/10">
-                  <item.icon size={28} className="text-primary" />
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-white/50 flex items-center justify-center mx-auto mb-3 bg-white/10 backdrop-blur-sm">
+                  <item.icon size={28} className="text-white" />
                 </div>
-                <span className="text-white/80 text-sm font-medium">{item.text}</span>
+                <span className="text-white text-sm font-medium" style={textShadow}>{item.text}</span>
               </div>
             ))}
           </motion.div>
@@ -87,15 +91,9 @@ export default function About() {
               viewport={{ once: true }}
             >
               <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-2xl overflow-hidden shadow-xl">
-                  <img src={B + 'images/about/Office-large-3.jpg'} alt="" className="w-full h-48 object-cover" />
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-xl mt-8">
-                  <img src={B + 'images/about/office03.jpg'} alt="" className="w-full h-48 object-cover" />
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-xl col-span-2">
-                  <img src={B + 'images/about/tjjapan02.jpg'} alt="" className="w-full h-48 object-cover" />
-                </div>
+                <img src={B + 'images/about/Office-large-3.jpg'} alt="" className="w-full h-48 object-cover" />
+                <img src={B + 'images/about/office03.jpg'} alt="" className="w-full h-48 object-cover mt-8" />
+                <img src={B + 'images/about/tjjapan02.jpg'} alt="" className="w-full h-48 object-cover col-span-2" />
               </div>
             </motion.div>
           </div>
@@ -153,7 +151,6 @@ export default function About() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="rounded-2xl overflow-hidden shadow-2xl"
             >
               <img src={B + 'images/about/ca_ryzs-1.jpg'} alt="" className="w-full h-auto" />
             </motion.div>
@@ -162,7 +159,6 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="rounded-2xl overflow-hidden shadow-2xl"
             >
               <img src={B + 'images/about/ca_cxcjqy-1.jpg'} alt="" className="w-full h-auto" />
             </motion.div>
