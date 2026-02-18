@@ -11,8 +11,8 @@ export default function ServiceSupport() {
   const pillars = t('serviceSupport.pillars', { returnObjects: true }) as string[]
 
   const systems = [
-    { key: 'msp', icon: Cloud, hasFeatures: false },
-    { key: 'hybrid', icon: Server, hasFeatures: true },
+    { key: 'msp', icon: Cloud, hasFeatures: false, image: 'images/products/efw-freighter01.jpg' },
+    { key: 'hybrid', icon: Server, hasFeatures: true, image: 'images/products/Foc02_1024.jpg' },
   ]
 
   return (
@@ -32,6 +32,7 @@ export default function ServiceSupport() {
               icon={sys.icon}
               title={t(`serviceSupport.systems.${sys.key}.title`)}
               description={t(`serviceSupport.systems.${sys.key}.description`)}
+              image={sys.image}
               {...(sys.hasFeatures && {
                 features: t(`serviceSupport.systems.${sys.key}.features`, { returnObjects: true }) as string[],
               })}

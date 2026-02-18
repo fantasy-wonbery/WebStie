@@ -476,7 +476,7 @@ export default function Home() {
               <img
                 src={import.meta.env.BASE_URL + 'images/airlines/' + logo}
                 alt={logo.replace(/\.(png|jpg|svg)$/, '')}
-                className="max-h-10 max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                className="max-h-10 max-w-full object-contain opacity-80 hover:opacity-100 transition-all duration-300 hover:scale-105"
               />
             </motion.div>
           ))}

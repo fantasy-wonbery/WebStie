@@ -11,11 +11,11 @@ export default function FlightCrew() {
   const pillars = t('flightCrew.pillars', { returnObjects: true }) as string[]
 
   const systems = [
-    { key: 'efb', icon: Tablet },
-    { key: 'preflight', icon: ClipboardCheck },
-    { key: 'certificate', icon: Award },
-    { key: 'sms', icon: ShieldCheck },
-    { key: 'brief', icon: FileCheck },
+    { key: 'efb', icon: Tablet, image: 'images/products/efb.png' },
+    { key: 'preflight', icon: ClipboardCheck, image: 'images/products/crew-tab.png' },
+    { key: 'certificate', icon: Award, image: 'images/products/data-capture.png' },
+    { key: 'sms', icon: ShieldCheck, image: 'images/products/datalink.png' },
+    { key: 'brief', icon: FileCheck, image: 'images/products/Connected-aircraft.jpg' },
   ]
 
   return (
@@ -35,6 +35,7 @@ export default function FlightCrew() {
               icon={sys.icon}
               title={t(`flightCrew.systems.${sys.key}.title`)}
               description={t(`flightCrew.systems.${sys.key}.description`)}
+              image={sys.image}
               delay={i * 0.1}
             />
           ))}

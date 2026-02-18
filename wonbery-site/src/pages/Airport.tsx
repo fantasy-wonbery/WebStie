@@ -11,10 +11,10 @@ export default function Airport() {
   const pillars = t('airport.pillars', { returnObjects: true }) as string[]
 
   const systems = [
-    { key: 'surface', icon: MapPin },
-    { key: 'tower', icon: Radio },
-    { key: 'resource', icon: Gauge },
-    { key: 'drone', icon: ShieldAlert },
+    { key: 'surface', icon: MapPin, image: 'images/products/dashboard02.jpg' },
+    { key: 'tower', icon: Radio, image: 'images/products/datalink01.jpg' },
+    { key: 'resource', icon: Gauge, image: 'images/products/Foc01_1024.jpg' },
+    { key: 'drone', icon: ShieldAlert, image: 'images/products/passenger.jpg' },
   ]
 
   return (
@@ -34,6 +34,7 @@ export default function Airport() {
               icon={sys.icon}
               title={t(`airport.systems.${sys.key}.title`)}
               description={t(`airport.systems.${sys.key}.description`)}
+              image={sys.image}
               delay={i * 0.1}
             />
           ))}

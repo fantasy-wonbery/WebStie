@@ -11,9 +11,9 @@ export default function AocSolutions() {
   const pillars = t('aocSolutions.pillars', { returnObjects: true }) as string[]
 
   const systems = [
-    { key: 'consulting', icon: Headset, hasFeatures: false },
-    { key: 'display', icon: Monitor, hasFeatures: false },
-    { key: 'design', icon: Layout, hasFeatures: true },
+    { key: 'consulting', icon: Headset, hasFeatures: false, image: 'images/products/aoc01.jpg' },
+    { key: 'display', icon: Monitor, hasFeatures: false, image: 'images/products/dashboard02.jpg' },
+    { key: 'design', icon: Layout, hasFeatures: true, image: 'images/products/Foc01_1024.jpg' },
   ]
 
   return (
@@ -33,6 +33,7 @@ export default function AocSolutions() {
               icon={sys.icon}
               title={t(`aocSolutions.systems.${sys.key}.title`)}
               description={t(`aocSolutions.systems.${sys.key}.description`)}
+              image={sys.image}
               {...(sys.hasFeatures && {
                 features: t(`aocSolutions.systems.${sys.key}.features`, { returnObjects: true }) as string[],
               })}

@@ -11,11 +11,11 @@ export default function Operations() {
   const pillars = t('operations.pillars', { returnObjects: true }) as string[]
 
   const systems = [
-    { key: 'voice', icon: Radio },
-    { key: 'foc', icon: Monitor },
-    { key: 'monitoring', icon: Radar },
-    { key: 'focOps', icon: Container },
-    { key: 'collaboration', icon: MessageSquareMore },
+    { key: 'voice', icon: Radio, image: 'images/products/datalink01.jpg' },
+    { key: 'foc', icon: Monitor, image: 'images/products/Foc01_1024.jpg' },
+    { key: 'monitoring', icon: Radar, image: 'images/products/dashboard02.jpg' },
+    { key: 'focOps', icon: Container, image: 'images/products/Foc02_1024.jpg' },
+    { key: 'collaboration', icon: MessageSquareMore, image: 'images/products/Connected-aircraft.jpg' },
   ]
 
   return (
@@ -36,6 +36,7 @@ export default function Operations() {
               title={t(`operations.systems.${sys.key}.title`)}
               description={t(`operations.systems.${sys.key}.description`)}
               features={t(`operations.systems.${sys.key}.features`, { returnObjects: true }) as string[]}
+              image={sys.image}
               delay={i * 0.1}
             />
           ))}
