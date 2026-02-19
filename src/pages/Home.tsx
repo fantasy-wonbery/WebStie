@@ -59,6 +59,20 @@ export default function Home() {
 
   return (
     <PageLayout className="bg-[#0A1E3D]">
+      {/* Video Background */}
+      <div className="fixed inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={`${import.meta.env.BASE_URL}videos/hero_fly.mp4`} type="video/mp4" />
+        </video>
+        {/* Dark overlay to maintain theme */}
+        <div className="absolute inset-0 bg-[#0A1E3D]/80" />
+      </div>
       <ParticleField color="#ffffff" count={200} />
       <FloatingOrbs colors={['#1E3A5F', '#4A90D9', '#C5A55A']} />
 
