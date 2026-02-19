@@ -71,12 +71,18 @@ export default function Home() {
       {/*  HERO - Video background with overlay                        */}
       {/* ============================================================ */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Video background */}
+        {/* Fallback background image for mobile */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${B}images/hero/airbus02.jpg)` }}
+        />
+        {/* Video background - hidden on mobile due to autoplay restrictions */}
         <video
           autoPlay
           loop
           muted
           playsInline
+          poster={B + 'images/hero/airbus02.jpg'}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src={B + 'videos/hero_fly.mp4'} type="video/mp4" />

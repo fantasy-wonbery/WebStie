@@ -61,11 +61,18 @@ export default function Home() {
     <PageLayout className="bg-[#0A1E3D]">
       {/* Video Background */}
       <div className="fixed inset-0 z-0">
+        {/* Fallback background image for mobile */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/hero/airbus02.jpg)` }}
+        />
+        {/* Video background */}
         <video
           autoPlay
           loop
           muted
           playsInline
+          poster={`${import.meta.env.BASE_URL}images/hero/airbus02.jpg`}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src={`${import.meta.env.BASE_URL}videos/hero_fly.mp4`} type="video/mp4" />
