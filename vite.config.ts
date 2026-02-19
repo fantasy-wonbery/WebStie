@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-export default defineConfig(({ command, mode }) => ({
-  // 生产环境部署到 avinect.com 时用 '/'，GitHub Pages 用 '/WebStie/'
-  base: mode === 'production' ? '/' : (command === 'build' ? '/WebStie/' : '/'),
+export default defineConfig(({ command }) => ({
+  // 默认 GitHub Pages 用 '/WebStie/'，服务器部署时通过脚本临时修改
+  base: command === 'build' ? '/WebStie/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
