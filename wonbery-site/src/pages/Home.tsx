@@ -32,12 +32,12 @@ const airlineLogos = [
 
 /* Service categories matching original site */
 const serviceCategories = [
-  { key: 'passenger',    icon: Users,   path: '/operations', img: 'images/services/service-v-01.jpg' },
   { key: 'operations',   icon: Radio,   path: '/operations', img: 'images/services/service-v-08.jpg' },
   { key: 'crew',         icon: Plane,   path: '/flight-crew', img: 'images/services/service-v-07.jpg' },
   { key: 'airport',      icon: MapPin,  path: '/airport', img: 'images/services/service-v-06.jpg' },
   { key: 'aoc',          icon: Layout,  path: '/aoc-solutions', img: 'images/services/service-v-09.jpg' },
   { key: 'maintenance',  icon: Wrench,  path: '/service', img: 'images/services/service-v-10.jpg' },
+  { key: 'passenger',    icon: Users,   path: '/about', img: 'images/services/service-v-01.jpg' },
 ]
 
 /* Tech icons - using original site images */
