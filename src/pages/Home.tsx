@@ -35,6 +35,9 @@ const brandMeta = {
 const capabilityIcons = [Globe, Zap, Users, Award]
 const capabilityKeys = ['global', 'tech', 'industry', 'barrier'] as const
 
+/* Text shadow style for readability on video background */
+const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3)' }
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -108,8 +111,8 @@ export default function Home() {
         >
           <source src={`${import.meta.env.BASE_URL}videos/hero_fly.mp4`} type="video/mp4" />
         </video>
-        {/* Dark overlay to maintain theme */}
-        <div className="absolute inset-0 bg-[#0A1E3D]/70" />
+        {/* Gradient overlay - lighter to show video, with text shadow for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1E3D]/60 via-[#0A1E3D]/40 to-[#0A1E3D]/70" />
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
         <div className="text-center">
@@ -124,7 +127,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <span className="inline-block px-5 py-2.5 rounded-full text-sm font-medium bg-white/5 border border-white/10 text-white/50 tracking-wider">
+            <span className="inline-block px-5 py-2.5 rounded-full text-sm font-medium bg-white/10 border border-white/20 text-white/70 tracking-wider backdrop-blur-sm" style={textShadow}>
               {t('home.badge')}
             </span>
           </motion.div>
@@ -142,7 +145,8 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-lg md:text-xl text-white/35 font-display tracking-widest mb-8"
+            className="text-lg md:text-xl text-white/60 font-display tracking-widest mb-8"
+            style={textShadow}
           >
             {t('home.subtitle')}
           </motion.p>
@@ -151,11 +155,12 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-lg md:text-xl text-white/50 max-w-3xl mx-auto mb-12"
+            className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-12"
+            style={textShadow}
           >
             {t('home.description')}
             <br />
-            <span className="text-white/30">{t('home.descriptionSub')}</span>
+            <span className="text-white/50">{t('home.descriptionSub')}</span>
           </motion.p>
 
           <motion.div
