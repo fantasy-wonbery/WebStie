@@ -18,8 +18,6 @@ import {
   PageLayout,
   Section,
   GlowCard,
-  ParticleField,
-  FloatingOrbs,
   StatsCard,
   LanguageSwitcher,
 } from '../components'
@@ -113,13 +111,7 @@ export default function Home() {
         {/* Dark overlay to maintain theme */}
         <div className="absolute inset-0 bg-[#0A1E3D]/70" />
 
-        {/* Particles and orbs on top of video */}
-        <div className="absolute inset-0 z-10">
-          <ParticleField color="#ffffff" count={200} />
-          <FloatingOrbs colors={['#1E3A5F', '#4A90D9', '#C5A55A']} />
-        </div>
-
-        <div className="relative z-20 max-w-7xl mx-auto w-full">
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
         <div className="text-center">
           {/* Language switcher for home page (no Navigation) */}
           <div className="fixed top-6 right-6 z-50">
