@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
 import {
   Radio,
   MapPin,
@@ -54,6 +55,37 @@ const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0
 export default function Home() {
   const { t, i18n } = useTranslation()
   const isZh = i18n.language === 'zh'
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  // Try to play video on mount and on user interaction
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const tryPlay = () => {
+      video.play().catch(() => {
+        // Autoplay blocked, will show poster/fallback image
+      })
+    }
+
+    // Try to play immediately
+    tryPlay()
+
+    // Also try on first user interaction
+    const handleInteraction = () => {
+      tryPlay()
+      document.removeEventListener('touchstart', handleInteraction)
+      document.removeEventListener('click', handleInteraction)
+    }
+
+    document.addEventListener('touchstart', handleInteraction, { once: true })
+    document.addEventListener('click', handleInteraction, { once: true })
+
+    return () => {
+      document.removeEventListener('touchstart', handleInteraction)
+      document.removeEventListener('click', handleInteraction)
+    }
+  }, [])
 
   const navItems = [
     { label: t('nav.operations'), href: '#services' },
@@ -76,12 +108,14 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${B}images/hero/airbus02.jpg)` }}
         />
-        {/* Video background - hidden on mobile due to autoplay restrictions */}
+        {/* Video background */}
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           poster={B + 'images/hero/airbus02.jpg'}
           className="absolute inset-0 w-full h-full object-cover"
         >

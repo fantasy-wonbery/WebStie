@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
 import {
   ShoppingBag,
   Wifi,
@@ -55,6 +56,37 @@ const itemVariants = {
 
 export default function Home() {
   const { t } = useTranslation()
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  // Try to play video on mount and on user interaction
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const tryPlay = () => {
+      video.play().catch(() => {
+        // Autoplay blocked, will show poster/fallback image
+      })
+    }
+
+    // Try to play immediately
+    tryPlay()
+
+    // Also try on first user interaction
+    const handleInteraction = () => {
+      tryPlay()
+      document.removeEventListener('touchstart', handleInteraction)
+      document.removeEventListener('click', handleInteraction)
+    }
+
+    document.addEventListener('touchstart', handleInteraction, { once: true })
+    document.addEventListener('click', handleInteraction, { once: true })
+
+    return () => {
+      document.removeEventListener('touchstart', handleInteraction)
+      document.removeEventListener('click', handleInteraction)
+    }
+  }, [])
 
   return (
     <PageLayout className="bg-[#0A1E3D]">
@@ -67,10 +99,12 @@ export default function Home() {
         />
         {/* Video background */}
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           poster={`${import.meta.env.BASE_URL}images/hero/airbus02.jpg`}
           className="absolute inset-0 w-full h-full object-cover"
         >
