@@ -15,7 +15,6 @@ import {
 } from 'lucide-react'
 import {
   PageLayout,
-  Hero,
   Section,
   GlowCard,
   ParticleField,
@@ -59,8 +58,8 @@ export default function Home() {
 
   return (
     <PageLayout className="bg-[#0A1E3D]">
-      {/* Video Background */}
-      <div className="fixed inset-0 z-0">
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 overflow-hidden">
         {/* Fallback background image for mobile */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -78,13 +77,15 @@ export default function Home() {
           <source src={`${import.meta.env.BASE_URL}videos/hero_fly.mp4`} type="video/mp4" />
         </video>
         {/* Dark overlay to maintain theme */}
-        <div className="absolute inset-0 bg-[#0A1E3D]/80" />
-      </div>
-      <ParticleField color="#ffffff" count={200} />
-      <FloatingOrbs colors={['#1E3A5F', '#4A90D9', '#C5A55A']} />
+        <div className="absolute inset-0 bg-[#0A1E3D]/70" />
 
-      {/* Hero Section */}
-      <Hero>
+        {/* Particles and orbs on top of video */}
+        <div className="absolute inset-0 z-10">
+          <ParticleField color="#ffffff" count={200} />
+          <FloatingOrbs colors={['#1E3A5F', '#4A90D9', '#C5A55A']} />
+        </div>
+
+        <div className="relative z-20 max-w-7xl mx-auto w-full">
         <div className="text-center">
           {/* Language switcher for home page (no Navigation) */}
           <div className="fixed top-6 right-6 z-50">
@@ -151,7 +152,8 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
-      </Hero>
+        </div>
+      </section>
 
       {/* Stats */}
       <Section>
