@@ -17,14 +17,14 @@ export default function Operations() {
     <div className="min-h-screen bg-white">
       <Navigation showBack />
 
-      {/* Hero Section - Minimal top-to-bottom overlay with text shadow */}
+      {/* Hero Section - Light blue overlay like original */}
       <section className="relative pt-16 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center md:bg-fixed"
           style={{ backgroundImage: `url(${B}images/pages/efw-mro-services01.jpg)` }}
         />
-        {/* Minimal gradient overlay from top to bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
+        {/* Light blue gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0063dd]/60 via-[#0063dd]/40 to-[#0063dd]/70" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
           {/* Stats banner */}
@@ -35,13 +35,13 @@ export default function Operations() {
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
               {isZh ? (
-                <>每天为<span className="text-primary">20+</span>航空公司
-                <span className="text-primary">1000+</span>架飞机
-                <span className="text-primary">10000+</span>员工提供服务</>
+                <>每天为<span className="text-white">20+</span>航空公司
+                <span className="text-white">1000+</span>架飞机
+                <span className="text-white">10000+</span>员工提供服务</>
               ) : (
-                <>Serving <span className="text-primary">20+</span> Airlines,
-                <span className="text-primary">1000+</span> Aircraft,
-                <span className="text-primary">10000+</span> Employees Daily</>
+                <>Serving <span className="text-white">20+</span> Airlines,
+                <span className="text-white">1000+</span> Aircraft,
+                <span className="text-white">10000+</span> Employees Daily</>
               )}
             </h1>
             <p className="text-white text-lg max-w-4xl mx-auto leading-relaxed" style={textShadow}>
@@ -66,8 +66,6 @@ export default function Operations() {
           </motion.div>
         </div>
 
-        {/* Wave divider */}
-        <WaveDivider color="#ffffff" className="absolute bottom-0 left-0 right-0" />
       </section>
 
       {/* Product 1: AOC智能语音调度系统 - 有图片 */}

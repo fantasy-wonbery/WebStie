@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Building2, MapPin, Eye, Target, Heart, Lightbulb } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import WaveDivider from '../components/WaveDivider'
 
 const B = import.meta.env.BASE_URL
 
@@ -12,7 +13,8 @@ const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0
 const valueIcons = [Eye, Target, Heart, Lightbulb]
 
 export default function About() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isZh = i18n.language === 'zh'
 
   const values = (['vision', 'mission', 'purpose', 'philosophy'] as const).map((key, i) => ({
     key,
@@ -25,11 +27,11 @@ export default function About() {
     <div className="min-h-screen bg-white">
       <Navigation showBack />
 
-      {/* Hero Section - Minimal top-to-bottom overlay with text shadow */}
+      {/* Hero Section - Light blue overlay like original */}
       <section className="relative pt-16 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center md:bg-fixed" style={{ backgroundImage: `url(${B}images/about/Office-large-3.jpg)` }} />
-        {/* Minimal gradient overlay from top to bottom */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
+        {/* Light blue gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0063dd]/60 via-[#0063dd]/40 to-[#0063dd]/70" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
           <motion.div
@@ -38,9 +40,15 @@ export default function About() {
             className="text-center mb-8"
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
-              每天为<span className="text-primary">20+</span>航空公司
-              <span className="text-primary">1000+</span>架飞机
-              <span className="text-primary">10000+</span>员工提供服务
+              {isZh ? (
+                <>每天为<span className="text-white">20+</span>航空公司
+                <span className="text-white">1000+</span>架飞机
+                <span className="text-white">10000+</span>员工提供服务</>
+              ) : (
+                <>Serving <span className="text-white">20+</span> Airlines,
+                <span className="text-white">1000+</span> Aircraft,
+                <span className="text-white">10000+</span> Employees Daily</>
+              )}
             </h1>
             <p className="text-white text-lg max-w-4xl mx-auto leading-relaxed" style={textShadow}>
               {t('about.subtitle')}
@@ -100,6 +108,8 @@ export default function About() {
         </div>
       </section>
 
+      <WaveDivider color="#f9fafb" />
+
       {/* Values */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -134,6 +144,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <WaveDivider color="#ffffff" flip />
 
       {/* Qualifications */}
       <section className="py-20 bg-white">
