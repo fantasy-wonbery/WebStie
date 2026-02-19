@@ -123,14 +123,14 @@ export default function Wonbery() {
             ))}
           </motion.div>
 
-          {/* CTA - Visit Official Website */}
+          {/* CTA - Visit Wonbery Site */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.6 }}
           >
             <a
-              href="https://www.wonbery.com"
+              href="https://fantasy-wonbery.github.io/WebStie/wonbery/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-10 py-4 rounded-xl bg-wonbery-accent text-wonbery-primary font-semibold text-lg hover:bg-wonbery-accent/90 transition-all hover:scale-105"
@@ -138,7 +138,7 @@ export default function Wonbery() {
               {t('wonbery.visitWebsite')}
               <ExternalLink size={20} />
             </a>
-            <p className="text-white/30 text-sm mt-4">www.wonbery.com</p>
+            <p className="text-white/30 text-sm mt-4">{t('wonbery.subtitle')}</p>
           </motion.div>
         </div>
       </Hero>
