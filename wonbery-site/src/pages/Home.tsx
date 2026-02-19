@@ -68,14 +68,19 @@ export default function Home() {
       <Navigation items={navItems} />
 
       {/* ============================================================ */}
-      {/*  HERO - Minimal top-to-bottom overlay with text shadow       */}
+      {/*  HERO - Video background with overlay                        */}
       {/* ============================================================ */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center md:bg-fixed"
-          style={{ backgroundImage: `url(${B}images/hero/airbus02.jpg)` }}
-        />
+        {/* Video background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={B + 'videos/hero_fly.mp4'} type="video/mp4" />
+        </video>
         {/* Minimal gradient overlay from top to bottom */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
 
