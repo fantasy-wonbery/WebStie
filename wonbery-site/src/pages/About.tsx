@@ -13,8 +13,7 @@ const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0
 const valueIcons = [Eye, Target, Heart, Lightbulb]
 
 export default function About() {
-  const { t, i18n } = useTranslation()
-  const isZh = i18n.language === 'zh'
+  const { t } = useTranslation()
 
   const values = (['vision', 'mission', 'purpose', 'philosophy'] as const).map((key, i) => ({
     key,
@@ -40,15 +39,7 @@ export default function About() {
             className="text-center mb-8"
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
-              {isZh ? (
-                <>每天为<span className="text-white">20+</span>航空公司
-                <span className="text-white">1000+</span>架飞机
-                <span className="text-white">10000+</span>员工提供服务</>
-              ) : (
-                <>Serving <span className="text-white">20+</span> Airlines,
-                <span className="text-white">1000+</span> Aircraft,
-                <span className="text-white">10000+</span> Employees Daily</>
-              )}
+              {t('common.heroTitle')}
             </h1>
             <p className="text-white text-lg max-w-4xl mx-auto leading-relaxed" style={textShadow}>
               {t('about.subtitle')}
@@ -88,7 +79,7 @@ export default function About() {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">
-                {t('about.badge') === '关于我们' ? '公司简介' : 'Company Overview'}
+                {t('about.companyOverview')}
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">{t('about.company.description')}</p>
               <p className="text-gray-600 leading-relaxed">{t('about.company.team')}</p>
@@ -119,7 +110,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-2xl md:text-3xl font-display font-bold text-gray-900 text-center mb-12"
           >
-            {t('about.badge') === '关于我们' ? '企业文化' : 'Corporate Culture'}
+            {t('about.corporateCulture')}
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((val, i) => {
@@ -156,7 +147,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-2xl md:text-3xl font-display font-bold text-gray-900 text-center mb-12"
           >
-            {t('about.badge') === '关于我们' ? '公司资质' : 'Corporate Qualifications'}
+            {t('about.qualifications')}
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div

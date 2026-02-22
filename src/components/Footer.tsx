@@ -34,14 +34,11 @@ export default function Footer({
         </div>
 
         <div className="flex items-center gap-6">
-          <a
-            href="#"
-            className="text-white/40 hover:text-white transition-colors text-sm"
-          >
+          <span className="text-white/40 text-sm">
             {t('common.privacyPolicy')}
-          </a>
+          </span>
           <a
-            href="#"
+            href={`mailto:${t('common.contactEmail')}`}
             className="text-white/40 hover:text-white transition-colors text-sm"
           >
             {t('common.contactUs')}

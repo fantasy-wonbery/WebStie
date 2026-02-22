@@ -34,15 +34,7 @@ export default function Operations() {
             className="text-center mb-8"
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
-              {isZh ? (
-                <>每天为<span className="text-white">20+</span>航空公司
-                <span className="text-white">1000+</span>架飞机
-                <span className="text-white">10000+</span>员工提供服务</>
-              ) : (
-                <>Serving <span className="text-white">20+</span> Airlines,
-                <span className="text-white">1000+</span> Aircraft,
-                <span className="text-white">10000+</span> Employees Daily</>
-              )}
+              {t('common.heroTitle')}
             </h1>
             <p className="text-white text-lg max-w-4xl mx-auto leading-relaxed" style={textShadow}>
               {t('operations.description')}

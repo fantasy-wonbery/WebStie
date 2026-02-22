@@ -7,6 +7,7 @@
     "learnMore": "Learn More",
     "viewDetails": "View Details",
     "contactUs": "Contact Us",
+    "heroTitle": "Serving 20+ Airlines, 1000+ Aircraft, 10000+ Employees Daily",
     "copyright": "© {{year}} Beijing Wonbery Technology Co., Ltd. All rights reserved.",
     "stats": {
       "airlines": "Airlines Served",
@@ -233,6 +234,9 @@
     "badge": "About Us",
     "title": "About Us",
     "subtitle": "Deep Expertise in Aviation IT",
+    "companyOverview": "Company Overview",
+    "corporateCulture": "Corporate Culture",
+    "qualifications": "Corporate Qualifications",
     "company": {
       "description": "Founded in 2006 and headquartered in Beijing with a registered capital of 92.58 million yuan, Beijing Wonbery Technology is a technology enterprise jointly established by the Beijing Science and Technology Commission's 863 Program, the Beijing Information Office, and the Chinese Academy of Sciences Graduate School. The company specializes in software R&D, customized aviation software development, enterprise IT consulting, and IoT application integration.",
       "team": "Wonbery's R&D team consists of graduates from China's top universities with over a decade of aviation informatization experience, serving dozens of domestic airlines, general aviation operators, and airports. The team continuously innovates in flight operations big data analytics, data visualization, AI, and optimization algorithms."

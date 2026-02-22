@@ -130,7 +130,7 @@ export default function Wonbery() {
             transition={{ delay: 0.7, duration: 0.6 }}
           >
             <a
-              href="/wonbery/"
+              href={`${import.meta.env.BASE_URL}wonbery/`}
               className="inline-flex items-center gap-3 px-10 py-4 rounded-xl bg-wonbery-accent text-wonbery-primary font-semibold text-lg hover:bg-wonbery-accent/90 transition-all hover:scale-105"
             >
               {t('wonbery.visitWebsite')}

@@ -10,8 +10,7 @@ const B = import.meta.env.BASE_URL
 const textShadow = { textShadow: '0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3)' }
 
 export default function AocSolutions() {
-  const { t, i18n } = useTranslation()
-  const isZh = i18n.language === 'zh'
+  const { t } = useTranslation()
 
   const products = [
     {
@@ -25,7 +24,7 @@ export default function AocSolutions() {
     {
       titleKey: 'design',
       image: 'images/products/efw-freighter01.jpg',
-      features: ['智能化', '科技化', '现代化', '自动化', '人性化'],
+      hasFeatures: true,
     },
   ]
 
@@ -46,15 +45,7 @@ export default function AocSolutions() {
             className="text-center mb-8"
           >
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6" style={textShadow}>
-              {isZh ? (
-                <>每天为<span className="text-white">20+</span>航空公司
-                <span className="text-white">1000+</span>架飞机
-                <span className="text-white">10000+</span>员工提供服务</>
-              ) : (
-                <>Serving <span className="text-white">20+</span> Airlines,
-                <span className="text-white">1000+</span> Aircraft,
-                <span className="text-white">10000+</span> Employees Daily</>
-              )}
+              {t('common.heroTitle')}
             </h1>
             <p className="text-white text-lg max-w-4xl mx-auto leading-relaxed" style={textShadow}>
               {t('aocSolutions.subtitle')}
@@ -102,9 +93,9 @@ export default function AocSolutions() {
                     <p className="text-gray-600 leading-relaxed mb-6">
                       {t(`aocSolutions.systems.${product.titleKey}.description`)}
                     </p>
-                    {product.features && (
+                    {product.hasFeatures && (
                       <div className="flex flex-wrap gap-3">
-                        {(isZh ? product.features : ['Intelligent', 'Tech-focused', 'Modern', 'Automated', 'User-friendly']).map((feature) => (
+                        {(t(`aocSolutions.systems.${product.titleKey}.features`, { returnObjects: true }) as string[]).map((feature) => (
                           <span key={feature} className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
                             {feature}
                           </span>

@@ -73,10 +73,16 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 text-center">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span className="text-white/30 text-xs">
             {t('common.copyright', { year })}
           </span>
+          <a
+            href={import.meta.env.BASE_URL.replace('wonbery/', '')}
+            className="text-white/30 hover:text-primary text-xs transition-colors"
+          >
+            ← Avinect Group
+          </a>
         </div>
       </div>
     </footer>
