@@ -25,15 +25,6 @@ import {
 } from '../components'
 import { useTranslation } from 'react-i18next'
 
-function ConexusWordmark({ className = '' }: { className?: string }) {
-  return (
-    <span className={`font-display font-bold tracking-[0.18em] ${className}`}>
-      <span>CONE</span>
-      <span className="text-conexus-secondary">X</span>
-      <span>US</span>
-    </span>
-  )
-}
 
 const pillarKeys = ['compute', 'compliance', 'treasury'] as const
 const pillarIcons = [Cpu, ShieldCheck, Landmark]
@@ -80,14 +71,14 @@ export default function Conexus() {
               <span className="text-conexus-secondary text-sm">{t('conexus.badge')}</span>
             </motion.div>
 
-            <motion.div
+            <motion.img
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="mb-4"
-            >
-              <ConexusWordmark className="text-4xl md:text-5xl lg:text-6xl" />
-            </motion.div>
+              src={`${import.meta.env.BASE_URL}images/conexus/wordmark.png`}
+              alt="CONEXUS"
+              className="block mb-6 h-12 md:h-16 lg:h-20 w-auto"
+            />
 
             <motion.p
               initial={{ opacity: 0 }}
