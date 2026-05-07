@@ -54,8 +54,8 @@
       "conexus": {
         "name": "Conexus",
         "subtitle": "Compute. Compliance. Treasury.",
-        "description": "Cross-border AI compute, settled offshore — geopolitically neutral compute for governments, sovereign-fund-backed operators, and institutional buyers",
-        "type": "B2B · Cross-border Compute Conduit",
+        "description": "Cross-border AI compute service platform — end-to-end services across compute procurement, compliance pathway, and offshore settlement",
+        "type": "B2B · Cross-border Compute Services",
         "tags": ["AI Compute", "Compliance Pathway", "HK Settlement"]
       }
     },
@@ -333,164 +333,108 @@
   "conexus": {
     "nav": {
       "about": "About",
-      "pillars": "Three Pillars",
+      "services": "Services",
       "pathway": "The Shantou Pathway",
       "contact": "Contact"
     },
     "badge": "An Avinect Group division",
     "heroTitle": "Conexus",
     "heroSubtitle": "Compute. Compliance. Treasury.",
-    "heroDescription": "Cross-border AI compute, settled offshore. We deliver geopolitically neutral Chinese AI compute to governments, sovereign-fund-backed operators, and institutional buyers — through a state-sanctioned compliance pathway, with Hong Kong settlement.",
-    "ctaPillars": "Explore Pillars",
-    "ctaContact": "Engage with us",
+    "heroDescription": "Conexus is Avinect Group's cross-border AI compute service platform. We provide end-to-end services across compute procurement, compliance pathway, and offshore settlement.",
+    "ctaServices": "Our Services",
+    "ctaContact": "Contact",
     "heroVisual": {
-      "title": "In a neutral lane",
-      "subtitle": "Cross-border compute conduit"
+      "title": "Avinect Group",
+      "subtitle": "Cross-border AI compute platform"
     },
     "stats": {
       "latencyValue": "33",
       "latencySuffix": "ms",
       "latency": "Latency to Singapore (SJC cable)",
-      "costValue": "50",
-      "costSuffix": "%",
-      "cost": "of US-region pricing",
       "modelsValue": "50",
       "modelsSuffix": "+",
       "models": "AI models covered",
+      "currenciesValue": "6",
+      "currenciesSuffix": "",
+      "currencies": "Settlement currencies",
       "bandwidthValue": "52",
       "bandwidthSuffix": "%",
       "bandwidth": "of China's intl bandwidth via Shantou"
     },
-    "problemSection": {
-      "title": "The Reality",
-      "body": "After AWS, Azure, and direct hyperscalers, institutional buyers in Asia and the Middle East still do not have a politically neutral AI compute option. Conexus is that option."
-    },
-    "whyNowSection": {
-      "title": "Why Now",
-      "subtitle": "Three structural shifts crystallized in 2026 H1"
-    },
-    "whyNow": {
-      "cost": {
-        "title": "Cost Structure Shifted",
-        "description": "China's compute cost advantage has become measurable and durable — at approximately 50% of US-region pricing."
-      },
-      "risk": {
-        "title": "Geopolitical Risk Surfaced",
-        "description": "Recent infrastructure events in the Middle East have made single-region compute exposure a documented institutional risk."
-      },
-      "compliance": {
-        "title": "Compliance Pathway Opened",
-        "description": "China formally launched cross-border AI compute via state-pilot pathways — making compliant Chinese AI legally accessible to overseas buyers for the first time."
-      }
-    },
-    "pillarsSection": {
-      "title": "Three Pillars",
+    "servicesSection": {
+      "title": "Service Scope",
       "subtitle": "Compute · Compliance · Treasury"
     },
     "pillars": {
       "compute": {
         "title": "Compute",
-        "subtitle": "Wholesale AI Token aggregation",
-        "description": "Coverage of 50+ leading models, including international (Claude, Gemini, GPT) and domestic Chinese (Qwen, DeepSeek, Kimi, GLM). Compute pricing approximately 50% of US-region equivalents, via volume discount and prepayment lock-in.",
+        "subtitle": "AI Token procurement",
+        "description": "Aggregating leading AI models from international and Chinese providers. We deliver compute capacity to clients via volume procurement and prepayment agreements with a unified API.",
         "highlights": [
           "50+ models covered",
           "OpenAI-compatible API",
-          "Volume + prepay pricing",
+          "Flexible pricing options",
           "Three-tier SLA"
         ]
       },
       "compliance": {
         "title": "Compliance",
-        "subtitle": "State-sanctioned data pathway",
-        "description": "Operated through China's only state-sanctioned 'Inbound Data Processing' pilot at the Shantou Huaqiao Experimental Zone — the second city in mainland China to receive this national-level designation.",
+        "subtitle": "Cross-border data pathway",
+        "description": "Built on the policy framework of the Shantou Huaqiao Experimental Zone's 'Inbound Data Processing' pilot, providing channel access and supporting documentation for clients with cross-border data requirements.",
         "highlights": [
-          "State-pilot certified",
+          "Pilot policy framework",
           "Physical isolation",
-          "End-to-end audit",
-          "Full documentation"
+          "Audit documentation",
+          "Process traceability"
         ]
       },
       "treasury": {
         "title": "Treasury",
         "subtitle": "Hong Kong-domiciled settlement",
-        "description": "Multi-currency offshore settlement (USD / HKD / SGD / MYR / AED / SAR) via Avinect Group's operating HSBC banking infrastructure. KYC/AML compliant. Built for institutional clients.",
+        "description": "Multi-currency offshore settlement via Avinect Group's Hong Kong banking infrastructure. KYC/AML processes follow institutional client compliance requirements.",
         "highlights": [
-          "Avinect Group entity",
-          "HSBC Hong Kong",
+          "Hong Kong entity",
+          "HSBC banking channel",
           "Multi-currency",
-          "Audit-grade records"
+          "Standard compliance"
         ]
-      }
-    },
-    "valueSection": {
-      "title": "Why Conexus",
-      "subtitle": "Seven pillars that hold simultaneously"
-    },
-    "value": {
-      "neutrality": {
-        "title": "Geopolitical Neutrality",
-        "description": "Non-US bloc, non-Middle-East-local, non-Russian — the third leg institutional audits can accept."
-      },
-      "resilience": {
-        "title": "Physical Resilience",
-        "description": "Shantou node away from conflict zones; local grid + offshore wind; Tier IV data center design."
-      },
-      "cost": {
-        "title": "Cost Efficiency",
-        "description": "China compute structurally at 50–70% of US-region cost; clients save 30–50% on total compute spend."
-      },
-      "latency": {
-        "title": "Latency Performance",
-        "description": "SJC subsea cable, 32.7ms to Singapore — 40–60% faster than AWS Singapore via US backhaul."
-      },
-      "compliance": {
-        "title": "Compliance Assurance",
-        "description": "State-pilot pathway with full audit documentation, deliverable to client legal and compliance teams."
-      },
-      "banking": {
-        "title": "Banking Credibility",
-        "description": "Avinect Group HK + HSBC operational, multi-currency, audit-grade transaction records."
-      },
-      "bridge": {
-        "title": "Cultural Bridge",
-        "description": "Chaoshan diaspora and Middle East capital network — relational, not transactional."
       }
     },
     "pathwaySection": {
       "title": "The Shantou Pathway",
-      "subtitle": "China's only state-sanctioned cross-border AI data pilot",
-      "body": "Conexus operates through China's only state-sanctioned 'Inbound Data Processing' pilot at the Shantou Huaqiao Experimental Zone — the second city in mainland China with this designation. The SJC subsea cable lands here, carrying 52% of China's international bandwidth, with 32.7ms latency to Singapore.",
+      "subtitle": "National-level cross-border data processing pilot",
+      "body": "The Shantou Huaqiao Economic and Cultural Cooperation Experimental Zone is one of China's national-level pilot zones for 'Inbound Data Processing'. The SJC subsea cable lands here, making it a key node for China's international bandwidth. Conexus operates within the policy framework of this pilot.",
       "feature1Title": "Subsea Cable Landing",
-      "feature1Description": "SJC cable Shantou landing carries 52% of China's international bandwidth, direct to 83 sites in 51 countries.",
-      "feature2Title": "Compliance Architecture",
-      "feature2Description": "Physical isolation + end-to-end encryption + full audit chain + documentation package for client legal teams.",
+      "feature1Description": "SJC cable Shantou landing connects to international nodes including Singapore, Japan, and the United States.",
+      "feature2Title": "Compliance Framework",
+      "feature2Description": "Physical isolation, end-to-end encryption, audit trail, and process traceability.",
       "feature3Title": "Power Infrastructure",
-      "feature3Description": "Local grid + offshore wind power (Guangdong East coastal plan: 60GW offshore wind). Tier IV design."
+      "feature3Description": "Local grid with offshore wind support, aligned with Tier IV data center planning."
     },
-    "engagementsSection": {
-      "title": "Current Engagements",
-      "subtitle": "Initial clients and strategic supply chain"
+    "approachSection": {
+      "title": "How We Work",
+      "subtitle": "Standard process with institutional compliance"
     },
-    "engagements": {
-      "malaysia": {
-        "title": "Malaysian Government Park",
-        "description": "Wholesale Token contract under term-sheet negotiation. Saudi sovereign-fund backed."
+    "approach": {
+      "engagement": {
+        "title": "Engagement",
+        "description": "We work with clients to define service scope and delivery format based on their use case, compliance requirements, and compute volume."
       },
-      "gulf": {
-        "title": "Gulf and Macau Clients",
-        "description": "Multiple institutional clients and park operators in active discussion."
+      "delivery": {
+        "title": "Delivery",
+        "description": "Compute capacity delivered through framework agreements, with corresponding compliance documentation, reconciliation records, and service-level commitments."
       },
-      "supply": {
-        "title": "Strategic Supply",
-        "description": "Strategic supply agreements with Alibaba Cloud and other domestic Chinese compute providers (volume + prepayment lock pricing)."
+      "operations": {
+        "title": "Operations",
+        "description": "Ongoing usage monitoring, periodic reconciliation, and service reporting to support long-term engagements and scaling."
       }
     },
     "governanceSection": {
-      "title": "Governance",
+      "title": "Company Information",
       "parent": "Parent",
-      "parentValue": "Avinect Group (Hong Kong, est. 2026)",
+      "parentValue": "Avinect Group (Hong Kong)",
       "banking": "Banking",
-      "bankingValue": "HSBC Hong Kong (operational)",
+      "bankingValue": "HSBC Hong Kong",
       "compliance": "Compliance",
       "complianceValue": "Shantou Huaqiao Experimental Zone Pilot",
       "settlement": "Settlement",
@@ -499,10 +443,10 @@
       "auditValue": "Annual third-party verification"
     },
     "cta": {
-      "title": "Engage with Conexus",
-      "description": "We work with governments, sovereign-fund-backed operators, and institutional buyers. For initial engagement, email contact@avinect.com with subject 'Conexus / [Your Region]'. We respond within 48 hours.",
+      "title": "Contact",
+      "description": "For service details or business inquiries, please email contact@avinect.com with subject line 'Conexus'.",
       "email": "Email Us",
-      "learnMore": "Explore Pillars"
+      "learnMore": "Our Services"
     }
   }
 }

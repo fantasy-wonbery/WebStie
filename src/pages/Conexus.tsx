@@ -3,15 +3,15 @@ import {
   Cpu,
   ShieldCheck,
   Landmark,
-  Globe,
-  Zap,
-  Building2,
   Network,
   CheckCircle2,
   ArrowRight,
   Cable,
   Lock,
   Wind,
+  ClipboardList,
+  PackageCheck,
+  Activity,
 } from 'lucide-react'
 import {
   PageLayout,
@@ -29,25 +29,11 @@ import { useTranslation } from 'react-i18next'
 const pillarKeys = ['compute', 'compliance', 'treasury'] as const
 const pillarIcons = [Cpu, ShieldCheck, Landmark]
 
-const whyNowKeys = ['cost', 'risk', 'compliance'] as const
-const whyNowIcons = [Zap, Globe, ShieldCheck]
-
-const valueKeys = [
-  'neutrality',
-  'resilience',
-  'cost',
-  'latency',
-  'compliance',
-  'banking',
-  'bridge',
-] as const
-const valueIcons = [Globe, ShieldCheck, Zap, Network, Lock, Building2, ArrowRight]
-
-const engagementKeys = ['malaysia', 'gulf', 'supply'] as const
-const engagementIcons = [Building2, Globe, Network]
-
 const pathwayKeys = ['feature1', 'feature2', 'feature3'] as const
 const pathwayIcons = [Cable, Lock, Wind]
+
+const approachKeys = ['engagement', 'delivery', 'operations'] as const
+const approachIcons = [ClipboardList, PackageCheck, Activity]
 
 const governanceKeys = ['parent', 'banking', 'compliance', 'settlement', 'audit'] as const
 
@@ -56,7 +42,7 @@ export default function Conexus() {
 
   const navItems = [
     { label: t('conexus.nav.about'), href: '#about' },
-    { label: t('conexus.nav.pillars'), href: '#pillars' },
+    { label: t('conexus.nav.services'), href: '#services' },
     { label: t('conexus.nav.pathway'), href: '#pathway' },
     { label: t('conexus.nav.contact'), href: '#contact' },
   ]
@@ -115,10 +101,10 @@ export default function Conexus() {
               className="flex flex-wrap gap-4"
             >
               <a
-                href="#pillars"
+                href="#services"
                 className="px-6 py-3 rounded-xl bg-conexus-secondary text-conexus-primary font-semibold hover:bg-conexus-secondary/90 transition-colors"
               >
-                {t('conexus.ctaPillars')}
+                {t('conexus.ctaServices')}
               </a>
               <a
                 href="#contact"
@@ -146,7 +132,7 @@ export default function Conexus() {
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-conexus-secondary shadow-[0_0_24px_rgba(212,175,55,0.6)]" />
                   <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-conexus-secondary to-transparent -translate-y-1/2" />
                 </motion.div>
-                <div className="text-3xl font-display font-bold text-conexus-secondary mb-2">
+                <div className="text-2xl font-display font-bold text-conexus-secondary mb-2">
                   {t('conexus.heroVisual.title')}
                 </div>
                 <div className="text-white/40 text-sm tracking-wide">
@@ -177,16 +163,16 @@ export default function Conexus() {
             delay={0}
           />
           <StatsCard
-            value={t('conexus.stats.costValue')}
-            suffix={t('conexus.stats.costSuffix')}
-            label={t('conexus.stats.cost')}
+            value={t('conexus.stats.modelsValue')}
+            suffix={t('conexus.stats.modelsSuffix')}
+            label={t('conexus.stats.models')}
             accentColor="#D4AF37"
             delay={0.1}
           />
           <StatsCard
-            value={t('conexus.stats.modelsValue')}
-            suffix={t('conexus.stats.modelsSuffix')}
-            label={t('conexus.stats.models')}
+            value={t('conexus.stats.currenciesValue')}
+            suffix={t('conexus.stats.currenciesSuffix')}
+            label={t('conexus.stats.currencies')}
             accentColor="#D4AF37"
             delay={0.2}
           />
@@ -200,25 +186,8 @@ export default function Conexus() {
         </div>
       </Section>
 
-      {/* Problem Statement */}
-      <Section className="border-t border-white/5">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto text-center"
-        >
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-conexus-secondary">
-            {t('conexus.problemSection.title')}
-          </h2>
-          <p className="text-xl text-white/70 leading-relaxed">
-            {t('conexus.problemSection.body')}
-          </p>
-        </motion.div>
-      </Section>
-
-      {/* Why Now */}
-      <Section className="border-t border-white/5">
+      {/* Services / Three Pillars */}
+      <Section id="services" className="border-t border-white/5">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0 }}
@@ -226,53 +195,7 @@ export default function Conexus() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-display font-bold mb-4"
           >
-            {t('conexus.whyNowSection.title')}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-white/60"
-          >
-            {t('conexus.whyNowSection.subtitle')}
-          </motion.p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {whyNowKeys.map((key, index) => {
-            const Icon = whyNowIcons[index]
-            return (
-              <GlowCard
-                key={key}
-                glowColor="rgba(212, 175, 55, 0.2)"
-                delay={index * 0.1}
-              >
-                <div className="p-3 rounded-xl bg-conexus-secondary/10 w-fit mb-4">
-                  <Icon size={24} className="text-conexus-secondary" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3">
-                  {t(`conexus.whyNow.${key}.title`)}
-                </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {t(`conexus.whyNow.${key}.description`)}
-                </p>
-              </GlowCard>
-            )
-          })}
-        </div>
-      </Section>
-
-      {/* Three Pillars */}
-      <Section id="pillars" className="border-t border-white/5">
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-display font-bold mb-4"
-          >
-            {t('conexus.pillarsSection.title')}
+            {t('conexus.servicesSection.title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -281,7 +204,7 @@ export default function Conexus() {
             transition={{ delay: 0.2 }}
             className="text-conexus-secondary tracking-wider font-display"
           >
-            {t('conexus.pillarsSection.subtitle')}
+            {t('conexus.servicesSection.subtitle')}
           </motion.p>
         </div>
 
@@ -325,55 +248,6 @@ export default function Conexus() {
                   ))}
                 </div>
               </GlowCard>
-            )
-          })}
-        </div>
-      </Section>
-
-      {/* Seven Value Pillars */}
-      <Section className="border-t border-white/5">
-        <div className="text-center mb-16">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-display font-bold mb-4"
-          >
-            {t('conexus.valueSection.title')}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-white/60 max-w-2xl mx-auto"
-          >
-            {t('conexus.valueSection.subtitle')}
-          </motion.p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {valueKeys.map((key, index) => {
-            const Icon = valueIcons[index]
-            return (
-              <motion.div
-                key={key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-                className="glass-card p-6"
-              >
-                <div className="w-12 h-12 rounded-xl bg-conexus-secondary/10 flex items-center justify-center mb-4">
-                  <Icon size={24} className="text-conexus-secondary" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  {t(`conexus.value.${key}.title`)}
-                </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {t(`conexus.value.${key}.description`)}
-                </p>
-              </motion.div>
             )
           })}
         </div>
@@ -434,7 +308,7 @@ export default function Conexus() {
         </div>
       </Section>
 
-      {/* Current Engagements */}
+      {/* How We Work / Service Approach */}
       <Section className="border-t border-white/5">
         <div className="text-center mb-12">
           <motion.h2
@@ -443,7 +317,7 @@ export default function Conexus() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-display font-bold mb-4"
           >
-            {t('conexus.engagementsSection.title')}
+            {t('conexus.approachSection.title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0 }}
@@ -452,13 +326,13 @@ export default function Conexus() {
             transition={{ delay: 0.2 }}
             className="text-white/60"
           >
-            {t('conexus.engagementsSection.subtitle')}
+            {t('conexus.approachSection.subtitle')}
           </motion.p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {engagementKeys.map((key, index) => {
-            const Icon = engagementIcons[index]
+          {approachKeys.map((key, index) => {
+            const Icon = approachIcons[index]
             return (
               <motion.div
                 key={key}
@@ -468,14 +342,19 @@ export default function Conexus() {
                 transition={{ delay: index * 0.1 }}
                 className="glass-card p-6"
               >
-                <div className="w-12 h-12 rounded-xl bg-conexus-secondary/10 flex items-center justify-center mb-4">
-                  <Icon size={24} className="text-conexus-secondary" />
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-conexus-secondary/10 flex items-center justify-center">
+                    <Icon size={20} className="text-conexus-secondary" />
+                  </div>
+                  <span className="text-xs text-conexus-secondary font-display tracking-widest">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                 </div>
                 <h3 className="text-lg font-semibold mb-2">
-                  {t(`conexus.engagements.${key}.title`)}
+                  {t(`conexus.approach.${key}.title`)}
                 </h3>
                 <p className="text-white/60 text-sm leading-relaxed">
-                  {t(`conexus.engagements.${key}.description`)}
+                  {t(`conexus.approach.${key}.description`)}
                 </p>
               </motion.div>
             )
@@ -483,7 +362,7 @@ export default function Conexus() {
         </div>
       </Section>
 
-      {/* Governance */}
+      {/* Company Information / Governance */}
       <Section className="border-t border-white/5">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -540,13 +419,13 @@ export default function Conexus() {
             className="flex flex-wrap justify-center gap-4"
           >
             <a
-              href="mailto:contact@avinect.com?subject=Conexus%20%2F%20Initial%20Inquiry"
+              href="mailto:contact@avinect.com?subject=Conexus"
               className="px-8 py-4 rounded-xl bg-conexus-secondary text-conexus-primary font-semibold hover:bg-conexus-secondary/90 transition-colors"
             >
               {t('conexus.cta.email')}
             </a>
             <a
-              href="#pillars"
+              href="#services"
               className="px-8 py-4 rounded-xl border border-white/20 text-white hover:bg-white/5 transition-colors flex items-center gap-2"
             >
               <ArrowRight size={20} />
