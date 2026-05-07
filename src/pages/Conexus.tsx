@@ -18,13 +18,79 @@ import {
   Hero,
   Section,
   GlowCard,
-  AnimatedText,
   Navigation,
   StatsCard,
   Footer,
   FloatingOrbs,
 } from '../components'
 import { useTranslation } from 'react-i18next'
+
+function ConexusWordmark({ className = '' }: { className?: string }) {
+  return (
+    <span className={`font-display font-bold tracking-[0.18em] ${className}`}>
+      <span>CONE</span>
+      <span className="text-conexus-secondary">X</span>
+      <span>US</span>
+    </span>
+  )
+}
+
+function ConexusMark({ size = 200 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 200 200"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="block"
+    >
+      <defs>
+        <linearGradient id="cxRingGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stopColor="#2A3548" />
+          <stop offset="100%" stopColor="#0B1320" />
+        </linearGradient>
+        <radialGradient id="cxOrbGrad" cx="35%" cy="30%" r="70%">
+          <stop offset="0%" stopColor="#FFE9A0" />
+          <stop offset="40%" stopColor="#D4AF37" />
+          <stop offset="100%" stopColor="#8B6E2F" />
+        </radialGradient>
+        <linearGradient id="cxBeamGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+          <stop offset="0%" stopColor="#D4AF37" stopOpacity="0" />
+          <stop offset="20%" stopColor="#D4AF37" stopOpacity="0.5" />
+          <stop offset="50%" stopColor="#FFF1B8" stopOpacity="1" />
+          <stop offset="80%" stopColor="#D4AF37" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#D4AF37" stopOpacity="0" />
+        </linearGradient>
+        <radialGradient id="cxOrbGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#D4AF37" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+
+      <circle cx="100" cy="100" r="84" stroke="#D4AF37" strokeWidth="0.5" strokeOpacity="0.25" fill="none" />
+      <circle cx="100" cy="100" r="76" stroke="url(#cxRingGrad)" strokeWidth="14" fill="none" />
+      <circle cx="100" cy="100" r="68" stroke="#000" strokeWidth="1" strokeOpacity="0.4" fill="none" />
+
+      <motion.rect
+        x="0" y="98" width="200" height="4"
+        fill="url(#cxBeamGrad)"
+        animate={{ opacity: [0.25, 0.55, 0.25] }}
+        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <rect x="0" y="99.5" width="200" height="1" fill="url(#cxBeamGrad)" />
+
+      <motion.circle
+        cx="24" cy="100" r="20" fill="url(#cxOrbGlow)"
+        animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.08, 1] }}
+        transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ transformOrigin: '24px 100px' }}
+      />
+      <circle cx="24" cy="100" r="11" fill="url(#cxOrbGrad)" />
+      <ellipse cx="21" cy="96" rx="3.5" ry="2.5" fill="#FFFFFF" opacity="0.45" />
+    </svg>
+  )
+}
 
 const pillarKeys = ['compute', 'compliance', 'treasury'] as const
 const pillarIcons = [Cpu, ShieldCheck, Landmark]
@@ -71,10 +137,14 @@ export default function Conexus() {
               <span className="text-conexus-secondary text-sm">{t('conexus.badge')}</span>
             </motion.div>
 
-            <AnimatedText
-              text={t('conexus.heroTitle')}
-              className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4"
-            />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="mb-4"
+            >
+              <ConexusWordmark className="text-4xl md:text-5xl lg:text-6xl" />
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0 }}
@@ -122,25 +192,19 @@ export default function Conexus() {
             className="relative"
           >
             <div className="aspect-square rounded-3xl bg-gradient-to-br from-conexus-primary to-[#1A2433] p-8 flex items-center justify-center relative overflow-hidden border border-conexus-secondary/10">
-              <div className="relative z-10 text-center">
-                <motion.div
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-                  className="relative w-48 h-48 mx-auto mb-6"
-                >
-                  <div className="absolute inset-0 rounded-full border-2 border-conexus-secondary/40" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-conexus-secondary shadow-[0_0_24px_rgba(212,175,55,0.6)]" />
-                  <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-conexus-secondary to-transparent -translate-y-1/2" />
-                </motion.div>
-                <div className="text-2xl font-display font-bold text-conexus-secondary mb-2">
+              <div className="relative z-10 text-center w-full px-6">
+                <div className="mx-auto mb-6 w-56 md:w-64">
+                  <ConexusMark size={256} />
+                </div>
+                <div className="text-sm font-display tracking-[0.4em] text-conexus-stone/70 mb-2">
                   {t('conexus.heroVisual.title')}
                 </div>
-                <div className="text-white/40 text-sm tracking-wide">
+                <div className="text-xs text-white/30 tracking-wider">
                   {t('conexus.heroVisual.subtitle')}
                 </div>
               </div>
 
-              <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0 opacity-10 pointer-events-none">
                 <div className="absolute top-1/4 left-1/4 w-32 h-16 bg-conexus-secondary rounded-full blur-2xl" />
                 <div className="absolute bottom-1/4 right-1/4 w-28 h-14 bg-conexus-accent rounded-full blur-2xl" />
               </div>
