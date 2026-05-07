@@ -123,27 +123,23 @@ export default function Conexus() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="relative"
+            className="relative aspect-square flex items-center justify-center"
           >
-            <div className="aspect-square rounded-3xl bg-gradient-to-br from-conexus-primary to-[#1A2433] flex items-center justify-center relative overflow-hidden border border-conexus-secondary/10">
-              <img
-                src={`${import.meta.env.BASE_URL}images/conexus/mark-primary.png`}
-                alt="Conexus mark"
-                className="w-3/4 h-3/4 object-contain"
-              />
+            <div className="absolute inset-0 rounded-full bg-conexus-secondary/5 blur-3xl" />
+            <img
+              src={`${import.meta.env.BASE_URL}images/conexus/mark-primary.png`}
+              alt="Conexus mark"
+              className="relative w-4/5 h-4/5 object-contain"
+            />
 
-              <div className="absolute bottom-6 left-0 right-0 text-center pointer-events-none">
-                <div className="text-xs font-display tracking-[0.4em] text-conexus-stone/70 mb-1">
-                  {t('conexus.heroVisual.title')}
-                </div>
-                <div className="text-[10px] text-white/30 tracking-wider">
-                  {t('conexus.heroVisual.subtitle')}
-                </div>
+            <div className="absolute -bottom-4 left-0 right-0 text-center pointer-events-none">
+              <div className="text-xs font-display tracking-[0.4em] text-conexus-stone/70 mb-1">
+                {t('conexus.heroVisual.title')}
+              </div>
+              <div className="text-[10px] text-white/30 tracking-wider">
+                {t('conexus.heroVisual.subtitle')}
               </div>
             </div>
-
-            <div className="absolute -top-4 -right-4 w-24 h-24 rounded-2xl bg-conexus-secondary/10 blur-xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 rounded-2xl bg-conexus-primary/40 blur-xl" />
           </motion.div>
         </div>
       </Hero>
