@@ -56,7 +56,7 @@
         "subtitle": "Compute. Compliance. Treasury.",
         "description": "Cross-border AI compute service platform — end-to-end services across compute procurement, compliance pathway, and offshore settlement",
         "type": "B2B · Cross-border Compute Services",
-        "tags": ["AI Compute", "Compliance Pathway", "HK Settlement"]
+        "tags": ["AI Compute", "Compliance Pathway", "Offshore Settlement"]
       }
     },
     "starrySky": {
@@ -334,7 +334,7 @@
     "nav": {
       "about": "About",
       "services": "Services",
-      "pathway": "The Shantou Pathway",
+      "pathway": "Compliance Pathway",
       "contact": "Contact"
     },
     "badge": "An Avinect Group division",
@@ -350,7 +350,7 @@
     "stats": {
       "latencyValue": "33",
       "latencySuffix": "ms",
-      "latency": "Latency to Singapore (SJC cable)",
+      "latency": "Latency to Southeast Asia hub",
       "modelsValue": "50",
       "modelsSuffix": "+",
       "models": "AI models covered",
@@ -359,7 +359,7 @@
       "currencies": "Settlement currencies",
       "bandwidthValue": "52",
       "bandwidthSuffix": "%",
-      "bandwidth": "of China's intl bandwidth via Shantou"
+      "bandwidth": "Pathway node share of intl bandwidth"
     },
     "servicesSection": {
       "title": "Service Scope",
@@ -380,7 +380,7 @@
       "compliance": {
         "title": "Compliance",
         "subtitle": "Cross-border data pathway",
-        "description": "Built on the policy framework of the Shantou Huaqiao Experimental Zone's 'Inbound Data Processing' pilot, providing channel access and supporting documentation for clients with cross-border data requirements.",
+        "description": "Built on the policy framework of a national-level cross-border data processing pilot, providing channel access and supporting documentation for clients with cross-border data requirements.",
         "highlights": [
           "Pilot policy framework",
           "Physical isolation",
@@ -390,26 +390,26 @@
       },
       "treasury": {
         "title": "Treasury",
-        "subtitle": "Hong Kong-domiciled settlement",
-        "description": "Multi-currency offshore settlement via Avinect Group's Hong Kong banking infrastructure. KYC/AML processes follow institutional client compliance requirements.",
+        "subtitle": "Offshore multi-currency settlement",
+        "description": "Multi-currency offshore settlement via international banking channels. KYC/AML processes follow institutional client compliance requirements.",
         "highlights": [
-          "Hong Kong entity",
-          "HSBC banking channel",
+          "Offshore entity",
+          "International banking",
           "Multi-currency",
           "Standard compliance"
         ]
       }
     },
     "pathwaySection": {
-      "title": "The Shantou Pathway",
+      "title": "Compliance Pathway",
       "subtitle": "National-level cross-border data processing pilot",
-      "body": "The Shantou Huaqiao Economic and Cultural Cooperation Experimental Zone is one of China's national-level pilot zones for 'Inbound Data Processing'. The SJC subsea cable lands here, making it a key node for China's international bandwidth. Conexus operates within the policy framework of this pilot.",
+      "body": "Conexus operates within the policy framework of a national-level cross-border data processing pilot. The pilot node sits within an international subsea cable landing zone — one of the key hubs for China's international bandwidth.",
       "feature1Title": "Subsea Cable Landing",
-      "feature1Description": "SJC cable Shantou landing connects to international nodes including Singapore, Japan, and the United States.",
+      "feature1Description": "International subsea cable landing node connecting to major overseas markets.",
       "feature2Title": "Compliance Framework",
       "feature2Description": "Physical isolation, end-to-end encryption, audit trail, and process traceability.",
       "feature3Title": "Power Infrastructure",
-      "feature3Description": "Local grid with offshore wind support, aligned with Tier IV data center planning."
+      "feature3Description": "Local grid with renewable energy support, aligned with high-tier data center planning."
     },
     "approachSection": {
       "title": "How We Work",
@@ -432,13 +432,13 @@
     "governanceSection": {
       "title": "Company Information",
       "parent": "Parent",
-      "parentValue": "Avinect Group (Hong Kong)",
-      "banking": "Banking",
-      "bankingValue": "HSBC Hong Kong",
+      "parentValue": "Avinect Group",
+      "banking": "Settlement Channel",
+      "bankingValue": "International banking",
       "compliance": "Compliance",
-      "complianceValue": "Shantou Huaqiao Experimental Zone Pilot",
+      "complianceValue": "National-level cross-border data pilot",
       "settlement": "Settlement",
-      "settlementValue": "Hong Kong-domiciled, multi-currency",
+      "settlementValue": "Offshore, multi-currency",
       "audit": "Audit",
       "auditValue": "Annual third-party verification"
     },

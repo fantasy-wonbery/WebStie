@@ -56,7 +56,7 @@
         "subtitle": "算力 · 合规 · 财资",
         "description": "跨境 AI 算力服务平台，围绕算力采购、合规通道与离岸结算提供端到端服务",
         "type": "B2B · 跨境算力服务",
-        "tags": ["AI 算力", "合规通道", "香港结算"]
+        "tags": ["AI 算力", "合规通道", "境外结算"]
       }
     },
     "starrySky": {
@@ -334,7 +334,7 @@
     "nav": {
       "about": "关于",
       "services": "服务",
-      "pathway": "汕头通道",
+      "pathway": "合规通道",
       "contact": "联系"
     },
     "badge": "Avinect Group 旗下",
@@ -350,7 +350,7 @@
     "stats": {
       "latencyValue": "33",
       "latencySuffix": "ms",
-      "latency": "至新加坡延迟（SJC 海缆）",
+      "latency": "至东南亚枢纽延迟",
       "modelsValue": "50",
       "modelsSuffix": "+",
       "models": "覆盖 AI 模型",
@@ -359,7 +359,7 @@
       "currencies": "支持结算币种",
       "bandwidthValue": "52",
       "bandwidthSuffix": "%",
-      "bandwidth": "汕头承载全国国际出口带宽"
+      "bandwidth": "通道节点国际出口带宽占比"
     },
     "servicesSection": {
       "title": "服务范围",
@@ -380,7 +380,7 @@
       "compliance": {
         "title": "Compliance · 合规",
         "subtitle": "跨境数据合规通道",
-        "description": "依托汕头华侨试验区「来数加工」试点的政策框架，为有跨境数据合规要求的客户提供通道接入与对应文书支持。",
+        "description": "依托国家级跨境数据加工试点的政策框架，为有跨境数据合规要求的客户提供通道接入与对应文书支持。",
         "highlights": [
           "试点政策框架",
           "物理隔离架构",
@@ -390,26 +390,26 @@
       },
       "treasury": {
         "title": "Treasury · 财资",
-        "subtitle": "香港主体离岸结算",
-        "description": "通过 Avinect Group 香港主体的银行通道完成多币种离岸结算。KYC/AML 流程符合机构客户的合规要求。",
+        "subtitle": "境外多币种结算",
+        "description": "通过国际银行通道完成多币种离岸结算。KYC/AML 流程符合机构客户的合规要求。",
         "highlights": [
-          "香港主体",
-          "汇丰银行通道",
+          "境外结算主体",
+          "国际银行通道",
           "多币种结算",
           "标准合规流程"
         ]
       }
     },
     "pathwaySection": {
-      "title": "汕头通道",
+      "title": "合规通道",
       "subtitle": "国家级跨境数据加工试点",
-      "body": "汕头华侨经济文化合作试验区是中国「来数加工」国家级试点之一。SJC 海缆在此登陆，是中国国际出口带宽的重要节点。Conexus 的合规架构基于该试点的政策框架。",
+      "body": "Conexus 的合规架构基于国家级跨境数据加工试点的政策框架。试点节点位于国际海缆登陆区，是中国国际出口带宽的重要枢纽之一。",
       "feature1Title": "海缆登陆",
-      "feature1Description": "SJC 海缆汕头登陆站，连通新加坡、日本、美国等国际节点。",
+      "feature1Description": "国际海缆登陆节点，连通主要海外市场。",
       "feature2Title": "合规框架",
       "feature2Description": "物理隔离、端到端加密、审计链路与操作规程留痕。",
       "feature3Title": "电力配套",
-      "feature3Description": "本地电网与海上风电支撑，符合 Tier IV 数据中心规划。"
+      "feature3Description": "本地电网与可再生能源支撑，符合高等级数据中心规划。"
     },
     "approachSection": {
       "title": "服务方式",
@@ -432,13 +432,13 @@
     "governanceSection": {
       "title": "公司信息",
       "parent": "母公司",
-      "parentValue": "Avinect Group（香港）",
-      "banking": "银行",
-      "bankingValue": "汇丰香港",
+      "parentValue": "Avinect Group",
+      "banking": "结算通道",
+      "bankingValue": "国际银行通道",
       "compliance": "合规",
-      "complianceValue": "汕头华侨试验区试点",
+      "complianceValue": "国家级跨境数据加工试点",
       "settlement": "结算",
-      "settlementValue": "香港主体，多币种",
+      "settlementValue": "境外多币种",
       "audit": "审计",
       "auditValue": "年度第三方审计"
     },
