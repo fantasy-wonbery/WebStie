@@ -42,6 +42,14 @@ export default {
           accent: '#5FA8D3',
           light: '#CAE9FF',
         },
+        // Conexus - 跨境 AI 算力 / 合规 / 财资
+        conexus: {
+          primary: '#0B1320',
+          secondary: '#D4AF37',
+          accent: '#B98A2E',
+          paper: '#F7F4ED',
+          stone: '#A6ADB8',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif'],

@@ -13,6 +13,7 @@ import {
   Zap,
   ExternalLink,
   Star,
+  Network,
 } from 'lucide-react'
 import {
   PageLayout,
@@ -23,13 +24,14 @@ import {
 } from '../components'
 import { useTranslation } from 'react-i18next'
 
-const brandKeys = ['jpmall', 'weflye', 'wonbery', 'weworks'] as const
+const brandKeys = ['jpmall', 'weflye', 'wonbery', 'weworks', 'conexus'] as const
 
 const brandMeta = {
   jpmall: { path: '/jpmall', icon: ShoppingBag, color: '#FF6F00', gradient: 'from-orange-500 to-amber-600' },
   weflye: { path: '/weflye', icon: Wifi, color: '#42A5F5', gradient: 'from-blue-500 to-indigo-600' },
   wonbery: { path: '/wonbery', icon: Radio, color: '#5FA8D3', gradient: 'from-blue-400 to-cyan-600' },
   weworks: { path: 'https://www.weworks.cn', icon: CreditCard, color: '#66BB6A', gradient: 'from-green-500 to-emerald-600', external: true },
+  conexus: { path: '/conexus', icon: Network, color: '#D4AF37', gradient: 'from-amber-600 to-yellow-700' },
 }
 
 const capabilityIcons = [Globe, Zap, Users, Award]

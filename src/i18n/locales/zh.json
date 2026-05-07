@@ -50,6 +50,13 @@
         "description": "面向企业HR的薪资发放服务平台，微信支付服务商资质",
         "type": "独立 · 业务品牌",
         "tags": ["发薪平台", "微信支付"]
+      },
+      "conexus": {
+        "name": "Conexus",
+        "subtitle": "算力 · 合规 · 财资",
+        "description": "跨境 AI 算力，离岸结算——为政府、主权基金背景运营方与机构买家提供地缘中立通道",
+        "type": "B2B · 跨境算力中立通道",
+        "tags": ["AI 算力", "合规通道", "香港结算"]
       }
     },
     "starrySky": {
@@ -322,5 +329,180 @@
     "tags": ["AOC 运行控制", "指挥通信", "视频会议", "AI 语音识别", "数据加密", "高可用"],
     "visitWebsite": "访问 Wonbery 官网",
     "footerName": "Wonbery 网博科技"
+  },
+  "conexus": {
+    "nav": {
+      "about": "关于",
+      "pillars": "三大支柱",
+      "pathway": "汕头通道",
+      "contact": "联系"
+    },
+    "badge": "Avinect Group 旗下",
+    "heroTitle": "Conexus",
+    "heroSubtitle": "算力 · 合规 · 财资。",
+    "heroDescription": "跨境 AI 算力，离岸结算。为政府、主权基金背景运营方与机构买家，提供地缘中立的中国 AI 算力——通过国家级合规通道交付，香港主体结算。",
+    "ctaPillars": "查看三大支柱",
+    "ctaContact": "联系我们",
+    "heroVisual": {
+      "title": "中立通道",
+      "subtitle": "In a neutral lane"
+    },
+    "stats": {
+      "latencyValue": "33",
+      "latencySuffix": "ms",
+      "latency": "至新加坡延迟（SJC 海缆）",
+      "costValue": "50",
+      "costSuffix": "%",
+      "cost": "综合成本约美元区水平",
+      "modelsValue": "50",
+      "modelsSuffix": "+",
+      "models": "覆盖主流 AI 模型",
+      "bandwidthValue": "52",
+      "bandwidthSuffix": "%",
+      "bandwidth": "汕头承载全国国际出口带宽"
+    },
+    "problemSection": {
+      "title": "当前的现实",
+      "body": "在 AWS、Azure 与各超大规模云之外，亚洲与中东的机构买家至今没有一个真正政治中立的 AI 算力选项。Conexus 就是这个选项。"
+    },
+    "whyNowSection": {
+      "title": "为何此刻",
+      "subtitle": "2026 上半年发生了三件结构性变化"
+    },
+    "whyNow": {
+      "cost": {
+        "title": "成本结构性变化",
+        "description": "中国算力的成本优势已经从趋势变为可测量、可持续的现实——综合定价约美元区的 50%。"
+      },
+      "risk": {
+        "title": "地缘风险显性化",
+        "description": "中东近期的基础设施安全事件，使机构资本将「单一地理风险」正式列入审计议程。"
+      },
+      "compliance": {
+        "title": "合规通道开启",
+        "description": "中国正式启动跨境数据流通的国家级试点通道——合规的中国 AI 算力，首次对海外机构买家合法可用。"
+      }
+    },
+    "pillarsSection": {
+      "title": "三大支柱",
+      "subtitle": "Compute · Compliance · Treasury"
+    },
+    "pillars": {
+      "compute": {
+        "title": "Compute · 算力",
+        "subtitle": "AI Token 大宗采购代理",
+        "description": "聚合 50+ 主流 AI 模型，覆盖国际（Claude、Gemini、GPT）与中国国产（Qwen、DeepSeek、Kimi、GLM）。综合成本约美元区定价的 50%，通过框架协议批量采购、预付锁价。",
+        "highlights": [
+          "50+ 模型覆盖",
+          "OpenAI 兼容 API",
+          "批量预付锁价",
+          "三档 SLA 体系"
+        ]
+      },
+      "compliance": {
+        "title": "Compliance · 合规",
+        "subtitle": "国家级跨境数据通道",
+        "description": "通过汕头华侨试验区国家级「来数加工」试点，提供合规跨境数据通道与完整审计文书包。继海南后第二个获批此项国家级试点的城市。",
+        "highlights": [
+          "国家级试点资质",
+          "物理隔离架构",
+          "端到端审计",
+          "完整文书包"
+        ]
+      },
+      "treasury": {
+        "title": "Treasury · 财资",
+        "subtitle": "香港主体离岸结算",
+        "description": "基于 Avinect Group 香港主体 + HSBC 已运营银行通道。多币种结算（USD / HKD / SGD / MYR / AED / SAR），KYC/AML 合规，机构客户友好。",
+        "highlights": [
+          "Avinect Group 主体",
+          "HSBC 香港",
+          "多币种结算",
+          "可审计交易记录"
+        ]
+      }
+    },
+    "valueSection": {
+      "title": "核心价值",
+      "subtitle": "七支柱同时成立——这是 Conexus 与所有竞品的根本差异"
+    },
+    "value": {
+      "neutrality": {
+        "title": "地缘中立",
+        "description": "非美阵营、非中东本地、非俄方——机构审计可接受的「第三脚」。"
+      },
+      "resilience": {
+        "title": "物理韧性",
+        "description": "汕头节点远离冲突区，本地电网+海上风电，Tier IV 数据中心设计。"
+      },
+      "cost": {
+        "title": "成本效率",
+        "description": "中国算力成本结构约美元区 50–70%，客户综合 IT 算力支出节省 30–50%。"
+      },
+      "latency": {
+        "title": "速度优势",
+        "description": "SJC 海缆汕头登陆，至新加坡 32.7ms——比 AWS Singapore 中转方案快 40–60%。"
+      },
+      "compliance": {
+        "title": "合规保障",
+        "description": "「来数加工」国家级试点 + 跨境数据专用通道，完整审计文书可交付客户合规团队。"
+      },
+      "banking": {
+        "title": "银行可信",
+        "description": "Avinect Group HK + HSBC 已运营，多币种结算，审计级流水。"
+      },
+      "bridge": {
+        "title": "文化桥梁",
+        "description": "潮汕侨胞网络与中东资本路径，关系深度而非交易型。"
+      }
+    },
+    "pathwaySection": {
+      "title": "汕头通道",
+      "subtitle": "中国唯一获批的国家级跨境 AI 数据试点",
+      "body": "Conexus 的合规架构基于汕头华侨试验区国家级「来数加工」试点。试验区是继海南后第二个获批此项国家级试点的城市。SJC 海缆在此登陆，承载全国 52% 国际出口带宽，至新加坡延迟仅 32.7 毫秒。",
+      "feature1Title": "海缆登陆",
+      "feature1Description": "SJC 海缆汕头登陆站，承载全国 52% 国际出口带宽，直连 51 国 83 个站点。",
+      "feature2Title": "合规架构",
+      "feature2Description": "物理隔离 + 端到端加密 + 完整审计链路 + 文书包交付客户法务团队。",
+      "feature3Title": "电力基础",
+      "feature3Description": "本地电网 + 海上风电支撑（粤东海上风电规划 60GW）。Tier IV 设计。"
+    },
+    "engagementsSection": {
+      "title": "进行中的合作",
+      "subtitle": "首批客户与战略供应链"
+    },
+    "engagements": {
+      "malaysia": {
+        "title": "马来西亚政府园区",
+        "description": "大宗 Token 批发合同正在条款谈判阶段。沙特主权基金背景。"
+      },
+      "gulf": {
+        "title": "海湾与澳门客户",
+        "description": "多家机构客户与园区运营方洽谈中。"
+      },
+      "supply": {
+        "title": "战略供应链",
+        "description": "与阿里云及国内主流算力供应商已建立战略采购合作（量级折扣 + 预付锁价）。"
+      }
+    },
+    "governanceSection": {
+      "title": "治理与合规",
+      "parent": "母公司",
+      "parentValue": "Avinect Group（香港，2026 年成立）",
+      "banking": "银行",
+      "bankingValue": "汇丰香港（已运营）",
+      "compliance": "合规",
+      "complianceValue": "汕头华侨试验区国家级试点",
+      "settlement": "结算",
+      "settlementValue": "香港主体，多币种",
+      "audit": "审计",
+      "auditValue": "年度第三方审计"
+    },
+    "cta": {
+      "title": "联系 Conexus",
+      "description": "我们服务于政府、主权基金背景运营方与机构买家。请发送邮件至 contact@avinect.com，主题注明「Conexus / [您的地区]」。我们将在 48 小时内回复。",
+      "email": "发送邮件",
+      "learnMore": "了解三大支柱"
+    }
   }
 }
