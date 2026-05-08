@@ -50,6 +50,13 @@
         "description": "HR payroll services platform with WeChat Pay merchant qualifications",
         "type": "Independent · Business Brand",
         "tags": ["Payroll", "WeChat Pay"]
+      },
+      "conexus": {
+        "name": "Conexus",
+        "subtitle": "Compute. Compliance. Treasury.",
+        "description": "Cross-border AI compute service platform — end-to-end services across compute procurement, compliance pathway, and offshore settlement",
+        "type": "B2B · Cross-border Compute Services",
+        "tags": ["AI Compute", "Compliance Pathway", "Offshore Settlement"]
       }
     },
     "starrySky": {
@@ -322,5 +329,124 @@
     "tags": ["AOC Operations Control", "Command Communications", "Video Conferencing", "AI Voice Recognition", "Data Encryption", "High Availability"],
     "visitWebsite": "Visit Wonbery Website",
     "footerName": "Wonbery Tech"
+  },
+  "conexus": {
+    "nav": {
+      "about": "About",
+      "services": "Services",
+      "pathway": "Compliance Pathway",
+      "contact": "Contact"
+    },
+    "badge": "An Avinect Group division",
+    "heroTitle": "Conexus",
+    "heroSubtitle": "Compute. Compliance. Treasury.",
+    "heroDescription": "Conexus is Avinect Group's cross-border AI compute service platform. We provide end-to-end services across compute procurement, compliance pathway, and offshore settlement.",
+    "ctaServices": "Our Services",
+    "ctaContact": "Contact",
+    "heroVisual": {
+      "title": "Avinect Group",
+      "subtitle": "Cross-border AI compute platform"
+    },
+    "stats": {
+      "latencyValue": "33",
+      "latencySuffix": "ms",
+      "latency": "Latency to Southeast Asia hub",
+      "modelsValue": "50",
+      "modelsSuffix": "+",
+      "models": "AI models covered",
+      "currenciesValue": "6",
+      "currenciesSuffix": "",
+      "currencies": "Settlement currencies",
+      "bandwidthValue": "52",
+      "bandwidthSuffix": "%",
+      "bandwidth": "Pathway node share of intl bandwidth"
+    },
+    "servicesSection": {
+      "title": "Service Scope",
+      "subtitle": "Compute · Compliance · Treasury"
+    },
+    "pillars": {
+      "compute": {
+        "title": "Compute",
+        "subtitle": "AI Token procurement",
+        "description": "Aggregating leading AI models from international and Chinese providers. We deliver compute capacity to clients via volume procurement and prepayment agreements with a unified API.",
+        "highlights": [
+          "50+ models covered",
+          "OpenAI-compatible API",
+          "Flexible pricing options",
+          "Three-tier SLA"
+        ]
+      },
+      "compliance": {
+        "title": "Compliance",
+        "subtitle": "Cross-border data pathway",
+        "description": "Built on the policy framework of a national-level cross-border data processing pilot, providing channel access and supporting documentation for clients with cross-border data requirements.",
+        "highlights": [
+          "Pilot policy framework",
+          "Physical isolation",
+          "Audit documentation",
+          "Process traceability"
+        ]
+      },
+      "treasury": {
+        "title": "Treasury",
+        "subtitle": "Offshore multi-currency settlement",
+        "description": "Multi-currency offshore settlement via international banking channels. KYC/AML processes follow institutional client compliance requirements.",
+        "highlights": [
+          "Offshore entity",
+          "International banking",
+          "Multi-currency",
+          "Standard compliance"
+        ]
+      }
+    },
+    "pathwaySection": {
+      "title": "Compliance Pathway",
+      "subtitle": "National-level cross-border data processing pilot",
+      "body": "Conexus operates within the policy framework of a national-level cross-border data processing pilot. The pilot node sits within an international subsea cable landing zone — one of the key hubs for China's international bandwidth.",
+      "feature1Title": "Subsea Cable Landing",
+      "feature1Description": "International subsea cable landing node connecting to major overseas markets.",
+      "feature2Title": "Compliance Framework",
+      "feature2Description": "Physical isolation, end-to-end encryption, audit trail, and process traceability.",
+      "feature3Title": "Power Infrastructure",
+      "feature3Description": "Local grid with renewable energy support, aligned with high-tier data center planning."
+    },
+    "approachSection": {
+      "title": "How We Work",
+      "subtitle": "Standard process with institutional compliance"
+    },
+    "approach": {
+      "engagement": {
+        "title": "Engagement",
+        "description": "We work with clients to define service scope and delivery format based on their use case, compliance requirements, and compute volume."
+      },
+      "delivery": {
+        "title": "Delivery",
+        "description": "Compute capacity delivered through framework agreements, with corresponding compliance documentation, reconciliation records, and service-level commitments."
+      },
+      "operations": {
+        "title": "Operations",
+        "description": "Ongoing usage monitoring, periodic reconciliation, and service reporting to support long-term engagements and scaling."
+      }
+    },
+    "governanceSection": {
+      "title": "Company Information",
+      "parent": "Parent",
+      "parentValue": "Avinect Group",
+      "banking": "Settlement Channel",
+      "bankingValue": "International banking",
+      "compliance": "Compliance",
+      "complianceValue": "National-level cross-border data pilot",
+      "settlement": "Settlement",
+      "settlementValue": "Offshore, multi-currency",
+      "audit": "Audit",
+      "auditValue": "Annual third-party verification"
+    },
+    "cta": {
+      "title": "Contact",
+      "description": "For service details or business inquiries, please email contact@avinect.com with subject line 'Conexus'.",
+      "email": "Email Us",
+      "learnMore": "Our Services"
+    }
   }
 }

@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import JpMall from './pages/JpMall'
 import Weflye from './pages/Weflye'
 import Wonbery from './pages/Wonbery'
+import Conexus from './pages/Conexus'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/jpmall" element={<JpMall />} />
           <Route path="/weflye" element={<Weflye />} />
           <Route path="/wonbery" element={<Wonbery />} />
+          <Route path="/conexus" element={<Conexus />} />
         </Routes>
       </AnimatePresence>
     </>

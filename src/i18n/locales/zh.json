@@ -50,6 +50,13 @@
         "description": "面向企业HR的薪资发放服务平台，微信支付服务商资质",
         "type": "独立 · 业务品牌",
         "tags": ["发薪平台", "微信支付"]
+      },
+      "conexus": {
+        "name": "Conexus",
+        "subtitle": "算力 · 合规 · 财资",
+        "description": "跨境 AI 算力服务平台，围绕算力采购、合规通道与离岸结算提供端到端服务",
+        "type": "B2B · 跨境算力服务",
+        "tags": ["AI 算力", "合规通道", "境外结算"]
       }
     },
     "starrySky": {
@@ -322,5 +329,124 @@
     "tags": ["AOC 运行控制", "指挥通信", "视频会议", "AI 语音识别", "数据加密", "高可用"],
     "visitWebsite": "访问 Wonbery 官网",
     "footerName": "Wonbery 网博科技"
+  },
+  "conexus": {
+    "nav": {
+      "about": "关于",
+      "services": "服务",
+      "pathway": "合规通道",
+      "contact": "联系"
+    },
+    "badge": "Avinect Group 旗下",
+    "heroTitle": "Conexus",
+    "heroSubtitle": "算力 · 合规 · 财资",
+    "heroDescription": "Conexus 是 Avinect Group 旗下的跨境 AI 算力服务平台，围绕算力采购、合规通道与离岸结算三个环节，为机构客户提供端到端服务。",
+    "ctaServices": "了解服务",
+    "ctaContact": "联系我们",
+    "heroVisual": {
+      "title": "Avinect Group",
+      "subtitle": "Cross-border AI compute platform"
+    },
+    "stats": {
+      "latencyValue": "33",
+      "latencySuffix": "ms",
+      "latency": "至东南亚枢纽延迟",
+      "modelsValue": "50",
+      "modelsSuffix": "+",
+      "models": "覆盖 AI 模型",
+      "currenciesValue": "6",
+      "currenciesSuffix": "",
+      "currencies": "支持结算币种",
+      "bandwidthValue": "52",
+      "bandwidthSuffix": "%",
+      "bandwidth": "通道节点国际出口带宽占比"
+    },
+    "servicesSection": {
+      "title": "服务范围",
+      "subtitle": "Compute · Compliance · Treasury"
+    },
+    "pillars": {
+      "compute": {
+        "title": "Compute · 算力",
+        "subtitle": "AI Token 采购代理",
+        "description": "聚合主流 AI 模型，覆盖国际与国内厂商。通过批量采购与预付协议为客户提供算力额度与统一接入。",
+        "highlights": [
+          "50+ 模型覆盖",
+          "OpenAI 兼容 API",
+          "灵活计费方案",
+          "三档 SLA 体系"
+        ]
+      },
+      "compliance": {
+        "title": "Compliance · 合规",
+        "subtitle": "跨境数据合规通道",
+        "description": "依托国家级跨境数据加工试点的政策框架，为有跨境数据合规要求的客户提供通道接入与对应文书支持。",
+        "highlights": [
+          "试点政策框架",
+          "物理隔离架构",
+          "审计文书支持",
+          "操作规程留痕"
+        ]
+      },
+      "treasury": {
+        "title": "Treasury · 财资",
+        "subtitle": "境外多币种结算",
+        "description": "通过国际银行通道完成多币种离岸结算。KYC/AML 流程符合机构客户的合规要求。",
+        "highlights": [
+          "境外结算主体",
+          "国际银行通道",
+          "多币种结算",
+          "标准合规流程"
+        ]
+      }
+    },
+    "pathwaySection": {
+      "title": "合规通道",
+      "subtitle": "国家级跨境数据加工试点",
+      "body": "Conexus 的合规架构基于国家级跨境数据加工试点的政策框架。试点节点位于国际海缆登陆区，是中国国际出口带宽的重要枢纽之一。",
+      "feature1Title": "海缆登陆",
+      "feature1Description": "国际海缆登陆节点，连通主要海外市场。",
+      "feature2Title": "合规框架",
+      "feature2Description": "物理隔离、端到端加密、审计链路与操作规程留痕。",
+      "feature3Title": "电力配套",
+      "feature3Description": "本地电网与可再生能源支撑，符合高等级数据中心规划。"
+    },
+    "approachSection": {
+      "title": "服务方式",
+      "subtitle": "标准化流程与机构级合规要求"
+    },
+    "approach": {
+      "engagement": {
+        "title": "需求评估",
+        "description": "根据客户的业务场景、合规要求与算力规模，与客户共同确认服务范围与交付方式。"
+      },
+      "delivery": {
+        "title": "交付实施",
+        "description": "通过框架协议交付算力额度，配套合规文书、对账记录与服务级别约定。"
+      },
+      "operations": {
+        "title": "持续运营",
+        "description": "提供使用监控、定期对账与服务报告，支持长期合作与扩展需求。"
+      }
+    },
+    "governanceSection": {
+      "title": "公司信息",
+      "parent": "母公司",
+      "parentValue": "Avinect Group",
+      "banking": "结算通道",
+      "bankingValue": "国际银行通道",
+      "compliance": "合规",
+      "complianceValue": "国家级跨境数据加工试点",
+      "settlement": "结算",
+      "settlementValue": "境外多币种",
+      "audit": "审计",
+      "auditValue": "年度第三方审计"
+    },
+    "cta": {
+      "title": "联系我们",
+      "description": "如需了解服务详情或商务合作，请发送邮件至 contact@avinect.com，主题标注「Conexus」。",
+      "email": "发送邮件",
+      "learnMore": "了解服务"
+    }
   }
 }
