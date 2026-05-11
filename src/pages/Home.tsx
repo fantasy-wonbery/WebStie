@@ -135,12 +135,12 @@ export default function Home() {
           </motion.div>
 
           <motion.img
-            src={`${import.meta.env.BASE_URL}avinect-logo.svg`}
-            alt="AVINECT"
+            src={`${import.meta.env.BASE_URL}images/avinect/logo-group.png`}
+            alt="AVINECT GROUP"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="h-16 md:h-20 lg:h-24 mx-auto mb-3"
+            className="h-20 md:h-28 lg:h-32 mx-auto mb-3"
           />
 
           <motion.p
