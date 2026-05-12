@@ -140,7 +140,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="h-20 md:h-28 lg:h-32 mx-auto mb-3"
+            className="h-28 md:h-40 lg:h-48 mx-auto mb-3"
           />
 
           <motion.p
